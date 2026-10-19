@@ -1,39 +1,46 @@
-# Сдача Qadam — Smart City v4
+# Сдача Qadam — Smart City VNext
 
 Команда **Qadam**, один участник. Регистрация отправлена. Рабочий дедлайн Smart City, подтверждённый участником: **20 октября 2026, 23:59 Asia/Almaty (UTC+5)**. Состояние формы и актуальный канал сверяются перед отправкой. Перенос Google-трека сам по себе не подтверждает перенос других секций.
 
 [Официальная страница и формы](https://gdg.community.dev/events/details/google-gdg-astana-presents-build-with-ai-hackathon-2026/) · [Файл кейсов](https://drive.google.com/file/d/1d3w6aU0r9fpHGLAyI4-pqVRWaJSFHPWw/view)
 
-## Материалы
+Это операторский чек-лист. Отмеченное выполнение относится к описанной проверке; подготовленный draft не считается отправленной заявкой. Кодовый freeze VNext — `d0b5b1462ffd48111bcf354be8baf98e85681bae`. Последующий doc-only commit архива и фактические SHA256 фиксируются в финальном manifest; неизвестный GitHub SHA заранее не указывается.
 
-- [x] Публичные [GitHub](https://github.com/gojosatorukz/qadam-astana) и [демо](https://qadam-astana-walk.pubg-bekzat.chatgpt.site) созданы.
-- [ ] GitHub/source.zip обновлены именно до финального v4 с текущими тестами и docs.
-- [ ] PDF-презентация до 10 MB соответствует v4.
-- [ ] Дополнительные демофайлы, если нужны: до 5 файлов, каждый до 100 MB.
-- [x] [YouTube по ссылке](https://youtu.be/SeL_Ts7Z1YU) — новая 90-секундная запись v4 с ручными русскими субтитрами.
-- [ ] Видео обновлено под финальный intent/closed-generation UI; открывается без сессии автора.
-- [x] Документированные [сценарии](TEST_SCENARIOS.md), [архитектура/питч](DECISIONS.md), [проверка](EVALUATION.md), [ответы жюри](JURY_QA.md).
-- [ ] Рабочее интерактивное демо и репозиторий либо архив кода приложены в форме.
+## Единый комплект
 
-## Проверки
+- [x] Публичные [GitHub](https://github.com/gojosatorukz/qadam-astana) и [сайт](https://qadam-astana-walk.pubg-bekzat.chatgpt.site) созданы; VNext опубликован на том же URL.
+- [x] Подготовлена полностью новая [90-секундная запись VNext](https://youtu.be/u8qfP-Jfxq8) и ручные RU-субтитры, 23 фрагмента.
+- [ ] Владелец завершил сохранение YouTube Unlisted; новый ролик и captions открываются без сессии автора.
+- [ ] Последующий doc-only source commit зафиксирован официальным helper без изменений frozen application code.
+- [ ] `qadam-source.zip` и `source-manifest.json` соответствуют этому commit; extracted source и SHA256 проверены.
+- [ ] PDF-презентация до 10 MB, PPTX, speaker notes и сценарий показывают тот же реализованный VNext.
+- [ ] MP4/SRT, preview, информация о подаче и общий bundle согласованы с новой YouTube-ссылкой и manifest.
+- [ ] Все финальные публичные файлы загружены на GitHub; проверены содержимое/хеши, ссылки и доступ без авторской сессии.
+- [x] Документированы [сценарии](TEST_SCENARIOS.md), [архитектура](DECISIONS.md), [исторический benchmark](EVALUATION.md), [новый QA](VNEXT_RELEASE.md), [ответы жюри](JURY_QA.md).
+- [ ] Рабочий сайт, репозиторий либо архив кода и разрешённые дополнительные материалы приложены в draft-форме. Если используются дополнительные файлы, сверены текущие ограничения формы на число/размер.
 
-- [x] Автосбор, сохранённые данные и provenance; неизвестные поля не заполнены догадками.
-- [x] Чистый npm ci из официального registry: 688 пакетов за 34 с, lockfile без изменений; tsc pass; **167/167 тестов**.
-- [x] No-key HTTP 8/8: ручные кнопки работают; текст RU/KK/EN требует уточнения; 20 минут могут дать empty; timezone-less now даёт 400.
-- [x] **30/30 oracle integration** инвариантов. Это не 30 вызовов Gemini и не AI accuracy.
-- [x] Замороженный реальный intent-прогон: **26/30 exact**, baseline 7/30; **27 API + 3 manual**, две 429 включены. Ограничения development 9/first-seen 21 и все ошибки опубликованы в evidence.
-- [ ] Финальный опубликованный v4: health/POST, intent.mode, generationMode, источники и trace проверены отдельно.
-- [ ] Desktop/mobile, три языка, даты, dialog/focus, тайлы, строгие фильтры и empty/partial/clarification просмотрены в финальном UI.
-- [ ] PDF, видео и source соответствуют последнему коду; нет непроведённых общих accuracy/latency claims.
+## Подтверждённые проверки приложения
 
-## Перед отправкой
+- [x] Снимок OSM и provenance сохранены; неизвестные поля не заполнены догадками. Редакционный слой: 10 canonical / 11 OSM IDs / 19 sourced facts.
+- [x] Чистый standalone `npm ci` из официального registry: 688 пакетов за 45 с, Node 24.12.0 / npm 11.6.2, исходники и lockfile не изменены; TypeScript PASS; **259/259 тестов**.
+- [x] Standalone facts importer `--check` PASS без соседнего research и ранее установленных node_modules.
+- [x] Анонимный опубликованный HTTP smoke **5/5**: schema 890, manual 85/55, invalid calendar 400, outside-coverage и football clarification; эти control paths не запускают AI.
+- [x] Отдельный направленный production browser QA: Gemini main 85/55, альтернативный 55, время 45 → 45/31, Mega confirmation 57/77, refinement без abandoned football, no-data partial и manual empty с действиями.
+- [x] Pin/search, favorites clear, custom 12:15, mobile 390 без overflow, выбор/карта, fit/abort и RU/EN/KK проверены в целевых сценариях.
+- [x] Внешнее ограничение записано: один Mega tile load failed, последующая кафе-карта загрузилась; надёжность OSM-тайлов/полевых переходов не обещается.
+- [x] Исторические **30/30 oracle integration** остаются проверкой инвариантов, не 30 Gemini-вызовами и не AI accuracy.
+- [x] Frozen intent-прогон сохранён: **26/30 exact**, baseline 7/30; **27 API + 3 manual**, две 429 включены; development 9 / first-seen 21 и ошибки остаются в исходных evidence.
+- [ ] Финальные PDF, видео и source прочитаны как комплект; нет непроведённых общих accuracy/latency claims. Матрица 34 сценариев аудита не выдана за 34 успешных live-проверки; отсутствие пользовательского исследования не скрыто.
+
+## Перед окончательным действием
 
 - [ ] Выбрана Smart City. Одновременное участие в двух секциях не считается подтверждённым.
-- [ ] Qadam совпадает в форме, репозитории, PDF и видео.
-- [ ] Ссылки открываются без личной сессии автора; демо не зависит от localhost.
-- [ ] В архиве нет ключей, `.env.local`, runtime, node_modules, личных контактов/треков или приватных research screenshots.
-- [ ] Публичные evidence включают только искусственные gold-запросы и публичные preset/OSM данные.
-- [ ] Есть © OpenStreetMap contributors / ODbL, ограничения источников и privacy.
-- [ ] Форма действительно отправлена; сохранены подтверждение и окончательные ссылки.
+- [ ] Qadam и актуальные ссылки совпадают в форме, README, PDF, видео и manifest.
+- [ ] Сайт работает без localhost, public links и external playback проверены отдельно.
+- [ ] В финальном архиве нет ключей, `.env.local`, runtime, node_modules, личных контактов/истории или приватных research screenshots. `.env.example` — только пустой публичный шаблон.
+- [ ] Публичные evidence содержат искусственные запросы и публичные preset/OSM данные; точная частная геолокация не раскрыта.
+- [ ] Есть © OpenStreetMap contributors / ODbL, ограничения источников, внешний dependency caveat и privacy: favorites хранят только выбранные публичные POI IDs.
+- [ ] После проверки draft пользователь **отдельно прямо разрешил финальную отправку**.
+- [ ] Только после этого форма отправлена и сохранено подтверждение с окончательными ссылками.
 
-Финал заявлен на 22 октября; точное время сверить у организаторов. Публичный сайт сохраняет канонический URL при новых версиях; GitHub Pages не запускает серверные API. [Развёртывание](DEPLOYMENT.md).
+Финал заявлен на 22 октября; точное время сверяется у организаторов. Публичный сайт сохраняет канонический URL; GitHub Pages не запускает серверные API. [Развёртывание](DEPLOYMENT.md). Подготовка и загрузка нового пакета сами по себе не разрешают отправлять заявку.

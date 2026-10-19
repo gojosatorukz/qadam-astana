@@ -1,0 +1,93 @@
+# Qadam VNext: состав и gate выпуска
+
+VNext опубликован на каноническом сайте: **Sites version 6**, исходный commit **`d0b5b1462ffd48111bcf354be8baf98e85681bae`**, успешный deploy **19.10.2026 22:50 UTC / 20.10.2026 03:50 Алматы**. Новое [90-секундное видео VNext](https://youtu.be/u8qfP-Jfxq8) подготовлено с ручными RU-субтитрами. Source ZIP, manifest, PDF/PPTX и видео синхронизируются единым комплектом; точный source commit после doc-only обновлений фиксируется упаковкой, не вымышленным GitHub SHA. Исторические артефакты и [EVALUATION](EVALUATION.md) сохраняются без переписывания результатов.
+
+## Подтверждённая проверка опубликованного VNext
+
+| Уровень | Фактическая проверка | Граница вывода |
+|---|---|---|
+| Frozen source | TypeScript и **259/259** автоматических тестов проходят | Инварианты/fixtures, не 259 пользователей или модельных запросов |
+| Самостоятельная копия | 187 файлов; нет .git, секретных env-файлов, прежних node_modules и research; обычный npm ci, TypeScript, 259/259, facts importer — PASS | Отдельный временный repro ZIP, не новый публичный submission ZIP |
+| Чистая установка | Node 24.12.0 / npm 11.6.2; официальный registry, пустой dedicated cache; 688 пакетов / 45 с; source hashes и lockfile неизменны | Одна проверенная среда; это не latency/SLA продукта |
+| Факты | Standalone importer PASS: 10 canonical / 11 OSM IDs / 19 facts, data hash `2d20ecaab74003d5ae3f35f17a1733756f70d4747ee979cfc34b8b95897d885f` | Нет зависимости от соседней research-папки; checked source не равно field verification |
+| Анонимный production HTTP | Пять запросов, пять ожидаемых результатов, без auth/cookies и повторов; проверены ниже | Нулевой AI path по controls/diagnostics; billing telemetry не запрашивалась |
+| Командный browser QA | Текстовый Gemini-result 85/55, variant 55 / return 13:10, изменение времени 45 → 45/31, Mega confirmation 57/77; refinement больше не переносит abandoned football | Направленный smoke с реальным провайдером, не новая NLP accuracy и не voluntary user study |
+| Интерфейс | Quiet/cheap/outlets→partial/no-data; manual museum 5 min→empty с действиями; pin/search, favorites clear, custom 12:15, mobile 390 без overflow, tabs/fit/abort и RU/EN/KK проверены | Матрица аудита из 34 пунктов целиком успешной не объявляется |
+
+Анонимный HTTP smoke выполнен **19.10.2026 22:56:22 UTC / 20.10.2026 03:56:22 Алматы** на том же canonical URL:
+
+| Запрос | HTTP | Проверенный результат |
+|---|---:|---|
+| GET /api/places | 200 | Все 890 POI проходят client schema; 10 canonical / 19 facts, POI bounds отдельно от walking coverage |
+| POST /api/plan, query пустой/localOnly, Байтерек, 20.10.2026 12:15 → 13:45 UTC+5, park | 200 | Два source-bound walking плана 85/55; labels «Больше прогулки» / «Ближе к старту»; оба wire guards и budget/return/filter/source-ID semantics PASS; intent manual/enrichment local |
+| POST с 31.02.2026 | 400 | Календарная ошибка до planning/model |
+| POST со стартом вне POI snapshot, но внутри API city bounds | 200 | plan=null, outside-coverage; обе AI стадии not-attempted |
+| POST «Хочу поиграть в футбол» | 200 | plan=null, unsupported-activity, явные external actions; обе AI стадии not-attempted |
+
+Разделение доказательств сохраняется: автоматические тесты, воспроизведение установки, HTTP, browser/model smoke и наблюдения с людьми — разные уровни. Командный QA не заменяет независимых пользователей. Исторический AI-прогон 26/30 и oracle 30 остаются в своих исходных наборах; новые результаты туда не добавлены.
+
+Наблюдавшееся ограничение: при одном production Mega-прогоне не загрузился внешний тайл OpenStreetMap, при последующем сценарии кафе подложка загрузилась. Надёжность тайлов/входов/полевых переходов не доказана этим smoke. Тайлы и Gemini остаются внешними зависимостями; snapshot, source-backed список и расчёт имеют собственные границы покрытия.
+
+Полные технические протоколы сохранены владельцем релиза отдельно от старых frozen evidence. Эта публичная сводка не содержит ключей, cookies, личной точной локации или participant contacts. Финальная упаковка должна сверить собственный manifest/hash с intended source; hash временного repro ZIP не заменяет hash публичного архива.
+
+## Что изменилось
+
+| Область | Реализованное поведение |
+|---|---|
+| Brief/уточнение | Локализованный вопрос, 2–4 typed actions, свой видимый ответ; понятный следующий шаг |
+| Контекст старта | Mega/Байтерек и другие известные пресеты требуют подтверждения конфликта; нет silent geocoding |
+| Recovery | Explicit manual-category очищает текст и задаёт localOnly; обе AI-стадии пропускаются, controls сохранены |
+| Неизвестные цели | Футбол/shopping получают честный data gap и явный external handoff, без fake categories |
+| Старт | Пресеты, поиск названных POI снимка, отдельный map pin и GPS по действию; граница корпуса показана отдельно от сети |
+| Время | Своя дата/время Алматы, duration или returnBy, строгий календарь/leap year/offset; now-бюджет обновляется после intent |
+| Контекст результата | departureAt, planComputedAt, returnBy, effectiveMinutes; stale state требует пересчёта |
+| Выбор | Один или до двух distinct canonical plans; одинаковые hard filters и полная проверка каждого |
+| Source ranking | Содержательные факты/имена предпочтительнее generated labels после hard filters; небольшой bounded bonus не является venue rating |
+| Данные | 10 canonical / 11 explicit OSM IDs / 19 sourced facts / 4 observation ideas; исходные filter/routing-поля сохранены |
+| Пояснения | Primary может использовать закрытые Gemini codes, alternative использует локальный renderer; trace отмечает различие |
+| Устойчивость | Parent abort обеих стадий, shared deadline, wire/semantic guards, truthful not-attempted/unavailable/empty diagnostics |
+| Приватность | Favorites сохраняет только публичные POI IDs на устройстве; query/location history не добавлена |
+
+## Границы реализации
+
+Второй вариант условен. Он заменяет конечное место при сохранении допустимого префикса, использует уже выбранные graph trees и обратный origin-tree. До четырёх Dijkstra суммарно; нет обещания глобального оптимума. Если различие только в aliases, перестановке или одинаковой стоимости, второй вариант не создаётся ради числа.
+
+Facts checkedAt означает проверку опубликованного источника. Полевые входы, препятствия, безопасность и текущие часы не проверены. Тексты наблюдения — идеи, отдельно от фактов. Public art не равно gallery; stadium не доказывает матч, mall не доказывает ассортимент. Новые sports/shopping/live categories без сбора источников не добавлены.
+
+OSM snapshot центральной Астаны не покрывает весь город. Прямоугольник корпуса не гарантирует graph snap/связность. Unknown hours остаются unknown, строгий фильтр может вернуть пусто. Connectors ≤200 м оценены по прямой. Известная длинная сеть не заменяется коротким estimate.
+
+`generationMode` описывает primary explanation. Второй вариант содержит source-backed local text; это явно отражено в trace/diagnostics. Semantic intent и объяснение — независимые стадии: недоступная первая требует уточнения, недоступная вторая сохраняет готовый маршрут. `localOnly` нужен для осознанного ручного восстановления, не для скрытого разбора текста keywords.
+
+## Кандидаты основного демо
+
+Ниже — отдельный deterministic production localOnly smoke на полном сохранённом OSM/графе с редакционным overlay. Отправление 20.10.2026 12:15 UTC+5, query пустой, без indoor/knownHoursOnly/accessibility. Вызовов модели и HTTP нет; это не live-проверка места и не AI benchmark. В обоих вариантах каждого случая использованы walking costs; по два Dijkstra. Первые три строки используют park, четвёртая — attraction; filters одинаковы внутри каждого случая.
+
+| Старт и окно | Основной вариант | Второй вариант |
+|---|---|---|
+| Байтерек, до 13:45 / 90 мин | Парк влюблённых: 85 мин = 52 ходьба + 25 визит + 8 запас; 3545 м; возврат 26 мин; 2 факта с источниками | Сквер: 55 мин = 22 + 25 + 8; 1432 м; возврат 11 мин; без редакционных фактов |
+| Mega/EXPO, до 14:15 / 120 мин | Ботанический сад: 113 мин = 78 ходьба + 25 визит + 10 запас; 5422 м; возврат 39 мин; 2 факта с источниками | Аллея мира и согласия: 59 мин = 24 + 25 + 10; 1575 м; возврат 12 мин; без редакционных фактов |
+| Mega/EXPO, до 13:45 / 90 мин | Аллея мира и согласия: 57 мин = 24 + 25 + 8; 1575 м; возврат 12 мин | NU Park: 77 мин = 44 + 25 + 8; 2946 м; возврат 22 мин |
+| Набережная Есиля, до 13:00 / 45 мин, attraction | Кенесары: 39 мин = 20 + 15 + 4; 1271 м; возврат 10 мин; 2 факта с источниками | А. Кунанбайулы: 41 мин = 22 + 15 + 4; 1522 м; возврат 11 мин; без редакционных фактов |
+
+Для сцены с источниками подходят «оставить Байтерек + 90 мин» либо «выбрать Mega + 120 мин». Парк с редакционными фактами у Mega за 90 мин этим набором не подтверждён; 45 мин также не обещаем. Возврат уже входит в walking, повторно прибавлять его нельзя. При другом времени, фильтрах или корпусе результат может отличаться. Браузерный показ этой цепочки фиксируется отдельно.
+
+## Проверка перед фиксацией
+
+Для source d0b5b146… зафиксированы приведённые выше 259/259 и отдельные smoke-результаты. Следующий doc/media-only commit должен сохранять этот application code. Любое дальнейшее изменение приложения требует нового соответствующего gate-лога с source SHA, датой, средой и фактическим итогом.
+
+1. Чистая установка из самостоятельной копии исходников без .env/.git/node_modules и соседнего research. TypeScript, полный `tests/*.test.ts`, bundled facts importer --check.
+2. Offline/mocked regressions: calendar/UTC+5, returnBy expiry, Mega confirmation, continuation, localOnly, оба abort path, shape/semantic guards, source identities, оба варианта с return/hours/filters.
+3. Направленный HTTP smoke с ключом/без ключа, malformed request/response, 429/timeout через fixtures. Не увеличивать нагрузку ради красивого счёта и не выдавать mocks/oracle за provider calls.
+4. Browser QA: Mega conflict и подтверждение, ручной музей+источник, своя дата/returnBy, football handoff/новый ответ, pin/search, fit полной геометрии, отмена stale response, source dialogs/favorites, RU/KK/EN, mobile/keyboard/reduced-motion.
+5. Матрицу аудита из 34 пунктов повторять с её реальными режимами offline/live/notchecked. Само число пунктов не является числом успешных прогонов. Пользовательские наблюдения с людьми фиксировать отдельно; если их нет, оставить gap.
+6. После freeze повторить общий набор и записать финальный итог один раз. Исторические frozen gold, 26/30 AI и 7/30 baseline не редактировать и не объединять с новым QA в процент «точности».
+
+Подробные ожидаемые результаты — в [TEST_SCENARIOS](TEST_SCENARIOS.md). Протоколы текущего браузерного QA ведутся отдельно от исторических public evidence; публичная сводка подтверждённых проверок находится выше.
+
+## Публикация и материалы
+
+Канонический адрес остаётся **https://qadam-astana-walk.pubg-bekzat.chatgpt.site**. Существующий Sites project identity сохраняется. Frontend и API остаются на Cloudflare Workers; GitHub Pages не запускает эти server routes. [Инструкция](DEPLOYMENT.md).
+
+Текущее видео выпуска — [Qadam VNext, 90 секунд](https://youtu.be/u8qfP-Jfxq8), с 23 вручную подготовленными фрагментами русских субтитров. Сохранение Unlisted, внешний playback и captions проверяет владелец публикации. Архив исходников, PDF/PPTX, MP4/SRT, README и manifest собираются как один согласованный комплект. Кодовый freeze остаётся d0b5b146…; точный последующий doc-only commit и SHA256 файлов берутся из финального manifest. До этой фиксации новые GitHub SHA/hashes не заявляются. Предыдущий рабочий комплект сохранён отдельно для rollback. Сборка и внешний upload остаются отдельными проверяемыми действиями владельца релиза.
+
+Финальный пакет проверяется по извлечённому source, отсутствию ключей/личных данных, полным ссылкам, чтению PDF/PPTX, видео и внешнему anonymous playback/captions. oEmbed 200 сам по себе не доказывает просмотр ролика. Форму можно готовить в рамках разрешённого draft scope; **финальная отправка требует отдельного прямого разрешения пользователя**.
