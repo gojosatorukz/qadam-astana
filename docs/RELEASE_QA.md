@@ -13,3 +13,5 @@ These checks complement the 167 automated tests. They are not additional automat
 - Local browser regression after the final UI fix: start a45-minute request, observe Loading, immediately choose20minutes. The old request is aborted, the action becomes ready, and no result panel appears later. No old45-minute result is displayed under the20-minute input.
 
 Video footage uses real published-app frames. The last budget-cancellation fix changes an interrupted-request edge case; the normal scenarios in the footage retain the same behavior. Exact frozen model evaluation is documented separately in [EVALUATION.md](EVALUATION.md).
+
+A later live text request hit the6,500ms interpretation deadline. The UI disclosed the unavailable interpretation and returned no fabricated plan. Explicit manual recovery then produced a37/90-minute route; optional AI explanations also fell back to factual retrieval text. These operational outcomes are retained separately from the frozen intent benchmark; no claim of uninterrupted provider availability is made.
