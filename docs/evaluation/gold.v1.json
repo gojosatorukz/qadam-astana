@@ -1,0 +1,1052 @@
+{
+  "version": 1,
+  "createdAt": "2026-10-19T19:52:18.089442+00:00",
+  "clientTimezone": "Asia/Almaty",
+  "annotationOrigin": "Independent agent semantic annotation, manually specified before new intent implementation; not model predictions.",
+  "supportedCategories": [
+    "art",
+    "attraction",
+    "cafe",
+    "library",
+    "museum",
+    "park",
+    "playground",
+    "viewpoint"
+  ],
+  "policies": [
+    "Array order is not significant; exact category sets are the primary semantic expectation.",
+    "Empty text uses the explicit category chips. Meaningful text overrides chips for category selection.",
+    "An explicit conjunction of different requested category experiences means all; an alternative means any. Single-category or exclusion-only cases use any.",
+    "Nature maps to park; paintings map to art; panorama maps to viewpoint; gallery is normalized to actual art category.",
+    "Quiet, price, Wi-Fi and sockets have no reliable fields in the saved corpus. Unsupported extracts must be literal query substrings, with no-data reason; case is ignored for scoring.",
+    "For explicit indoor-only control versus outdoor text, retain the control and expose the conflict. The outdoor phrase is marked not-supported; controlConflicts is evaluation metadata, not a requirement for a particular response field.",
+    "No specified POI must be selected: empty or partial can be valid under geographic/time/hour constraints if transparently disclosed. Forbidden categories may never be returned.",
+    "This is a small adversarial gold set, not a representative estimate of all user-query accuracy."
+  ],
+  "cases": [
+    {
+      "id": "RU01",
+      "language": "ru",
+      "query": "",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [
+          "cafe"
+        ],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "cafe"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "chips-only"
+      ]
+    },
+    {
+      "id": "RU02",
+      "language": "ru",
+      "query": "Без кафе и парков.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [],
+        "excludedCategories": [
+          "cafe",
+          "park"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "negated-list"
+      ]
+    },
+    {
+      "id": "RU03",
+      "language": "ru",
+      "query": "Не хочу идти в кафе; хочу прогуляться на природе.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "park"
+        ],
+        "excludedCategories": [
+          "cafe"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "negation-with-insertion",
+        "indirect-nature"
+      ]
+    },
+    {
+      "id": "RU04",
+      "language": "ru",
+      "query": "Хочу музей.",
+      "controls": {
+        "origin": {
+          "lat": 51.12828,
+          "lon": 71.43055,
+          "label": "Байтерек"
+        },
+        "minutes": 90,
+        "interests": [
+          "cafe"
+        ],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "museum"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "text-overrides-default-chip"
+      ]
+    },
+    {
+      "id": "RU05",
+      "language": "ru",
+      "query": "Хочу кофе и музей.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "cafe",
+          "museum"
+        ],
+        "excludedCategories": [],
+        "includeMode": "all",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "conjunction-all"
+      ]
+    },
+    {
+      "id": "RU06",
+      "language": "ru",
+      "query": "Хочу музей или библиотеку.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "museum",
+          "library"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "alternative-any"
+      ]
+    },
+    {
+      "id": "RU07",
+      "language": "ru",
+      "query": "Хочу посмотреть картины, не памятники.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "art"
+        ],
+        "excludedCategories": [
+          "attraction"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "indirect-paintings",
+        "negation"
+      ]
+    },
+    {
+      "id": "RU08",
+      "language": "ru",
+      "query": "Недорогое тихое кафе с Wi-Fi и розетками.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "cafe"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [
+          {
+            "text": "Недорогое",
+            "reason": "no-data"
+          },
+          {
+            "text": "тихое",
+            "reason": "no-data"
+          },
+          {
+            "text": "Wi-Fi",
+            "reason": "no-data"
+          },
+          {
+            "text": "розетками",
+            "reason": "no-data"
+          }
+        ],
+        "controlConflicts": []
+      },
+      "features": [
+        "unsupported-price",
+        "unsupported-quiet",
+        "unsupported-wifi",
+        "unsupported-sockets"
+      ]
+    },
+    {
+      "id": "RU09",
+      "language": "ru",
+      "query": "Хочу парк на свежем воздухе.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": true,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "park"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [
+          {
+            "text": "на свежем воздухе",
+            "reason": "not-supported"
+          }
+        ],
+        "controlConflicts": [
+          "indoor"
+        ]
+      },
+      "features": [
+        "text-control-conflict"
+      ]
+    },
+    {
+      "id": "RU10",
+      "language": "ru",
+      "query": "Музей, библиотека и смотровая площадка.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "museum",
+          "library",
+          "viewpoint"
+        ],
+        "excludedCategories": [],
+        "includeMode": "all",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "three-categories",
+        "conjunction-all"
+      ]
+    },
+    {
+      "id": "KK01",
+      "language": "kk",
+      "query": "",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [
+          "park"
+        ],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "park"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "chips-only"
+      ]
+    },
+    {
+      "id": "KK02",
+      "language": "kk",
+      "query": "Кафелер мен саябақтарға барғым келмейді.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [],
+        "excludedCategories": [
+          "cafe",
+          "park"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "negated-list"
+      ]
+    },
+    {
+      "id": "KK03",
+      "language": "kk",
+      "query": "Кофе ішуге барғым келмейді, табиғат аясында серуендегім келеді.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "park"
+        ],
+        "excludedCategories": [
+          "cafe"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "negation-with-insertion",
+        "indirect-nature"
+      ]
+    },
+    {
+      "id": "KK04",
+      "language": "kk",
+      "query": "Мұражайға барғым келеді.",
+      "controls": {
+        "origin": {
+          "lat": 51.12828,
+          "lon": 71.43055,
+          "label": "Байтерек"
+        },
+        "minutes": 90,
+        "interests": [
+          "cafe"
+        ],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "museum"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "text-overrides-default-chip"
+      ]
+    },
+    {
+      "id": "KK05",
+      "language": "kk",
+      "query": "Кофе ішіп, саябаққа да барғым келеді.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "cafe",
+          "park"
+        ],
+        "excludedCategories": [],
+        "includeMode": "all",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "conjunction-all"
+      ]
+    },
+    {
+      "id": "KK06",
+      "language": "kk",
+      "query": "Мұражайға немесе кітапханаға барғым келеді.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "museum",
+          "library"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "alternative-any"
+      ]
+    },
+    {
+      "id": "KK07",
+      "language": "kk",
+      "query": "Суреттерді көргім келеді, ескерткіштерге бармаймын.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "art"
+        ],
+        "excludedCategories": [
+          "attraction"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "indirect-paintings",
+        "negation"
+      ]
+    },
+    {
+      "id": "KK08",
+      "language": "kk",
+      "query": "Тыныш әрі арзан, Wi-Fi мен розеткасы бар кофехана керек.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "cafe"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [
+          {
+            "text": "Тыныш",
+            "reason": "no-data"
+          },
+          {
+            "text": "арзан",
+            "reason": "no-data"
+          },
+          {
+            "text": "Wi-Fi",
+            "reason": "no-data"
+          },
+          {
+            "text": "розеткасы",
+            "reason": "no-data"
+          }
+        ],
+        "controlConflicts": []
+      },
+      "features": [
+        "unsupported-quiet",
+        "unsupported-price",
+        "unsupported-wifi",
+        "unsupported-sockets"
+      ]
+    },
+    {
+      "id": "KK09",
+      "language": "kk",
+      "query": "Баламен ойын алаңына барғым келеді, кафе ұсынбаңыз.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "playground"
+        ],
+        "excludedCategories": [
+          "cafe"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "child-playground",
+        "negation"
+      ]
+    },
+    {
+      "id": "KK10",
+      "language": "kk",
+      "query": "Қаланың панорамасын көргім келеді.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "viewpoint"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "indirect-panorama"
+      ]
+    },
+    {
+      "id": "EN01",
+      "language": "en",
+      "query": "",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [
+          "art"
+        ],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "art"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "chips-only"
+      ]
+    },
+    {
+      "id": "EN02",
+      "language": "en",
+      "query": "No cafés or parks, please.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [],
+        "excludedCategories": [
+          "cafe",
+          "park"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "negated-list"
+      ]
+    },
+    {
+      "id": "EN03",
+      "language": "en",
+      "query": "I don't want to go to a café; I'd rather spend time in nature.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "park"
+        ],
+        "excludedCategories": [
+          "cafe"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "negation-with-insertion",
+        "indirect-nature"
+      ]
+    },
+    {
+      "id": "EN04",
+      "language": "en",
+      "query": "I want a museum.",
+      "controls": {
+        "origin": {
+          "lat": 51.12828,
+          "lon": 71.43055,
+          "label": "Bayterek"
+        },
+        "minutes": 90,
+        "interests": [
+          "cafe"
+        ],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "museum"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "text-overrides-default-chip"
+      ]
+    },
+    {
+      "id": "EN05",
+      "language": "en",
+      "query": "A coffee stop and a park walk.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "cafe",
+          "park"
+        ],
+        "excludedCategories": [],
+        "includeMode": "all",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "conjunction-all"
+      ]
+    },
+    {
+      "id": "EN06",
+      "language": "en",
+      "query": "A museum or an art gallery would work.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "museum",
+          "art"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "alternative-any",
+        "gallery-normalized-art"
+      ]
+    },
+    {
+      "id": "EN07",
+      "language": "en",
+      "query": "I'd like to see paintings, not monuments.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "art"
+        ],
+        "excludedCategories": [
+          "attraction"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "indirect-paintings",
+        "negation"
+      ]
+    },
+    {
+      "id": "EN08",
+      "language": "en",
+      "query": "Find a quiet, cheap café with Wi-Fi and power sockets.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "cafe"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [
+          {
+            "text": "quiet",
+            "reason": "no-data"
+          },
+          {
+            "text": "cheap",
+            "reason": "no-data"
+          },
+          {
+            "text": "Wi-Fi",
+            "reason": "no-data"
+          },
+          {
+            "text": "power sockets",
+            "reason": "no-data"
+          }
+        ],
+        "controlConflicts": []
+      },
+      "features": [
+        "unsupported-quiet",
+        "unsupported-price",
+        "unsupported-wifi",
+        "unsupported-sockets"
+      ]
+    },
+    {
+      "id": "EN09",
+      "language": "en",
+      "query": "Take the child to a playground, without cafés or museums.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": false,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "playground"
+        ],
+        "excludedCategories": [
+          "cafe",
+          "museum"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "controlConflicts": []
+      },
+      "features": [
+        "child-playground",
+        "negated-list"
+      ]
+    },
+    {
+      "id": "EN10",
+      "language": "en",
+      "query": "A park outdoors, but keep the indoor-only filter on.",
+      "controls": {
+        "origin": {
+          "lat": 51.1643,
+          "lon": 71.4258,
+          "label": "Есиль"
+        },
+        "minutes": 90,
+        "interests": [],
+        "indoor": true,
+        "knownHoursOnly": false,
+        "accessible": false,
+        "now": "2026-10-20T12:00:00+05:00"
+      },
+      "expected": {
+        "desiredCategories": [
+          "park"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [
+          {
+            "text": "outdoors",
+            "reason": "not-supported"
+          }
+        ],
+        "controlConflicts": [
+          "indoor"
+        ]
+      },
+      "features": [
+        "text-control-conflict"
+      ]
+    }
+  ]
+}

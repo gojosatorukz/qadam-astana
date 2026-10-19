@@ -1,0 +1,61 @@
+{
+  "copiedAtUTC": "2026-10-19T20:26:16.610711+00:00",
+  "policy": "Byte-exact public synthetic-query/OSM evidence. No credentials, private screenshots, provider bodies or real-user traces. Clean-install report is a separately sanitized derivative.",
+  "files": [
+    {
+      "file": "gold.v1.json",
+      "bytes": 25732,
+      "sha256": "a3172fd7314c898e8fc5eb4cb56c62e0eb80fae8559619dc499744c092fc3d95"
+    },
+    {
+      "file": "gold-freeze.json",
+      "bytes": 492,
+      "sha256": "40abcb200a7f1c4497458a1546a5e88e4e2f034e1205aa21e06981efd37acfae"
+    },
+    {
+      "file": "contract-mapping.v1.json",
+      "bytes": 1197,
+      "sha256": "46b483de2d401286008ff5b008f0f0054657452f2c9fbce1fd5eaab9859ad23c"
+    },
+    {
+      "file": "contract-mapping-freeze.json",
+      "bytes": 282,
+      "sha256": "00b3d19e8a5bd993a8b34eb708e224744f56fa5e90d190b677fed467aeda9eb2"
+    },
+    {
+      "file": "baseline.v1.json",
+      "bytes": 279474,
+      "sha256": "ddf210bedd9658d00b5b5ba45a43bedefda6ec903ba1d8faee17920105a3adbd"
+    },
+    {
+      "file": "baseline-summary.v1.json",
+      "bytes": 1748,
+      "sha256": "22620f9b77ec49c671a03e36d9850e7ec0df18fa59ec59530bd73893a7d8e6c5"
+    },
+    {
+      "file": "baseline-freeze.json",
+      "bytes": 285,
+      "sha256": "225403af042e233e7e29fd8da8848097dd673f3fccfe1a1d395694a995612bcb"
+    },
+    {
+      "file": "final-intent-thirty.v4.json",
+      "bytes": 44559,
+      "sha256": "754cd0cbed4f21d085b24505efc3bb91ef99ece9be4096ff460c82695d4453be"
+    },
+    {
+      "file": "final-intent-freeze.v4.json",
+      "bytes": 2032,
+      "sha256": "f05a0b1de98641fff15c9f7ca1cfacd20462d1f5a48a2b85b810990f68b06c60"
+    },
+    {
+      "file": "final-analysis.v4.txt",
+      "bytes": 3889,
+      "sha256": "e11c1af9facd0268c46a9cd87690ed3f87e8a280d4eb09a461b8d4baaa3d120c"
+    },
+    {
+      "file": "replay-contract.v1.json",
+      "bytes": 251953,
+      "sha256": "e6ed787b5b1d094d1b479e2e5a8cdff7183fc8cf18699119b2aec7a35d57ef0d"
+    }
+  ]
+}

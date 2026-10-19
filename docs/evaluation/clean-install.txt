@@ -1,0 +1,113 @@
+Qadam isolated clean-install release verification
+
+Install result recorded UTC: 2026-10-19T20:06:52.966505+00:00
+Directory: <isolated-checkout>
+Platform: macOS Darwin 25.2.0
+Node: v24.12.0 (required >=22.13.0)
+npm: 11.6.2
+
+INSTALL: PASS
+Command: npm ci --registry=https://registry.npmjs.org/ --userconfig=<isolated-npmrc> --cache=<isolated-cache> --no-audit --no-fund --loglevel=notice
+Result: exit 0; added 688 packages in 34s.
+Lock entries: 894. All 887 resolved URLs use registry.npmjs.org.
+Original and installed package-lock.json SHA256: eedaeab6870c0f70f9db869fcaa24abae9b0f945cbc9acb8a43b6e7ed6bcbfca
+No lockfile rewrite or dependency workaround required.
+No .env files, credentials, existing node_modules, dist or runtime copied.
+Main project node_modules and lockfile untouched.
+Warnings: upstream deprecation of @esbuild-kit/esm-loader@2.6.5 and @esbuild-kit/core-utils@3.3.2; installation successful.
+
+SOURCE SYNC: PASS; root READY received for frozen v4. One public source snapshot copied without .env*, .dev.vars*, .git, installed dependencies, dist, runtimes or build cache.
+Source files: 146; bytes: 7601299.
+Source manifest SHA256: a53e24933faf7224d5fc84820ecb60de52704c20753e4076e5bb9456fb3a0f35
+Manifest: <local-source-manifest>
+Synced UTC: 2026-10-19T20:17:30.781135+00:00
+TYPECHECK: PASS
+Command: ./node_modules/.bin/tsc --noEmit --incremental false
+Exit: 0; no diagnostics; approximately 8 seconds.
+TEST SUITE: PASS
+Command: node --experimental-strip-types --test tests/*.test.ts
+Result: 167 tests, 167 passed, 0 failed/skipped/cancelled; duration 2607.493334 ms.
+Includes 30 frozen oracle-contract integration cases; these validate pipeline constraints with supplied validated contracts and do not measure model intent accuracy.
+Includes real saved OSM POI+walking graph scenarios, planner intent regressions, mocked provider failures/deadlines and finite-vocabulary generation checks.
+NO-KEY HTTP API: PASS
+Isolated server: http://127.0.0.1:5197; started with GEMINI_API_KEY/GOOGLE_API_KEY/GOOGLE_APPLICATION_CREDENTIALS/GEMINI_MODEL/GEMINI_FALLBACK_MODELS explicitly unset. Health confirms geminiConfigured=false.
+Smoke assertions passed: 8/8.
+[
+  {
+    "case": "GET /api/plan without credentials",
+    "status": 200,
+    "geminiConfigured": false,
+    "poiCount": 890,
+    "graphNodes": 81383
+  },
+  {
+    "case": "empty query + coffee chips without credentials",
+    "status": 200,
+    "intent": "manual",
+    "intentStatus": "matched",
+    "generationMode": "retrieval",
+    "stops": [
+      "osm-way-1333795504"
+    ],
+    "minutes": 39,
+    "returnMinutes": 5,
+    "routeKind": "walking"
+  },
+  {
+    "case": "semantic text without credentials (ru)",
+    "status": 200,
+    "plan": null,
+    "intent": "unavailable",
+    "failure": "not-configured",
+    "intentStatus": "needs-clarification"
+  },
+  {
+    "case": "semantic text without credentials (en)",
+    "status": 200,
+    "plan": null,
+    "intent": "unavailable",
+    "failure": "not-configured",
+    "intentStatus": "needs-clarification"
+  },
+  {
+    "case": "semantic text without credentials (kk)",
+    "status": 200,
+    "plan": null,
+    "intent": "unavailable",
+    "failure": "not-configured",
+    "intentStatus": "needs-clarification"
+  },
+  {
+    "case": "manual coffee 20-minute infeasible round trip",
+    "status": 200,
+    "plan": null,
+    "intent": "manual",
+    "intentStatus": "empty"
+  },
+  {
+    "case": "timezone-less now rejected at HTTP boundary",
+    "status": 400
+  },
+  {
+    "case": "GET / app HTML",
+    "status": 200
+  }
+]
+Server stopped after verification. No source coordinates from a user were used: requests use the public riverfront preset.
+Local app HTML returned HTTP 200 and contains Qadam.
+The smoke checks actual HTTP behavior; it does not claim browser interaction or live Gemini model accuracy.
+
+Root-authorized final UI refresh after initial snapshot: app/page.tsx Reset aria localization and app/globals.css 44px controls; only these two files recopied. Backend unchanged.
+Final source manifest SHA256: e53c701426f4adaf735387773475fb59dc572a34388117984d26693bd84a9c8c
+
+TYPECHECK after the final authorized two-file UI refresh: PASS; same tsc command, exit 0, no diagnostics.
+
+Final root-authorized date UI refresh: app/page.tsx and lib/ui-copy.ts (formatAlmatyDate for WebKit Kazakh month names); backend and intent benchmark hashes unchanged.
+Source manifest SHA256 after this UI refresh: 3a035885425f757a96d00adef6850220edda38ab8e6f746d19efa36f07605749
+Final date-UI typecheck: PASS; ./node_modules/.bin/tsc --noEmit --incremental false; exit 0; no diagnostics. No dependency reinstall or backend/test changes required.
+
+Latest root-authorized UI refresh (budget request race): app/page.tsx only. Budget changes invalidate/abort the pending request before changing minutes; an existing result can then rebuild. Backend/intent/RAG and dependency inputs unchanged.
+Refresh UTC: 2026-10-19T20:34:17.351616+00:00
+Refreshed page SHA256: 4f9ee1afcbc3adb8f7d5724d01bb4a2d6a417d62cd7a7b53eb54723a0f1651f4
+Source manifest SHA256 after budget race refresh: 73040ac980e75d2de6a88c33f0de3a8d9c4bf0b0b493855b61f7e9d20010b66a
+Budget-race UI typecheck: PASS; ./node_modules/.bin/tsc --noEmit --incremental false; exit 0; no diagnostics. No npm reinstall or test rerun: only the UI request invalidation changed, as authorized by root. Browser race verification is owned by root and is not claimed by this clean-install check.

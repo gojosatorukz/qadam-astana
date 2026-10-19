@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "fixedAt": "2026-10-19T19:53:18.769205+00:00",
+  "goldSha256": "a3172fd7314c898e8fc5eb4cb56c62e0eb80fae8559619dc499744c092fc3d95",
+  "basis": "Root supplied the implementation contract after gold was sealed, before any new implementation/model results were observed. Original semantic expectations remain frozen.",
+  "contractUnsupportedReasons": [
+    "no-data",
+    "use-controls",
+    "not-supported"
+  ],
+  "mapping": {
+    "unsupportedForControlConflict": "For RU09 and EN10, keep exact extract and map gold v1 reason not-supported to public-contract reason use-controls.",
+    "needsClarification": "true exactly when expected.controlConflicts is nonempty; false for all other v1 cases.",
+    "setComparison": "desiredCategories and excludedCategories ignore order and duplicates; all actual outputs still retained verbatim.",
+    "unsupportedComparison": "Literal query extract, case-insensitive. Exact fragment preferred; benchmark reports per-attribute semantic coverage separately from strict exact-text equality to avoid conflating wording with missing attributes."
+  },
+  "controlConflictCases": [
+    "RU09",
+    "EN10"
+  ],
+  "observedNewModelCallsAtFreeze": 0
+}

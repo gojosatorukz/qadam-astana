@@ -1,0 +1,1796 @@
+{
+  "version": 4,
+  "kind": "single-final-frozen-30-case-evaluation",
+  "startedAt": "2026-10-19T20:13:07.900Z",
+  "finishedAt": "2026-10-19T20:14:07.898Z",
+  "preCallFreeze": "final-intent-freeze.v4.json",
+  "hashesBeforeCalls": {
+    "intentSha256": "a5be7a0819f8fad7605c858d48545cb4509f48f5f44b13b11b986265f32a5dde",
+    "promptSha256": "ebe7d291a68871edea28b60bb07f21f7f5f7888805972d7318a1331398929e1f",
+    "goldSha256": "a3172fd7314c898e8fc5eb4cb56c62e0eb80fae8559619dc499744c092fc3d95",
+    "contractMappingSha256": "46b483de2d401286008ff5b008f0f0054657452f2c9fbce1fd5eaab9859ad23c",
+    "intentTypesSha256": "6ea452ff59031ecc7a2a6dbec639dcdc1aba6b0330ca1e13eb9b5659259e876e"
+  },
+  "model": "gemini-3.5-flash-lite",
+  "totalTimeoutMs": 6000,
+  "pauseBetweenCasesMs": 1000,
+  "plannedCaseEvaluations": 30,
+  "plannedProviderCalls": 27,
+  "completedCases": 30,
+  "actualProviderCalls": 27,
+  "stoppedEarly": {
+    "reason": "Two consecutive infrastructure/provider/timeout failures; no retry",
+    "afterId": "EN10"
+  },
+  "partition": {
+    "development9Ids": [
+      "RU03",
+      "RU04",
+      "RU08",
+      "KK05",
+      "KK06",
+      "KK08",
+      "EN02",
+      "EN07",
+      "EN10"
+    ],
+    "previouslyUnseen21Ids": [
+      "RU01",
+      "RU02",
+      "RU05",
+      "RU06",
+      "RU07",
+      "RU09",
+      "RU10",
+      "KK01",
+      "KK02",
+      "KK03",
+      "KK04",
+      "KK07",
+      "KK09",
+      "KK10",
+      "EN01",
+      "EN03",
+      "EN04",
+      "EN05",
+      "EN06",
+      "EN08",
+      "EN09"
+    ],
+    "manualIds": [
+      "RU01",
+      "KK01",
+      "EN01"
+    ]
+  },
+  "method": "One interpretIntent evaluation per frozen case, sequentially, unchanged final prompt/schema/validator. One provider request per nonempty query; empty query uses required manual chips mode. Compare exact category sets, includeMode, clarification and case-insensitive exact unsupported quote+reason pairs against unchanged mapped gold. No retries.",
+  "limits": [
+    "A single run on 30 selected adversarial inputs, not an estimate of population accuracy.",
+    "Nine inputs were development examples. The 21 other IDs had not been submitted to this intent provider before this frozen run; they are reported separately. The general implementation was designed for the task and closed category vocabulary, so first-seen does not mean an external benchmark.",
+    "Three first-seen inputs have empty queries and correctly use manual chips. Thus this is 30 evaluated cases and 27 planned Gemini calls, not 30 Gemini-parsed inputs.",
+    "Literal expected-fragment coverage is reported separately from exact quote equality and is not a complete semantic accuracy measure.",
+    "All failures remain in the denominator. No prompts, request headers, key, environment values or provider bodies are stored."
+  ],
+  "summary": {
+    "all": {
+      "evaluatedCases": 30,
+      "providerCalls": 27,
+      "geminiContracts": 25,
+      "manualContracts": 3,
+      "strictMatches": 26,
+      "strictNonmatches": 4,
+      "desiredExactMatches": 28,
+      "excludedExactMatches": 28,
+      "includeModeExactMatches": 28,
+      "unsupportedExactQuoteMatches": 26,
+      "clarificationExactMatches": 28,
+      "failures": {
+        "not-configured": 0,
+        "timeout": 0,
+        "provider": 2,
+        "invalid-output": 0
+      },
+      "http429": 2,
+      "literalUnsupportedCoverage": {
+        "covered": 13,
+        "total": 14
+      },
+      "providerLatencyMs": {
+        "min": 197,
+        "median": 980,
+        "max": 5293
+      }
+    },
+    "development9": {
+      "evaluatedCases": 9,
+      "providerCalls": 9,
+      "geminiContracts": 8,
+      "manualContracts": 0,
+      "strictMatches": 6,
+      "strictNonmatches": 3,
+      "desiredExactMatches": 8,
+      "excludedExactMatches": 8,
+      "includeModeExactMatches": 8,
+      "unsupportedExactQuoteMatches": 6,
+      "clarificationExactMatches": 8,
+      "failures": {
+        "not-configured": 0,
+        "timeout": 0,
+        "provider": 1,
+        "invalid-output": 0
+      },
+      "http429": 1,
+      "literalUnsupportedCoverage": {
+        "covered": 8,
+        "total": 9
+      },
+      "providerLatencyMs": {
+        "min": 209,
+        "median": 1231,
+        "max": 5293
+      }
+    },
+    "previouslyUnseen21": {
+      "evaluatedCases": 21,
+      "providerCalls": 18,
+      "geminiContracts": 17,
+      "manualContracts": 3,
+      "strictMatches": 20,
+      "strictNonmatches": 1,
+      "desiredExactMatches": 20,
+      "excludedExactMatches": 20,
+      "includeModeExactMatches": 20,
+      "unsupportedExactQuoteMatches": 20,
+      "clarificationExactMatches": 20,
+      "failures": {
+        "not-configured": 0,
+        "timeout": 0,
+        "provider": 1,
+        "invalid-output": 0
+      },
+      "http429": 1,
+      "literalUnsupportedCoverage": {
+        "covered": 5,
+        "total": 5
+      },
+      "providerLatencyMs": {
+        "min": 197,
+        "median": 942,
+        "max": 1455
+      }
+    },
+    "previouslyUnseenProviderOnly": {
+      "evaluatedCases": 18,
+      "providerCalls": 18,
+      "geminiContracts": 17,
+      "manualContracts": 0,
+      "strictMatches": 17,
+      "strictNonmatches": 1,
+      "desiredExactMatches": 17,
+      "excludedExactMatches": 17,
+      "includeModeExactMatches": 17,
+      "unsupportedExactQuoteMatches": 17,
+      "clarificationExactMatches": 17,
+      "failures": {
+        "not-configured": 0,
+        "timeout": 0,
+        "provider": 1,
+        "invalid-output": 0
+      },
+      "http429": 1,
+      "literalUnsupportedCoverage": {
+        "covered": 5,
+        "total": 5
+      },
+      "providerLatencyMs": {
+        "min": 197,
+        "median": 942,
+        "max": 1455
+      }
+    },
+    "byLanguage": {
+      "ru": {
+        "evaluatedCases": 10,
+        "providerCalls": 9,
+        "geminiContracts": 9,
+        "manualContracts": 1,
+        "strictMatches": 9,
+        "strictNonmatches": 1,
+        "desiredExactMatches": 10,
+        "excludedExactMatches": 10,
+        "includeModeExactMatches": 10,
+        "unsupportedExactQuoteMatches": 9,
+        "clarificationExactMatches": 10,
+        "failures": {
+          "not-configured": 0,
+          "timeout": 0,
+          "provider": 0,
+          "invalid-output": 0
+        },
+        "http429": 0,
+        "literalUnsupportedCoverage": {
+          "covered": 5,
+          "total": 5
+        },
+        "providerLatencyMs": {
+          "min": 842,
+          "median": 1128,
+          "max": 1455
+        }
+      },
+      "kk": {
+        "evaluatedCases": 10,
+        "providerCalls": 9,
+        "geminiContracts": 9,
+        "manualContracts": 1,
+        "strictMatches": 9,
+        "strictNonmatches": 1,
+        "desiredExactMatches": 10,
+        "excludedExactMatches": 10,
+        "includeModeExactMatches": 10,
+        "unsupportedExactQuoteMatches": 9,
+        "clarificationExactMatches": 10,
+        "failures": {
+          "not-configured": 0,
+          "timeout": 0,
+          "provider": 0,
+          "invalid-output": 0
+        },
+        "http429": 0,
+        "literalUnsupportedCoverage": {
+          "covered": 4,
+          "total": 4
+        },
+        "providerLatencyMs": {
+          "min": 697,
+          "median": 959,
+          "max": 1347
+        }
+      },
+      "en": {
+        "evaluatedCases": 10,
+        "providerCalls": 9,
+        "geminiContracts": 7,
+        "manualContracts": 1,
+        "strictMatches": 8,
+        "strictNonmatches": 2,
+        "desiredExactMatches": 8,
+        "excludedExactMatches": 8,
+        "includeModeExactMatches": 8,
+        "unsupportedExactQuoteMatches": 8,
+        "clarificationExactMatches": 8,
+        "failures": {
+          "not-configured": 0,
+          "timeout": 0,
+          "provider": 2,
+          "invalid-output": 0
+        },
+        "http429": 2,
+        "literalUnsupportedCoverage": {
+          "covered": 4,
+          "total": 5
+        },
+        "providerLatencyMs": {
+          "min": 197,
+          "median": 928,
+          "max": 5293
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "RU01",
+      "language": "ru",
+      "partition": "previously-unseen21",
+      "providerCalls": 0,
+      "httpStatus": null,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "cafe"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "manual",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "cafe"
+          ],
+          "excludedCategories": [],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 0
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "RU02",
+      "language": "ru",
+      "partition": "previously-unseen21",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [],
+        "excludedCategories": [
+          "cafe",
+          "park"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [],
+          "excludedCategories": [
+            "cafe",
+            "park"
+          ],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 1455
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "RU03",
+      "language": "ru",
+      "partition": "development9",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "park"
+        ],
+        "excludedCategories": [
+          "cafe"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "park"
+          ],
+          "excludedCategories": [
+            "cafe"
+          ],
+          "includeMode": "any",
+          "unsupported": [
+            {
+              "text": "прогуляться на природе",
+              "reason": "not-supported"
+            }
+          ],
+          "needsClarification": false
+        },
+        "ms": 980
+      },
+      "comparison": {
+        "strictMatch": false,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": false,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "RU04",
+      "language": "ru",
+      "partition": "development9",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "museum"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "museum"
+          ],
+          "excludedCategories": [],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 1231
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "RU05",
+      "language": "ru",
+      "partition": "previously-unseen21",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "cafe",
+          "museum"
+        ],
+        "excludedCategories": [],
+        "includeMode": "all",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "cafe",
+            "museum"
+          ],
+          "excludedCategories": [],
+          "includeMode": "all",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 1128
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "RU06",
+      "language": "ru",
+      "partition": "previously-unseen21",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "museum",
+          "library"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "museum",
+            "library"
+          ],
+          "excludedCategories": [],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 842
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "RU07",
+      "language": "ru",
+      "partition": "previously-unseen21",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "art"
+        ],
+        "excludedCategories": [
+          "attraction"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "art"
+          ],
+          "excludedCategories": [
+            "attraction"
+          ],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 938
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "RU08",
+      "language": "ru",
+      "partition": "development9",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "cafe"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [
+          {
+            "text": "Недорогое",
+            "reason": "no-data"
+          },
+          {
+            "text": "тихое",
+            "reason": "no-data"
+          },
+          {
+            "text": "Wi-Fi",
+            "reason": "no-data"
+          },
+          {
+            "text": "розетками",
+            "reason": "no-data"
+          }
+        ],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "cafe"
+          ],
+          "excludedCategories": [],
+          "includeMode": "any",
+          "unsupported": [
+            {
+              "text": "Недорогое",
+              "reason": "no-data"
+            },
+            {
+              "text": "тихое",
+              "reason": "no-data"
+            },
+            {
+              "text": "Wi-Fi",
+              "reason": "no-data"
+            },
+            {
+              "text": "розетками",
+              "reason": "no-data"
+            }
+          ],
+          "needsClarification": false
+        },
+        "ms": 1248
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 4,
+          "total": 4
+        }
+      }
+    },
+    {
+      "id": "RU09",
+      "language": "ru",
+      "partition": "previously-unseen21",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "park"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [
+          {
+            "text": "на свежем воздухе",
+            "reason": "use-controls"
+          }
+        ],
+        "needsClarification": true
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "park"
+          ],
+          "excludedCategories": [],
+          "includeMode": "any",
+          "unsupported": [
+            {
+              "text": "на свежем воздухе",
+              "reason": "use-controls"
+            }
+          ],
+          "needsClarification": true
+        },
+        "ms": 860
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 1,
+          "total": 1
+        }
+      }
+    },
+    {
+      "id": "RU10",
+      "language": "ru",
+      "partition": "previously-unseen21",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "museum",
+          "library",
+          "viewpoint"
+        ],
+        "excludedCategories": [],
+        "includeMode": "all",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "museum",
+            "library",
+            "viewpoint"
+          ],
+          "excludedCategories": [],
+          "includeMode": "all",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 1153
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "KK01",
+      "language": "kk",
+      "partition": "previously-unseen21",
+      "providerCalls": 0,
+      "httpStatus": null,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "park"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "manual",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "park"
+          ],
+          "excludedCategories": [],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 0
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "KK02",
+      "language": "kk",
+      "partition": "previously-unseen21",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [],
+        "excludedCategories": [
+          "cafe",
+          "park"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [],
+          "excludedCategories": [
+            "cafe",
+            "park"
+          ],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 1347
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "KK03",
+      "language": "kk",
+      "partition": "previously-unseen21",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "park"
+        ],
+        "excludedCategories": [
+          "cafe"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "park"
+          ],
+          "excludedCategories": [
+            "cafe"
+          ],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 942
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "KK04",
+      "language": "kk",
+      "partition": "previously-unseen21",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "museum"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "museum"
+          ],
+          "excludedCategories": [],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 697
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "KK05",
+      "language": "kk",
+      "partition": "development9",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "cafe",
+          "park"
+        ],
+        "excludedCategories": [],
+        "includeMode": "all",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "cafe",
+            "park"
+          ],
+          "excludedCategories": [],
+          "includeMode": "all",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 1201
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "KK06",
+      "language": "kk",
+      "partition": "development9",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "museum",
+          "library"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "museum",
+            "library"
+          ],
+          "excludedCategories": [],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 837
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "KK07",
+      "language": "kk",
+      "partition": "previously-unseen21",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "art"
+        ],
+        "excludedCategories": [
+          "attraction"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "art"
+          ],
+          "excludedCategories": [
+            "attraction"
+          ],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 918
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "KK08",
+      "language": "kk",
+      "partition": "development9",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "cafe"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [
+          {
+            "text": "Тыныш",
+            "reason": "no-data"
+          },
+          {
+            "text": "арзан",
+            "reason": "no-data"
+          },
+          {
+            "text": "Wi-Fi",
+            "reason": "no-data"
+          },
+          {
+            "text": "розеткасы",
+            "reason": "no-data"
+          }
+        ],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "cafe"
+          ],
+          "excludedCategories": [],
+          "includeMode": "any",
+          "unsupported": [
+            {
+              "text": "Тыныш",
+              "reason": "no-data"
+            },
+            {
+              "text": "арзан",
+              "reason": "no-data"
+            },
+            {
+              "text": "Wi-Fi мен розеткасы бар",
+              "reason": "no-data"
+            }
+          ],
+          "needsClarification": false
+        },
+        "ms": 1285
+      },
+      "comparison": {
+        "strictMatch": false,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": false,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 4,
+          "total": 4
+        }
+      }
+    },
+    {
+      "id": "KK09",
+      "language": "kk",
+      "partition": "previously-unseen21",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "playground"
+        ],
+        "excludedCategories": [
+          "cafe"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "playground"
+          ],
+          "excludedCategories": [
+            "cafe"
+          ],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 959
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "KK10",
+      "language": "kk",
+      "partition": "previously-unseen21",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "viewpoint"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "viewpoint"
+          ],
+          "excludedCategories": [],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 1034
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "EN01",
+      "language": "en",
+      "partition": "previously-unseen21",
+      "providerCalls": 0,
+      "httpStatus": null,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "art"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "manual",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "art"
+          ],
+          "excludedCategories": [],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 0
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "EN02",
+      "language": "en",
+      "partition": "development9",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [],
+        "excludedCategories": [
+          "cafe",
+          "park"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [],
+          "excludedCategories": [
+            "cafe",
+            "park"
+          ],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 1309
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "EN03",
+      "language": "en",
+      "partition": "previously-unseen21",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "park"
+        ],
+        "excludedCategories": [
+          "cafe"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "park"
+          ],
+          "excludedCategories": [
+            "cafe"
+          ],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 849
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "EN04",
+      "language": "en",
+      "partition": "previously-unseen21",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "museum"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "museum"
+          ],
+          "excludedCategories": [],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 855
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "EN05",
+      "language": "en",
+      "partition": "previously-unseen21",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "cafe",
+          "park"
+        ],
+        "excludedCategories": [],
+        "includeMode": "all",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "cafe",
+            "park"
+          ],
+          "excludedCategories": [],
+          "includeMode": "all",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 999
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "EN06",
+      "language": "en",
+      "partition": "previously-unseen21",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "museum",
+          "art"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "museum",
+            "art"
+          ],
+          "excludedCategories": [],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 928
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "EN07",
+      "language": "en",
+      "partition": "development9",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "art"
+        ],
+        "excludedCategories": [
+          "attraction"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "art"
+          ],
+          "excludedCategories": [
+            "attraction"
+          ],
+          "includeMode": "any",
+          "unsupported": [],
+          "needsClarification": false
+        },
+        "ms": 5293
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "EN08",
+      "language": "en",
+      "partition": "previously-unseen21",
+      "providerCalls": 1,
+      "httpStatus": 200,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "cafe"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [
+          {
+            "text": "quiet",
+            "reason": "no-data"
+          },
+          {
+            "text": "cheap",
+            "reason": "no-data"
+          },
+          {
+            "text": "Wi-Fi",
+            "reason": "no-data"
+          },
+          {
+            "text": "power sockets",
+            "reason": "no-data"
+          }
+        ],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "gemini",
+        "contract": {
+          "version": 1,
+          "desiredCategories": [
+            "cafe"
+          ],
+          "excludedCategories": [],
+          "includeMode": "any",
+          "unsupported": [
+            {
+              "text": "quiet",
+              "reason": "no-data"
+            },
+            {
+              "text": "cheap",
+              "reason": "no-data"
+            },
+            {
+              "text": "Wi-Fi",
+              "reason": "no-data"
+            },
+            {
+              "text": "power sockets",
+              "reason": "no-data"
+            }
+          ],
+          "needsClarification": false
+        },
+        "ms": 1158
+      },
+      "comparison": {
+        "strictMatch": true,
+        "facets": {
+          "desiredCategories": true,
+          "excludedCategories": true,
+          "includeMode": true,
+          "unsupportedExactQuotes": true,
+          "needsClarification": true
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 4,
+          "total": 4
+        }
+      }
+    },
+    {
+      "id": "EN09",
+      "language": "en",
+      "partition": "previously-unseen21",
+      "providerCalls": 1,
+      "httpStatus": 429,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "playground"
+        ],
+        "excludedCategories": [
+          "cafe",
+          "museum"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "resolution": {
+        "mode": "unavailable",
+        "contract": null,
+        "failure": "provider",
+        "ms": 197
+      },
+      "comparison": {
+        "strictMatch": false,
+        "facets": {
+          "desiredCategories": false,
+          "excludedCategories": false,
+          "includeMode": false,
+          "unsupportedExactQuotes": false,
+          "needsClarification": false
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 0
+        }
+      }
+    },
+    {
+      "id": "EN10",
+      "language": "en",
+      "partition": "development9",
+      "providerCalls": 1,
+      "httpStatus": 429,
+      "expected": {
+        "version": 1,
+        "desiredCategories": [
+          "park"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [
+          {
+            "text": "outdoors",
+            "reason": "use-controls"
+          }
+        ],
+        "needsClarification": true
+      },
+      "resolution": {
+        "mode": "unavailable",
+        "contract": null,
+        "failure": "provider",
+        "ms": 209
+      },
+      "comparison": {
+        "strictMatch": false,
+        "facets": {
+          "desiredCategories": false,
+          "excludedCategories": false,
+          "includeMode": false,
+          "unsupportedExactQuotes": false,
+          "needsClarification": false
+        },
+        "literalUnsupportedCoverage": {
+          "covered": 0,
+          "total": 1
+        }
+      }
+    }
+  ],
+  "hashesAfterCalls": {
+    "intentSha256": "a5be7a0819f8fad7605c858d48545cb4509f48f5f44b13b11b986265f32a5dde",
+    "promptSha256": "ebe7d291a68871edea28b60bb07f21f7f5f7888805972d7318a1331398929e1f",
+    "goldSha256": "a3172fd7314c898e8fc5eb4cb56c62e0eb80fae8559619dc499744c092fc3d95",
+    "contractMappingSha256": "46b483de2d401286008ff5b008f0f0054657452f2c9fbce1fd5eaab9859ad23c",
+    "intentTypesSha256": "6ea452ff59031ecc7a2a6dbec639dcdc1aba6b0330ca1e13eb9b5659259e876e"
+  },
+  "sourceUnchanged": true
+}

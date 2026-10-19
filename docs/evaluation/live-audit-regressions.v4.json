@@ -1,0 +1,132 @@
+{
+  "checked_at_utc": "2026-10-19T20:40:07.422682+00:00",
+  "source_commit": "8d321bd7feb1093f53998947cec1d529cd28484f",
+  "not_part_of_frozen_benchmark": true,
+  "credentials_sent": false,
+  "cases": [
+    {
+      "case": "audit-T1",
+      "query": "Без кафе и парков",
+      "http": 200,
+      "intentMode": "gemini",
+      "status": "matched",
+      "contract": {
+        "version": 1,
+        "desiredCategories": [],
+        "excludedCategories": [
+          "cafe",
+          "park"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "stopCategories": [
+        "attraction",
+        "playground",
+        "library"
+      ],
+      "minutes": 79,
+      "generationMode": "gemini",
+      "passed": true
+    },
+    {
+      "case": "audit-T2",
+      "query": "Не хочу идти в кафе",
+      "http": 200,
+      "intentMode": "gemini",
+      "status": "matched",
+      "contract": {
+        "version": 1,
+        "desiredCategories": [],
+        "excludedCategories": [
+          "cafe"
+        ],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "stopCategories": [
+        "attraction",
+        "park",
+        "playground"
+      ],
+      "minutes": 78,
+      "generationMode": "gemini",
+      "passed": true
+    },
+    {
+      "case": "audit-T3",
+      "query": "Хочу музей",
+      "http": 200,
+      "intentMode": "gemini",
+      "status": "empty",
+      "contract": {
+        "version": 1,
+        "desiredCategories": [
+          "museum"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [],
+        "needsClarification": false
+      },
+      "stopCategories": [],
+      "minutes": null,
+      "generationMode": "retrieval",
+      "passed": true
+    },
+    {
+      "case": "audit-T4",
+      "query": "Хочу тихое недорогое кафе с розетками",
+      "http": 200,
+      "intentMode": "gemini",
+      "status": "partial",
+      "contract": {
+        "version": 1,
+        "desiredCategories": [
+          "cafe"
+        ],
+        "excludedCategories": [],
+        "includeMode": "any",
+        "unsupported": [
+          {
+            "text": "тихое",
+            "reason": "no-data"
+          },
+          {
+            "text": "недорогое",
+            "reason": "no-data"
+          },
+          {
+            "text": "с розетками",
+            "reason": "no-data"
+          }
+        ],
+        "needsClarification": false
+      },
+      "stopCategories": [
+        "cafe"
+      ],
+      "minutes": 43,
+      "generationMode": "gemini",
+      "passed": true
+    }
+  ],
+  "request_base": {
+    "origin": {
+      "lat": 51.12828,
+      "lon": 71.43055,
+      "label": "Байтерек"
+    },
+    "minutes": 90,
+    "interests": [
+      "cafe"
+    ],
+    "indoor": false,
+    "knownHoursOnly": false,
+    "accessible": false,
+    "language": "ru",
+    "now": "2026-10-20T12:00:00+05:00"
+  }
+}

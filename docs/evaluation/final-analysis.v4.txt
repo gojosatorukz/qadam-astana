@@ -1,0 +1,36 @@
+FINAL intent v4 — one frozen 30-case run, not population accuracy
+
+Final code/prompt are frozen for deployment. No prompt, schema, validator or expected-output edits were made during this run. No retry was performed.
+Intent code SHA256: a5be7a0819f8fad7605c858d48545cb4509f48f5f44b13b11b986265f32a5dde
+Prompt SHA256: ebe7d291a68871edea28b60bb07f21f7f5f7888805972d7318a1331398929e1f
+Gold SHA256: a3172fd7314c898e8fc5eb4cb56c62e0eb80fae8559619dc499744c092fc3d95
+
+Protocol and accounting
+All 30 frozen cases evaluated exactly once, in fixed order, with a one-second pause between cases.
+27 actual Gemini HTTP calls + 3 required manual empty-query/chips cases.
+Development sequence before this run used 21 real calls (9 v1 + 3 v2 diagnostic + 9 v3). Total actual Gemini calls across these evaluations: 48, not 51. This run did not include 30 cloud-parsed inputs.
+Before final calls, the partition was frozen: 9 development IDs; 21 IDs not previously submitted to this intent provider, including the 3 manual cases. The general implementation and policy had already been developed; this is a small selected adversarial set, not an external population benchmark.
+
+Observed results, failures retained in the denominator
+All 30: 26 strict mapped-contract matches, 4 nonmatches.
+Provider-only: 23/27 strict matches; 25 valid Gemini contracts and 2 HTTP429 failures.
+Manual: 3/3 strict matches.
+Previously unseen21: 20/21 strict matches; provider-only subset 17/18, plus 3/3 manual.
+Development9: 6/9 strict matches.
+Desired/excluded categories and includeMode: 28/30 exact each. Both failures are HTTP429; all 25 returned Gemini contracts match these category/logic facets.
+Invalid-output: 0. Timeout: 0. HTTP429/provider: 2.
+Observed provider-attempt latency: min197, median980, max5293ms; this includes fast HTTP429 attempts and is not a latency guarantee or load benchmark.
+
+Nonmatches — do not relabel them as successes
+RU03 (development): correct park desire and cafe exclusion, but it also calls the supported nature-walk phrase not-supported. This is an unnecessary/spurious unsupported disclosure, a semantic defect rather than only a quote-boundary difference.
+KK08 (development): correct category, no-data reason and clarification=false. All 4 no-data attribute fragments are covered, but Wi-Fi and sockets are combined into a longer query quote rather than the frozen exact extract pairs. Strict match fails, while literal attribute coverage is 4/4.
+EN09 (previously unseen) and EN10 (development): HTTP429, mode=unavailable, failure=provider. No generated contract was returned or substituted. They remain strict failures.
+
+Stop policy
+The two consecutive HTTP429 responses were the last two cases (EN09, EN10). The stop rule triggered at case30, so every planned case had already been attempted. The JSON's stoppedEarly field records that trigger, not an omitted remainder. There were no calls afterward and no attempt to manufacture successes by retry.
+
+Product policy in this frozen version
+A clear supported category with no-data preferences remains partial with visible unknowns, without blocking on clarification. Categoryless no-data queries require clarification so arbitrary nearby venues cannot look verified. Pure exclusions are allowed. Explicit control conflicts and ambiguous demands still ask for clarification. The exact-query quote check, disjoint exclusions and closed vocabulary remain strict.
+
+Presentation guidance
+Show tests, deterministic planner/gold replay and actual provider parsing separately. If showing v4, write "one run on 30 selected cases: 26 exact; 27 API calls +3 manual; first-seen subset20/21" with the first-seen provider-only17/18 caveat available in notes. Do not claim 30 Gemini calls, universal accuracy or a holdout independent of development design. Mention the two429 failures and explicit manual behavior as an operational limitation.

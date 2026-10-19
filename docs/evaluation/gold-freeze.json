@@ -1,0 +1,13 @@
+{
+  "sealedAt": "2026-10-19T19:52:18.090035+00:00",
+  "path": "research/intent-evaluation/gold.v1.json",
+  "sha256": "a3172fd7314c898e8fc5eb4cb56c62e0eb80fae8559619dc499744c092fc3d95",
+  "bytes": 25732,
+  "cases": 30,
+  "languages": {
+    "ru": 10,
+    "kk": 10,
+    "en": 10
+  },
+  "status": "Frozen before new intent implementation; do not change expected outcomes after observing results. If a genuine annotation error is found, create a separately versioned corrigendum and retain v1."
+}

@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-10-19T19:52:46.968Z",
+  "goldSha256": "a3172fd7314c898e8fc5eb4cb56c62e0eb80fae8559619dc499744c092fc3d95",
+  "plannerSha256": "551737d6fd3464816dde325dc1a3ada3831064004355553568f5ab3efb577db8",
+  "method": "Actual inferInterests/inferExcludedInterests and planRoute calls on independently frozen source and real saved OSM POI+walking graph; fixed 2026-10-20T12:00+05:00. No model or network. Legacy has no includeMode, unsupported or control-conflict fields, so its effective union behavior is any and absence of required disclosures is recorded.",
+  "limits": [
+    "30 selected adversarial cases, not a representative population sample.",
+    "No cloud model quality measured.",
+    "Canonical gallery→art mapping is reported only for semantic comparison; raw legacy outputs retained.",
+    "A missing all-category stop is not automatically a planner defect; feasibility and truthful partial/empty disclosure must be evaluated separately.",
+    "trace.ms contains observed non-deterministic local elapsed times."
+  ],
+  "summary": {
+    "count": 30,
+    "strictIntentMatches": 7,
+    "desiredCategoryExactMatches": 16,
+    "excludedCategoryExactMatches": 20,
+    "includeModeExactMatches": 26,
+    "unsupportedExactMatches": 25,
+    "controlConflictDisclosureExactMatches": 28,
+    "plansReturned": 27,
+    "routesWithGoldForbiddenCategory": 9,
+    "routesWithNoRequestedCategoryWhenDesiredNonempty": 4,
+    "budgetViolations": 0,
+    "returnViolations": 0,
+    "byLanguage": {
+      "ru": {
+        "count": 10,
+        "strictIntentMatches": 2
+      },
+      "kk": {
+        "count": 10,
+        "strictIntentMatches": 3
+      },
+      "en": {
+        "count": 10,
+        "strictIntentMatches": 2
+      }
+    }
+  }
+}
