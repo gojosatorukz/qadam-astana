@@ -1,0 +1,64 @@
+{
+  "created_at": "2026-10-20T04:09:02.258304+05:00",
+  "team": "Qadam",
+  "track": "AI MODELS FOR SMART CITY",
+  "submission_status": "HOLD — draft only; not submitted",
+  "site": "https://qadam-astana-walk.pubg-bekzat.chatgpt.site/",
+  "github": "https://github.com/gojosatorukz/qadam-astana",
+  "youtube": "https://youtu.be/u8qfP-Jfxq8",
+  "source_commit": "f274665892ae406ba308cb01f5e694903ee78e58",
+  "files": {
+    "START_HERE.txt": {
+      "bytes": 5992,
+      "sha256": "81efd847f6a16d34ac1d19129761da597698b29cea021430b68187d3afbc7977"
+    },
+    "presentation/qadam-pitch.pdf": {
+      "bytes": 770925,
+      "sha256": "5711192541c5cd9155bdd98a697142f209671b4cc1af89ac8784a7c8780b1a5e"
+    },
+    "presentation/qadam-pitch.pptx": {
+      "bytes": 488189,
+      "sha256": "77e9abe8c27e2d0891e6a293d5fa26ba0e8c6aace9c340f0cf20c4817144b2b2"
+    },
+    "presentation/qadam-speaker-script.md": {
+      "bytes": 9496,
+      "sha256": "de322393b5c92ca2b4d12183b48e3e877594753e04e40595238cf57f91f0baab"
+    },
+    "demo/qadam-demo.mp4": {
+      "bytes": 4656360,
+      "sha256": "e4dbee4eea918c8ec519613f320112630533850a82adc26442c108b2e81b3ad9"
+    },
+    "demo/subtitles.ru.srt": {
+      "bytes": 2975,
+      "sha256": "d81776d81e9c67eded3af7eb6d8c646b26a85e7660b87c452721e0ee0357591f"
+    },
+    "source/qadam-source.zip": {
+      "bytes": 2047625,
+      "sha256": "82349c8e0e410306a22d6aa59f8e05b694c1f350632da78aa6a347991f879abd"
+    },
+    "source/source-manifest.json": {
+      "bytes": 27522,
+      "sha256": "0e666ea317063b3458282858c11f8a9c181c0e8d71aaac7470a1a060924fc263"
+    },
+    "docs/EVALUATION.md": {
+      "bytes": 16056,
+      "sha256": "ae1ef2c17097681ccfe893f17d74b8c00b4f61dd0257468299cb20b65f183513"
+    },
+    "docs/TEST_SCENARIOS.md": {
+      "bytes": 11857,
+      "sha256": "f9217f13ff52f1979934dc008c43de8b3854cf52e5ae8d18966dee410e440e09"
+    },
+    "docs/JURY_QA.md": {
+      "bytes": 7548,
+      "sha256": "fef1d8e4b788212a0799428104aa0d4d5577ee6542dc0e77f71b9174833cde19"
+    },
+    "docs/DECISIONS.md": {
+      "bytes": 12953,
+      "sha256": "c5c6b979eba4beac0451ac8d9e30e8a04b5547400f38c5abcf5b9bfac205957e"
+    },
+    "docs/VNEXT_RELEASE.md": {
+      "bytes": 17951,
+      "sha256": "5eaf5def05eeabbddebd1956b30ecdfc9ab55ae30a41445275405ba09b56d254"
+    }
+  }
+}
