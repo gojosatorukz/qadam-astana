@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-20T12:01:53.395669+05:00",
+  "created_at": "2026-10-20T13:59:41.693979+05:00",
   "team": "Qadam",
   "track": "AI MODELS FOR SMART CITY",
   "submission_status": "HOLD — product iteration; baseline v9 media and saved form need refresh; not submitted",
@@ -7,11 +7,11 @@
   "site": "https://qadam-astana-walk.pubg-bekzat.chatgpt.site/",
   "github": "https://github.com/gojosatorukz/qadam-astana",
   "youtube": "https://youtu.be/YsN--AADsZ0",
-  "source_commit": "e3fb47fbc3f60e00384b313fc69f2e057673108c",
+  "source_commit": "e8c6d7ac7b1c6c93241d9307e81b7f51e0aa9221",
   "files": {
     "START_HERE.txt": {
-      "bytes": 4758,
-      "sha256": "9c186847376340569e88aa583b4ac3204ef142dde1ea20aa925cfb053845cedc"
+      "bytes": 5707,
+      "sha256": "f0cb876b6337fc63ba400cf84ca4d7c2083bd07d5bbeca21cfce2089aac37daa"
     },
     "presentation/qadam-pitch.pdf": {
       "bytes": 771040,
@@ -42,36 +42,36 @@
       "sha256": "70d6a494072f90149e86a9ceeafe0c602c76de90ff49c4f001c76fb08bdf39d1"
     },
     "source/qadam-source.zip": {
-      "bytes": 2624398,
-      "sha256": "8d90363be69652d6d19ca0cd2c459c86bb4a021b84fe45515dcea7eb91c17b08"
+      "bytes": 2659127,
+      "sha256": "18a5e85491878ffcef8776f670abc2b7e06f3296205eaa92f297e424913275e5"
     },
     "source/source-manifest.json": {
-      "bytes": 30357,
-      "sha256": "60e4ebe68465cd1f334b8a98f15f5e21da8443b3733296f9c3382b8af8d392e2"
+      "bytes": 31366,
+      "sha256": "f1f69549db4837da398f3d057abeda6e651931375e30026c66f6ca0e0642fd3e"
     },
     "docs/EVALUATION.md": {
       "bytes": 16056,
       "sha256": "ae1ef2c17097681ccfe893f17d74b8c00b4f61dd0257468299cb20b65f183513"
     },
     "docs/TEST_SCENARIOS.md": {
-      "bytes": 15798,
-      "sha256": "fe5c6353b2a3809a24a3c0ea2504dadd35f203388127e2272bbeddfd07acf897"
+      "bytes": 20937,
+      "sha256": "914af109ed7fe813e97bc1fe2640163f59802a14357a124116fa15503625d98e"
     },
     "docs/JURY_QA.md": {
-      "bytes": 11756,
-      "sha256": "d5158c02b004cd84eca205b8bbf661fb0b2c9bed5ec9a03159bb434dac6c41fb"
+      "bytes": 14566,
+      "sha256": "0e4d51b072393fce8517fb268362d32ef210c7f87478c04a825410808d28c8ab"
     },
     "docs/JURY_EVIDENCE.md": {
-      "bytes": 24402,
-      "sha256": "aa8133337351ac95106fa62d97625981a744740898501d03e3e2a826643c3000"
+      "bytes": 27462,
+      "sha256": "492bbd9a012c6cb765c23e67d07e9467b95a694daf716e2992a61b57be534a09"
     },
     "docs/DECISIONS.md": {
       "bytes": 18947,
       "sha256": "ad5b31ce8ff1ae7194c0c8c0b3d63873f4f51068a8e38cacc9c1077797b5f776"
     },
     "docs/VNEXT_RELEASE.md": {
-      "bytes": 35679,
-      "sha256": "c81667ff4f9387724b63d2eb507cf0612bf5ff5819bfdb409bf43ff323fb26fd"
+      "bytes": 39156,
+      "sha256": "601558c4a542755b80d2aa02da2c0910805a331ad24ec239b5d5c36582889072"
     }
   }
 }
