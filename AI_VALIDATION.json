@@ -1,0 +1,1089 @@
+{
+  "verifiedAt": "2026-10-20T17:26:21.849372+00:00",
+  "release": "ai-v18",
+  "site": "https://qadam-astana.pages.dev/",
+  "backupSite": "https://qadam-astana-walk.pubg-bekzat.chatgpt.site/",
+  "deployment": {
+    "id": "3c0aabe1-33f9-4f3d-8f9b-f33c75bf9e48",
+    "url": "https://3c0aabe1.qadam-astana.pages.dev",
+    "environment": "production",
+    "status": "success",
+    "method": "Existing authenticated dashboard Direct Upload"
+  },
+  "clientBundle": "/assets/index-2D4MFpyA.js",
+  "apiSha256": "35d508943398f60be9dea68964668dddf692cd6b8efde9d402f5df5fa841bba8",
+  "policy": {
+    "primary": "gemini-3.1-flash-lite",
+    "reserve": "@cf/google/gemma-4-26b-a4b-it",
+    "hedgeAfterMs": 1500,
+    "globalProviderDeadlineMs": 20000,
+    "maxModelCalls": 2,
+    "lexicalFallback": false,
+    "responseCache": false
+  },
+  "production": {
+    "requests": 30,
+    "validContracts": 30,
+    "semanticPassed": 30,
+    "unavailable": 0,
+    "batches": 3,
+    "additionalHoldoutCases": 10,
+    "winners": {
+      "cloudflare": 30,
+      "gemini": 0
+    },
+    "httpLatencyMs": {
+      "min": 2173,
+      "median": 2470.5,
+      "max": 4530
+    },
+    "beganAt": "2026-10-20T17:22:58.387Z",
+    "endedAt": "2026-10-20T17:25:29.097Z",
+    "availabilityGate": "PASSED_IN_OBSERVED_SAMPLE",
+    "limitation": "Finite selected synthetic public query sample, not an uptime SLA or a guarantee of all future semantic interpretations."
+  },
+  "mobile": {
+    "method": "Real public UI through CUA at390x844, free-text input, no injected model contract or private GPS",
+    "roundTripFood": {
+      "query": "Проголодался, хочу пообедать недалеко от старта",
+      "A": "Bayterek",
+      "B": null,
+      "minutes": 45,
+      "routes": 4,
+      "intent": "cloudflare"
+    },
+    "negation": {
+      "query": "Хочу прогуляться в парке, но в кафе не заходить",
+      "A": "Bayterek",
+      "B": null,
+      "minutes": 45,
+      "routes": 1,
+      "cafeExcluded": true
+    },
+    "foodToB": {
+      "query": "Хочу пообедать по дороге",
+      "A": "Bayterek",
+      "B": "National Museum of Kazakhstan",
+      "minutes": 90,
+      "routes": 4,
+      "primaryWalkingMinutes": 52,
+      "primaryVisitMinutes": 30,
+      "primaryBufferMinutes": 8,
+      "intentMs": 2525,
+      "intent": "cloudflare"
+    },
+    "physicalPhone": false,
+    "physicalGpsWalk": false
+  },
+  "checks": {
+    "canonicalTests": 462,
+    "hostingTests": 43,
+    "typescript": "PASS",
+    "canonicalBuild": "PASS",
+    "hostingBuild": "PASS"
+  },
+  "history": {
+    "geminiOnlyV17": "6/10 valid contracts,4provider/timeouts; retained separately",
+    "v18Prototype": "16/20 strict semantic checks after evaluation correction; all actual outcomes retained",
+    "v18CorrectedBeforeFastHedge": "20/20 valid contracts,19/20 strict semantic checks; missing unsupported football quote retained"
+  },
+  "privacy": {
+    "coordinatesPassportAndGpsStreamToModel": false,
+    "modelInput": "User text and bounded current controls only; free text can contain personal details. Technical provider logs are outside application control.",
+    "modelTraining": false,
+    "cityReporting": false
+  },
+  "billing": "Existing Free deployment; no subscription, paid binding, new API key or new Wrangler grant. Workers AI has a finite daily free allowance.",
+  "media": "UNCHANGED baselinev9",
+  "submission": "HOLD-NOT-SUBMITTED; form untouched",
+  "reproduction": "Run node AI_BENCHMARK.mjs 1 (or2/3). Makes10 real public API calls perbatch and writes production-batchN.json. Consumes finite free model allowance. Expected assertions are independent in script. Outcomes may change with provider availability; this is not a cached demonstration.",
+  "observedBatches": [
+    {
+      "beganAt": "2026-10-20T17:22:58.387Z",
+      "at": "2026-10-20T17:23:24.686Z",
+      "origin": "https://qadam-astana.pages.dev",
+      "batch": 1,
+      "health": {
+        "status": "ok",
+        "architecture": "browser-graph-planning",
+        "routing": "client-osm-walking-graph",
+        "serverGraph": false,
+        "geminiConfigured": true,
+        "intentModel": "gemini-3.1-flash-lite",
+        "reserveConfigured": true,
+        "reserveModel": "@cf/google/gemma-4-26b-a4b-it",
+        "hedgeAfterMs": 1500,
+        "poiCount": 1204,
+        "serverNowMs": 1792516978599
+      },
+      "clientBundle": "/assets/index-2D4MFpyA.js",
+      "scope": "Real current public HTTP API requests, synthetic public queries, no cache or injected model contracts, all outcomes retained. Small finite sample is not an uptime SLA.",
+      "passed": 10,
+      "total": 10,
+      "results": [
+        {
+          "language": "ru",
+          "query": "покушать",
+          "http": 200,
+          "ms": 2938,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "food"
+              ],
+              "excludedCategories": [],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2868,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 58
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "kk",
+          "query": "тамақ ішкім келеді",
+          "http": 200,
+          "ms": 3669,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "food"
+              ],
+              "excludedCategories": [],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 3634,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 58
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "en",
+          "query": "a park without coffee",
+          "http": 200,
+          "ms": 2397,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "park"
+              ],
+              "excludedCategories": [
+                "cafe"
+              ],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2359,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 31
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "ru",
+          "query": "кофе и парк",
+          "http": 200,
+          "ms": 2468,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "cafe",
+                "park"
+              ],
+              "excludedCategories": [],
+              "includeMode": "all",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2438,
+            "attempts": [
+              {
+                "provider": "gemini",
+                "outcome": "provider"
+              },
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 32
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "en",
+          "query": "a museum or a park",
+          "http": 200,
+          "ms": 2386,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "museum",
+                "park"
+              ],
+              "excludedCategories": [],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2349,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 32
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "ru",
+          "query": "Я проголодался, хочу поесть по дороге",
+          "http": 200,
+          "ms": 2274,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "food"
+              ],
+              "excludedCategories": [],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2241,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 30
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "kk",
+          "query": "Кофе емес, мұражайға барғым келеді",
+          "http": 200,
+          "ms": 2173,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "museum"
+              ],
+              "excludedCategories": [
+                "cafe"
+              ],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2140,
+            "attempts": [
+              {
+                "provider": "gemini",
+                "outcome": "provider"
+              },
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 31
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "en",
+          "query": "a cafe with Wi-Fi",
+          "http": 200,
+          "ms": 2525,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "cafe"
+              ],
+              "excludedCategories": [],
+              "includeMode": "any",
+              "unsupported": [
+                {
+                  "text": "Wi-Fi",
+                  "reason": "no-data"
+                }
+              ],
+              "needsClarification": false
+            },
+            "ms": 2470,
+            "attempts": [
+              {
+                "provider": "gemini",
+                "outcome": "provider"
+              },
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 42
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "ru",
+          "query": "футбол",
+          "http": 200,
+          "ms": 2801,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [],
+              "excludedCategories": [],
+              "includeMode": "any",
+              "unsupported": [
+                {
+                  "text": "футбол",
+                  "reason": "not-supported"
+                }
+              ],
+              "needsClarification": true
+            },
+            "ms": 2766,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 40
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "en",
+          "query": "a park instead of a cafe",
+          "http": 200,
+          "ms": 2462,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "park"
+              ],
+              "excludedCategories": [
+                "cafe"
+              ],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2434,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 31
+              }
+            ]
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "beganAt": "2026-10-20T17:23:55.033Z",
+      "at": "2026-10-20T17:24:24.412Z",
+      "origin": "https://qadam-astana.pages.dev",
+      "batch": 2,
+      "health": {
+        "status": "ok",
+        "architecture": "browser-graph-planning",
+        "routing": "client-osm-walking-graph",
+        "serverGraph": false,
+        "geminiConfigured": true,
+        "intentModel": "gemini-3.1-flash-lite",
+        "reserveConfigured": true,
+        "reserveModel": "@cf/google/gemma-4-26b-a4b-it",
+        "hedgeAfterMs": 1500,
+        "poiCount": 1204,
+        "serverNowMs": 1792517035183
+      },
+      "clientBundle": "/assets/index-2D4MFpyA.js",
+      "scope": "Real current public HTTP API requests, synthetic public queries, no cache or injected model contracts, all outcomes retained. Small finite sample is not an uptime SLA.",
+      "passed": 10,
+      "total": 10,
+      "results": [
+        {
+          "language": "ru",
+          "query": "парк, без кафе",
+          "http": 200,
+          "ms": 3619,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "park"
+              ],
+              "excludedCategories": [
+                "cafe"
+              ],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 3556,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 66
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "kk",
+          "query": "саябақ және мұражай",
+          "http": 200,
+          "ms": 2965,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "park",
+                "museum"
+              ],
+              "excludedCategories": [],
+              "includeMode": "all",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2931,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 63
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "en",
+          "query": "Coffee first and then a park, please",
+          "http": 200,
+          "ms": 4530,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "cafe",
+                "park"
+              ],
+              "excludedCategories": [],
+              "includeMode": "all",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 4503,
+            "attempts": [
+              {
+                "provider": "gemini",
+                "outcome": "provider"
+              },
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 32
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "ru",
+          "query": "музей или библиотека",
+          "http": 200,
+          "ms": 3309,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "museum",
+                "library"
+              ],
+              "excludedCategories": [],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 3176,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 63
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "kk",
+          "query": "Қарным ашты, тамақтанғым келеді",
+          "http": 200,
+          "ms": 2473,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "food"
+              ],
+              "excludedCategories": [],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2417,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 30
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "en",
+          "query": "Not a cafe. I want to visit a library",
+          "http": 200,
+          "ms": 2463,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "library"
+              ],
+              "excludedCategories": [
+                "cafe"
+              ],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2431,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 31
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "ru",
+          "query": "Хочу тихое кафе с розетками",
+          "http": 200,
+          "ms": 2423,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "cafe"
+              ],
+              "excludedCategories": [],
+              "includeMode": "any",
+              "unsupported": [
+                {
+                  "text": "тихое",
+                  "reason": "no-data"
+                },
+                {
+                  "text": "розетками",
+                  "reason": "no-data"
+                }
+              ],
+              "needsClarification": false
+            },
+            "ms": 2376,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 54
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "ru",
+          "query": "Музей, только в помещении",
+          "http": 200,
+          "ms": 2687,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "museum"
+              ],
+              "excludedCategories": [],
+              "includeMode": "any",
+              "unsupported": [
+                {
+                  "text": "только в помещении",
+                  "reason": "use-controls"
+                }
+              ],
+              "needsClarification": true
+            },
+            "ms": 2561,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 44
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "kk",
+          "query": "Кафеге барғым келмейді",
+          "http": 200,
+          "ms": 2458,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [],
+              "excludedCategories": [
+                "cafe"
+              ],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2380,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 30
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "ru",
+          "query": "футбол. Уточнение: вместо этого хочу в парк",
+          "http": 200,
+          "ms": 2310,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "park"
+              ],
+              "excludedCategories": [],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2279,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 30
+              }
+            ]
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "beganAt": "2026-10-20T17:25:02.918Z",
+      "at": "2026-10-20T17:25:29.097Z",
+      "origin": "https://qadam-astana.pages.dev",
+      "batch": 3,
+      "health": {
+        "status": "ok",
+        "architecture": "browser-graph-planning",
+        "routing": "client-osm-walking-graph",
+        "serverGraph": false,
+        "geminiConfigured": true,
+        "intentModel": "gemini-3.1-flash-lite",
+        "reserveConfigured": true,
+        "reserveModel": "@cf/google/gemma-4-26b-a4b-it",
+        "hedgeAfterMs": 1500,
+        "poiCount": 1204,
+        "serverNowMs": 1792517103076
+      },
+      "clientBundle": "/assets/index-2D4MFpyA.js",
+      "scope": "Real current public HTTP API requests, synthetic public queries, no cache or injected model contracts, all outcomes retained. Small finite sample is not an uptime SLA.",
+      "passed": 10,
+      "total": 10,
+      "results": [
+        {
+          "language": "ru",
+          "query": "Давай заглянем в библиотеку почитать",
+          "http": 200,
+          "ms": 2799,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "library"
+              ],
+              "excludedCategories": [],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2730,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 58
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "kk",
+          "query": "Кітап оқуға кітапханаға барғым келеді",
+          "http": 200,
+          "ms": 2265,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "library"
+              ],
+              "excludedCategories": [],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2229,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 30
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "en",
+          "query": "An art gallery and coffee",
+          "http": 200,
+          "ms": 2720,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "art",
+                "cafe"
+              ],
+              "excludedCategories": [],
+              "includeMode": "all",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2623,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 32
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "ru",
+          "query": "Пообедать или выпить кофе",
+          "http": 200,
+          "ms": 2310,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "food",
+                "cafe"
+              ],
+              "excludedCategories": [],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2281,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 32
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "kk",
+          "query": "Мұражай немесе саябақ",
+          "http": 200,
+          "ms": 2349,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "museum",
+                "park"
+              ],
+              "excludedCategories": [],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2320,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 32
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "en",
+          "query": "Take me to a viewpoint, no museums",
+          "http": 200,
+          "ms": 2330,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "viewpoint"
+              ],
+              "excludedCategories": [
+                "museum"
+              ],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2292,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 32
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "ru",
+          "query": "Место для детей, на детскую площадку",
+          "http": 200,
+          "ms": 2269,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "playground"
+              ],
+              "excludedCategories": [],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2232,
+            "attempts": [
+              {
+                "provider": "gemini",
+                "outcome": "provider"
+              },
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 30
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "en",
+          "query": "I'd like somewhere cheap to eat",
+          "http": 200,
+          "ms": 3320,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "food"
+              ],
+              "excludedCategories": [],
+              "includeMode": "any",
+              "unsupported": [
+                {
+                  "text": "cheap",
+                  "reason": "no-data"
+                }
+              ],
+              "needsClarification": false
+            },
+            "ms": 3292,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 85
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "ru",
+          "query": "Хочу сходить по магазинам",
+          "http": 200,
+          "ms": 2964,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [],
+              "excludedCategories": [],
+              "includeMode": "any",
+              "unsupported": [
+                {
+                  "text": "по магазинам",
+                  "reason": "not-supported"
+                }
+              ],
+              "needsClarification": true
+            },
+            "ms": 2931,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 41
+              }
+            ]
+          },
+          "passed": true
+        },
+        {
+          "language": "kk",
+          "query": "Саябаққа барғым келеді, бірақ кофеханаға емес",
+          "http": 200,
+          "ms": 2699,
+          "resolution": {
+            "mode": "cloudflare",
+            "contract": {
+              "version": 1,
+              "desiredCategories": [
+                "park"
+              ],
+              "excludedCategories": [
+                "cafe"
+              ],
+              "includeMode": "any",
+              "unsupported": [],
+              "needsClarification": false
+            },
+            "ms": 2655,
+            "attempts": [
+              {
+                "provider": "cloudflare",
+                "outcome": "success",
+                "outputTokens": 66
+              }
+            ]
+          },
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

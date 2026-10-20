@@ -1,38 +1,38 @@
 {
-  "createdAt": "2026-10-20T16:06:12.675296+00:00",
+  "createdAt": "2026-10-20T17:32:50.022815+00:00",
   "site": "https://qadam-astana.pages.dev/",
   "backupSite": "https://qadam-astana-walk.pubg-bekzat.chatgpt.site/",
-  "canonicalSourceCommit": "397ad3ad0391385021d1b2991e3569e573c83785",
-  "architecture": "Cloudflare Pages static SPA; browser graph/planning workers; server-only Gemini Functions",
-  "hosting": "Free; no paid bindings or subscription enabled",
+  "canonicalSourceCommit": "e03dc88f92c465f8bb5e96e52569b89b4f236bb2",
+  "architecture": "Cloudflare Pages static SPA; browser graph/planning workers; server-only Gemini plus Cloudflare Google Gemma validated reserve",
+  "hosting": "Existing Free hosting and Workers AI binding; finite daily AI allowance; no paid subscription enabled",
   "tests": {
-    "canonical": 453,
-    "standalone": 30,
+    "canonical": 462,
+    "standalone": 43,
     "typescript": "PASS",
     "build": "PASS"
   },
   "runtimeArchive": {
     "path": "qadam-cloudflare-deploy.zip",
     "files": 21,
-    "bytes": 4002709,
-    "sha256": "86fcdd47523d0c5b9e3881696b88ca96ee3be299ef5f5eaa2d6be89f7f257363"
+    "bytes": 4005189,
+    "sha256": "1066f96b77ec0443086d1a367d665be27df7a639d55151e0b0e961d91ad72276"
   },
   "sourceArchive": {
     "path": "qadam-cloudflare-source.zip",
-    "files": 276,
-    "bytes": 2966173,
-    "sha256": "85a72dbe009f06fff019c100cc39a714e81c25c92451cc62f9bc9ec065943ef1"
+    "files": 281,
+    "bytes": 2985114,
+    "sha256": "0967a575261223287e896c44407293e6b33c2f9858d99d6bd4b8b77ea890f7a3"
   },
   "secretScan": "PASS",
   "submission": "HOLD-NOT-SUBMITTED",
-  "release": "audit-v17",
+  "release": "ai-v18",
   "deployment": {
-    "id": "aad9e602-76f0-491a-ae0f-e36e4e8743a1",
-    "url": "https://aad9e602.qadam-astana.pages.dev",
+    "id": "3c0aabe1-33f9-4f3d-8f9b-f33c75bf9e48",
+    "url": "https://3c0aabe1.qadam-astana.pages.dev",
     "environment": "production",
-    "branch": "main",
     "status": "success",
-    "method": "Existing authenticated Cloudflare Dashboard Direct Upload; 21/21 files; advanced-mode _worker.js."
+    "method": "Existing authenticated dashboard Direct Upload",
+    "branch": "main"
   },
   "productionSecret": {
     "name": "GEMINI_API_KEY",
@@ -51,44 +51,108 @@
     "preferences": "minimal local worker snapshot; excluded from public API and Gemini request",
     "ratings": "Personal only; stars after a GPS-confirmed completed visit; a soft bias of ±6 cannot override hard constraints.",
     "cityReporting": "Future opt-in proposal only; collection and transmission are disabled.",
-    "modelTraining": "not enabled"
+    "modelTraining": "not enabled",
+    "models": "Gemini and/or Cloudflare-hosted Google Gemma receive the query and bounded controls only. No structured coordinates, passport data or GPS stream are sent to the models; free text can contain private data. Provider technical logs are outside app control."
   },
   "media": {
     "status": "Baseline v9 unchanged; demo and pitch updates are deferred until product approval.",
     "video": "https://youtu.be/YsN--AADsZ0"
   },
   "liveChecks": {
-    "publishedClientBundle": "/assets/index-BatgoU7C.js",
-    "apiHealth": "PASS: 1,204 POIs; key configured; gemini-3.1-flash-lite; serverGraph=false.",
-    "quickFood": "PASS: real public 390 px UI; explicit activity choice produced 4 network routes within 45 min; 0 AI calls.",
+    "publishedClientBundle": "/assets/index-2D4MFpyA.js",
+    "apiHealth": "PASS: 1,204 POIs, Gemini configured, Workers AI binding configured, hedge 1,500 ms, serverGraph=false.",
     "aiIntent": {
-      "validContracts": 6,
-      "requests": 10,
-      "batches": 2,
-      "providerOrTimeoutFailures": 4,
-      "availabilityGate": "NOT_PASSED",
-      "testedDeployment": "f8b136ad-4946-404a-9eb9-6c41ece94bfb",
-      "scope": "Real production API requests; all returned contracts met the tested semantics, including negation, all/any, KK and unknown Wi-Fi. The final API binary is byte-identical; only the Home UI changed. No SLA claim."
+      "requests": 30,
+      "validContracts": 30,
+      "semanticPassed": 30,
+      "unavailable": 0,
+      "batches": 3,
+      "additionalHoldoutCases": 10,
+      "winners": {
+        "cloudflare": 30,
+        "gemini": 0
+      },
+      "httpLatencyMs": {
+        "min": 2173,
+        "median": 2470.5,
+        "max": 4530
+      },
+      "beganAt": "2026-10-20T17:22:58.387Z",
+      "endedAt": "2026-10-20T17:25:29.097Z",
+      "availabilityGate": "PASSED_IN_OBSERVED_SAMPLE",
+      "limitation": "Finite selected synthetic public query sample, not an uptime SLA or a guarantee of all future semantic interpretations."
     },
-    "mobile": "PASS: no horizontal overflow at 320/390/430 px; 44 px quick actions; existing stable UI also checked at 667 px landscape; dialog focus, native summary Tab/Escape, and RU/KK/EN deadline checks.",
-    "gps": "PASS: controlled GPS/clock browser harness with the actual compiled reroute worker; B and return-to-A cases, exact deadline, explicit completion, and 35 s yielding 0 walk XP. A physical phone walk is NOT VERIFIED.",
-    "sourceReproduction": "PASS: the final 276-entry source ZIP rebuilt 21/21 byte-identical runtime files using existing pinned dependencies, without env credentials."
+    "mobileFreeText": {
+      "method": "Real public UI through CUA at 390×844, free-text input, no injected model contract or private GPS.",
+      "roundTripFood": {
+        "query": "Проголодался, хочу пообедать недалеко от старта",
+        "A": "Bayterek",
+        "B": null,
+        "minutes": 45,
+        "routes": 4,
+        "intent": "cloudflare"
+      },
+      "negation": {
+        "query": "Хочу прогуляться в парке, но в кафе не заходить",
+        "A": "Bayterek",
+        "B": null,
+        "minutes": 45,
+        "routes": 1,
+        "cafeExcluded": true
+      },
+      "foodToB": {
+        "query": "Хочу пообедать по дороге",
+        "A": "Bayterek",
+        "B": "National Museum of Kazakhstan",
+        "minutes": 90,
+        "routes": 4,
+        "primaryWalkingMinutes": 52,
+        "primaryVisitMinutes": 30,
+        "primaryBufferMinutes": 8,
+        "intentMs": 2525,
+        "intent": "cloudflare"
+      },
+      "physicalPhone": false,
+      "physicalGpsWalk": false
+    },
+    "consoleErrors": "None captured in final public browser session.",
+    "priorV17Checks": "GPS reroute harness, 320/390/430 px, phone landscape and passport invariants were previously verified in audit-v17; UI layout/GPS logic is unchanged in ai-v18. No physical phone walk is verified.",
+    "sourceReproduction": "PASS: the final 281-entry source ZIP rebuilt 21/21 byte-identical runtime files using existing pinned dependencies, without env credentials. Not a fresh npm ci."
   },
   "temporaryPublisherAccess": "No new Wrangler grant created; published through existing authenticated dashboard. Previous temporary OAuth remains revoked.",
   "limitations": [
-    "Google Gemini availability remains insufficient in the observed sample: 6/10 valid contracts. Quota errors, provider failures and timeouts are handled explicitly. Manual quick actions and the map do not require Gemini.",
+    "Observed 30/30 is a finite synthetic public query sample with 10 new holdout cases, not general accuracy or an uptime SLA. All 30 winners were the Cloudflare reserve; Gemini recovery is not demonstrated.",
+    "Free Workers AI has finite daily allowance; external outages or exhausted quotas can still make AI unavailable. No paid tier enabled.",
     "A physical iPhone GPS/voice walk is not verified for this release.",
-    "POI coverage, hours, accessibility and graph connectors have documented uncertainty."
+    "POI coverage, hours, accessibility and graph connectors have documented uncertainty. Unsupported shopping/sport requests are clarified rather than silently replaced."
   ],
-  "verifiedAt": "2026-10-20T16:11:35.544181+00:00",
+  "verifiedAt": "2026-10-20T17:26:21.849372+00:00",
   "intentModel": "gemini-3.1-flash-lite",
-  "apiCodeSha256": "2e3d2ce4c2af9a1adec76937cd26e89df1f0c143d60cb7911a2bdfada353038a",
+  "apiCodeSha256": "35d508943398f60be9dea68964668dddf692cd6b8efde9d402f5df5fa841bba8",
   "auditFixes": [
     "Preserve the map wish/exclusions, or explicitly replace them, before requiring a POI.",
     "Safe GPS-gap recovery retains the original B or A and absolute deadline; no progress teleport.",
     "Completed-minute floor for walk XP; neutral/OFF/unrelated personalization leaves the baseline invariant.",
     "Readable mobile captions, 44 px controls, keyboard-accessible summary, and correct A/B deadline labels in RU/KK/EN.",
-    "Ordered 20/21/26/40 s deadlines; a single HTTP 503 retry within the original deadline; distinct HTTP 429 quota UI.",
-    "Explicit empty-text activity quick actions use local planning; free text remains Google Gemini without keyword fallback."
-  ]
+    "Ordered 20/21/26/40 s deadlines; at most one Gemini and one reserve call share the 20 s intent deadline when AI is configured. The legacy Gemini-only path retains one bounded HTTP 503 retry; HTTP 429 has distinct quota UI.",
+    "Explicit empty-text activity quick actions use local planning; free text uses validated Gemini or the independent Google Gemma reserve, without keyword fallback.",
+    "Primary Gemini and independent Google Gemma reserve with a 1,500 ms hedge, at most one request each and a shared 20 s deadline. The first validated contract wins; the losing request is cancelled.",
+    "Same strict closed schema, verbatim unsupported evidence, negative exclusions and all/any. Singleton all normalized to equivalent any without dropping constraints.",
+    "RU/KK/EN truthful reserve badge and updated privacy text. The public benchmark and all 30 actual outcomes are included."
+  ],
+  "reserveModel": "@cf/google/gemma-4-26b-a4b-it",
+  "aiPolicy": {
+    "primary": "gemini-3.1-flash-lite",
+    "reserve": "@cf/google/gemma-4-26b-a4b-it",
+    "hedgeAfterMs": 1500,
+    "globalProviderDeadlineMs": 20000,
+    "maxModelCalls": 2,
+    "lexicalFallback": false,
+    "responseCache": false
+  },
+  "aiHistory": {
+    "geminiOnlyV17": "6/10 valid contracts, 4 provider/timeout failures; retained separately.",
+    "v18Prototype": "16/20 strict semantic checks after evaluation correction; all actual outcomes retained",
+    "v18CorrectedBeforeFastHedge": "20/20 valid contracts,19/20 strict semantic checks; missing unsupported football quote retained"
+  }
 }
