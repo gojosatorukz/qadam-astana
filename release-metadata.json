@@ -1,101 +1,72 @@
 {
-  "release": "Qadam final-audit package A",
-  "team": "Qadam",
-  "author": "Rashiduly Bekzat",
-  "track": "AI MODELS FOR SMART CITY",
+  "release": "Qadam mobile-first product iteration",
   "site": "https://qadam-astana-walk.pubg-bekzat.chatgpt.site/",
-  "youtube": "https://youtu.be/YsN--AADsZ0",
-  "github": "https://github.com/gojosatorukz/qadam-astana",
-  "source_commit": "72e00e9acc2d7fba2e8aea30fb2356ab6df3e3a6",
-  "application_code_commit": "72e00e9acc2d7fba2e8aea30fb2356ab6df3e3a6",
-  "source_files": 191,
+  "site_saved_version": 11,
+  "site_deployment_id": "appgdep_6ad70667ac1081919b98666734d27c46",
   "site_deployment_status": "succeeded",
-  "site_saved_version": 9,
-  "site_deployment_id": "appgdep_6ad6f99ecaa881918db1d8516e1481e7",
-  "last_live_site_version": 9,
-  "last_live_source_commit": "72e00e9acc2d7fba2e8aea30fb2356ab6df3e3a6",
-  "automatic_tests": {
-    "pass": 278,
+  "source_commit": "41dbc88e8726b56534d9a2e8a0056fd53bf2aff6",
+  "source_files": 200,
+  "github": "https://github.com/gojosatorukz/qadam-astana",
+  "github_publication_status": "Published payload; anonymous immutable RAW11/11byte-exact; ZIP CRC/source200/bundle17/embeddedmedia-v9verified",
+  "youtube": "https://youtu.be/YsN--AADsZ0",
+  "media_status": "baseline-v9; refresh deferred by participant; does not show new mobile/A→B/food",
+  "presentation_status": "baseline-v9;10slides;refresh pending",
+  "draft_status": "Saved version9 draft unchanged this iteration; stale relative to product; requires coordinated media/attachments refresh",
+  "competition_submission_status": "HOLD — NOT SUBMITTED",
+  "release_status": "PRODUCT REVIEW READY; site11/source/GitHub aligned; final submission pending media and saved-form refresh",
+  "tests": {
+    "pass": 309,
     "fail": 0
   },
-  "typescript": "pass",
-  "build": "pass",
-  "independent_clean_install": "not repeated for this patch; unchanged lockfile; baseline checks separately recorded",
-  "facts": {
-    "places": 10,
-    "osm_mappings": 11,
-    "facts": 18,
-    "source_urls": 5,
-    "ideas": 4
+  "typescript": "PASS",
+  "build": "PASS",
+  "facts_importer": "PASS;18facts",
+  "dataset": {
+    "pois": 1204,
+    "baseline_preserved": 890,
+    "food_added": 314,
+    "walking_nodes": 81383,
+    "walking_edges": 97427,
+    "photos_verified": 2
   },
-  "youtube_status": "published unlisted; manual RU24captions; full signed-out Incognito playback/transcript verified",
-  "youtube_playback_proof": "../research/audit-implementation-evidence/youtube-final-playback.json",
-  "video": {
-    "seconds": 90,
-    "width": 1920,
-    "height": 1080,
-    "bytes": 4435754,
-    "srt_cues": 24
-  },
-  "presentation": {
-    "slides": 10,
-    "notes": 10,
-    "target_speaker_seconds": 370,
-    "actual_timed_rehearsal": "not performed"
-  },
-  "user_observations": {
-    "completed": 0,
-    "available_volunteers": "participant can invite1–2",
-    "protocol": "TEST_WITH_PEOPLE.md"
-  },
-  "draft_status": "Saved; four Qadam-Final attachments independently downloaded and byte-exact canonical; team/track/GitHub retained; NOT SUBMITTED",
-  "github_publication_status": "Published payload; anonymous immutable RAW 19/19 byte-exact; ZIP CRC/embedded assets/SRT24 verified",
-  "competition_submission_status": "HOLD — NOT SUBMITTED",
-  "deadline_local": "2026-10-20T23:59:00+05:00",
-  "deadline_source": "direct organizer extension confirmed by participant",
-  "release_status": "Site9, GitHub payload and saved draft aligned; competition HOLD — NOT SUBMITTED",
-  "sha256": {
-    "qadam-source.zip": "2ba73006675aae03e100cae63918109a99fea64428ef8bfa21080a213b7a558e",
-    "qadam-submission-package.zip": "30dd7dba669d9faf44582a1a304524feb46c80b349ecec6d795037528199f725",
-    "presentation/qadam-pitch.pdf": "4b06254a36183393c5a1c3392ccf6a3476638e1c075fe8e38f94cac7c2554e7f",
-    "presentation/qadam-pitch.pptx": "4c709abd1cffb91533500f52f626e7ed680017451a4d3546bac55716121b9c8c",
-    "media/qadam-demo.mp4": "1d75761a01a701ae3684fbaccb8ac6d645dc104cb75991aafff54fd0b8d50267",
-    "media/subtitles.ru.srt": "70d6a494072f90149e86a9ceeafe0c602c76de90ff49c4f001c76fb08bdf39d1"
-  },
-  "checked_at_utc": "2026-10-20T05:26:38.945507+00:00",
-  "draft_attachments": [
-    {
-      "name": "Qadam-Final-presentation.pdf",
-      "bytes": 771040,
-      "sha256": "4b06254a36183393c5a1c3392ccf6a3476638e1c075fe8e38f94cac7c2554e7f",
-      "matches_canonical_and_for_form": true
-    },
-    {
-      "name": "Qadam-Final-demo.mp4",
-      "bytes": 4435754,
-      "sha256": "1d75761a01a701ae3684fbaccb8ac6d645dc104cb75991aafff54fd0b8d50267",
-      "matches_canonical_and_for_form": true
-    },
-    {
-      "name": "Qadam-Final-source.zip",
-      "bytes": 2066808,
-      "sha256": "2ba73006675aae03e100cae63918109a99fea64428ef8bfa21080a213b7a558e",
-      "matches_canonical_and_for_form": true
-    },
-    {
-      "name": "Qadam-Final-links.txt",
-      "bytes": 7257,
-      "sha256": "3127e1860130edddd36b0b6394e45e0ed6ebb48fd5a8955bbf432b40d71993af",
-      "matches_canonical_and_for_form": true
-    }
+  "modes": [
+    "optionalB;withoutBreturnA",
+    "A→POIs→B",
+    "emptywishautomaticnearby"
   ],
-  "draft_verification": "../research/audit-implementation-evidence/actual-form-final-verification.json",
-  "github_payload_commit": "474ea00125241df8168f57246c52d90f670f6d64",
-  "github_payload_verification": "github-audit-package-verification.json",
-  "site_production_smoke": {
-    "status": "PASS",
-    "flow": "Real Gemini park without cafe;90min→85/55; controls retained→45min→45/31; origin unchanged; 4000counter and coordinate2GIS links present",
-    "provider_modes": "Gemini intent + closed selected-POI explanation verified via UI trace",
-    "proof": "../research/audit-implementation-evidence/production-v9-park90.txt"
-  }
+  "max_choices": 4,
+  "max_stops": 3,
+  "max_Dijkstra_trees": 5,
+  "browser_qa": "Exact покушать real Gemini roundtrip45 and A→B90,4choices each;repeat free pins;fullmap;automaticblankwish/noB;320/390/430no page overflow",
+  "physical_iPhone_GPS": "not independently tested",
+  "user_observations": "Participant supplied mobile screenshots and forwarded feedback; number of independent observers unknown; formal sessions not claimed",
+  "source_photos": "2matched garden/park photos, CC BY-SA4 with attribution; no verifiedrestaurantphotos",
+  "checked_at_utc": "2026-10-20T06:13:31.581463+00:00",
+  "sha256": {
+    "qadam-source.zip": "8c3e1977eb73b971ebad42faf70386d87984d9783f232a2f7768f7bdb41cfb37",
+    "qadam-submission-package.zip": "6983679d34a344f1049b43ba0bd8f81095c89d718e5fd63195359a1d565976c5",
+    "qadam-submission-info.txt": "7e0c87aaa228cda64bc527dfccf1347a1565ca8b28ccfc684f6c49db3340daa9",
+    "media/qadam-demo.mp4": "1d75761a01a701ae3684fbaccb8ac6d645dc104cb75991aafff54fd0b8d50267",
+    "media/subtitles.ru.srt": "70d6a494072f90149e86a9ceeafe0c602c76de90ff49c4f001c76fb08bdf39d1",
+    "presentation/qadam-pitch.pdf": "4b06254a36183393c5a1c3392ccf6a3476638e1c075fe8e38f94cac7c2554e7f",
+    "presentation/qadam-pitch.pptx": "4c709abd1cffb91533500f52f626e7ed680017451a4d3546bac55716121b9c8c"
+  },
+  "public_site_checks": {
+    "site_version": 11,
+    "source_commit": "41dbc88e8726b56534d9a2e8a0056fd53bf2aff6",
+    "optional_B_default": "round-trip confirmed in publishedUI",
+    "free_pin": "two successive arbitraryB taps confirmed before applying",
+    "food_AB": "Exact покушать,realGemini,Baiterek→NationalMuseum90,4distinctfoodchoices,primaryRahat53walk+29visit+8buffer",
+    "full_map": "PASS;A,foodstop,B visible on390x844",
+    "provider_observation": "Earlier v10 first call timed out at6500ms;explicitretry succeeded. v11 directedA→B call succeeded. No service availability rate inferred.",
+    "timeout_recovery": "Newunitregressions cover explicit FoodwithoutAI/manual path and A/B/time preservation; no deliberate production outage induced",
+    "proof": "../research/mobile-first-v10-evidence/production-v11-A-to-B-food.txt"
+  },
+  "remaining": [
+    "Physical iPhone/GPS retest",
+    "Update demo/pitch after product review",
+    "Refresh saved form attachments together; final submission requires explicit user instruction"
+  ],
+  "github_payload_commit": "666622a91c79e7ca69f176e71a7c6c2c0d8e1764",
+  "github_payload_verification": "github-mobile-v11-verification.json"
 }
