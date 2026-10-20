@@ -1,38 +1,38 @@
 {
-  "createdAt": "2026-10-20T12:59:19.796805+00:00",
+  "createdAt": "2026-10-20T16:06:12.675296+00:00",
   "site": "https://qadam-astana.pages.dev/",
   "backupSite": "https://qadam-astana-walk.pubg-bekzat.chatgpt.site/",
-  "canonicalSourceCommit": "9795babc545cd0626ae7609d0a42e9d0db4b8dbe",
+  "canonicalSourceCommit": "397ad3ad0391385021d1b2991e3569e573c83785",
   "architecture": "Cloudflare Pages static SPA; browser graph/planning workers; server-only Gemini Functions",
   "hosting": "Free; no paid bindings or subscription enabled",
   "tests": {
-    "canonical": 423,
-    "standalone": 29,
+    "canonical": 453,
+    "standalone": 30,
     "typescript": "PASS",
     "build": "PASS"
   },
   "runtimeArchive": {
     "path": "qadam-cloudflare-deploy.zip",
     "files": 21,
-    "bytes": 3999114,
-    "sha256": "f427115619b64a85fb0f0fe426279b75170dbc03c1c17a5d4810a7f36e4af964"
+    "bytes": 4002709,
+    "sha256": "86fcdd47523d0c5b9e3881696b88ca96ee3be299ef5f5eaa2d6be89f7f257363"
   },
   "sourceArchive": {
     "path": "qadam-cloudflare-source.zip",
-    "files": 270,
-    "bytes": 2944086,
-    "sha256": "c5d8c103d8d55632b86aa7961b4c2b66290403cb4866ab85c3c666188d3e8294"
+    "files": 276,
+    "bytes": 2966173,
+    "sha256": "85a72dbe009f06fff019c100cc39a714e81c25c92451cc62f9bc9ec065943ef1"
   },
   "secretScan": "PASS",
   "submission": "HOLD-NOT-SUBMITTED",
-  "release": "mobile-city-v16",
+  "release": "audit-v17",
   "deployment": {
-    "id": "076888aa-2fd2-41ca-9a39-bf23577fa5cc",
-    "url": "https://076888aa.qadam-astana.pages.dev",
+    "id": "aad9e602-76f0-491a-ae0f-e36e4e8743a1",
+    "url": "https://aad9e602.qadam-astana.pages.dev",
     "environment": "production",
     "branch": "main",
     "status": "success",
-    "method": "Cloudflare dashboard Direct Upload;21/21 files uploaded; advanced-mode _worker.js supported"
+    "method": "Existing authenticated Cloudflare Dashboard Direct Upload; 21/21 files; advanced-mode _worker.js."
   },
   "productionSecret": {
     "name": "GEMINI_API_KEY",
@@ -47,31 +47,48 @@
     "Strict fresh GPS/accuracy/near-A startup; custom time preview until explicit now replanning"
   ],
   "personalData": {
-    "passportStorage": "browser localStorage only; no GPS tracks or coordinates in passport",
+    "passportStorage": "Local browser only; precise completion timestamps and up to 3 ordered public POI IDs; no coordinates or GPS track in the stored passport.",
     "preferences": "minimal local worker snapshot; excluded from public API and Gemini request",
-    "ratings": "personal only; stars after GPS-confirmed completed visit; soft±6 bias cannot override hard constraints",
-    "cityReporting": "future proposal only; collection and transmission disabled",
+    "ratings": "Personal only; stars after a GPS-confirmed completed visit; a soft bias of ±6 cannot override hard constraints.",
+    "cityReporting": "Future opt-in proposal only; collection and transmission are disabled.",
     "modelTraining": "not enabled"
   },
   "media": {
-    "status": "baseline v9; update deferred until participant approves product",
+    "status": "Baseline v9 unchanged; demo and pitch updates are deferred until product approval.",
     "video": "https://youtu.be/YsN--AADsZ0"
   },
   "liveChecks": {
-    "publishedClientBundle": "/assets/index-Drahgzbt.js",
-    "apiHealth": "PASS:publichealth,statusok,geminiConfiguredtrue,1204POI",
-    "aiIntent": "PASS:Gemini food interpretation3612ms on retry; initial attempt timed out; four network routes produced",
-    "explanations": "Provider unavailable on checked response; deterministic source-based explanations preserved",
-    "map": "PASS:75 feasible places at45min, full-screen map opens on public hostname",
-    "localMobile": "PASS:320/390/430 widths;freeAmapclick;expiredcustomblocked;mapPOIbuildpreservesrequiredplace;GPSpreviewnoXP",
-    "sourceReproduction": "PASS:publicsourceZIP270files;rebuild21runtimefiles byte-identical with existing pinned dependencies",
-    "physicalPhone": "Previous release routes confirmed by participant; this release checked in phone-sized browser, new physical iPhone walk not confirmed"
+    "publishedClientBundle": "/assets/index-BatgoU7C.js",
+    "apiHealth": "PASS: 1,204 POIs; key configured; gemini-3.1-flash-lite; serverGraph=false.",
+    "quickFood": "PASS: real public 390 px UI; explicit activity choice produced 4 network routes within 45 min; 0 AI calls.",
+    "aiIntent": {
+      "validContracts": 6,
+      "requests": 10,
+      "batches": 2,
+      "providerOrTimeoutFailures": 4,
+      "availabilityGate": "NOT_PASSED",
+      "testedDeployment": "f8b136ad-4946-404a-9eb9-6c41ece94bfb",
+      "scope": "Real production API requests; all returned contracts met the tested semantics, including negation, all/any, KK and unknown Wi-Fi. The final API binary is byte-identical; only the Home UI changed. No SLA claim."
+    },
+    "mobile": "PASS: no horizontal overflow at 320/390/430 px; 44 px quick actions; existing stable UI also checked at 667 px landscape; dialog focus, native summary Tab/Escape, and RU/KK/EN deadline checks.",
+    "gps": "PASS: controlled GPS/clock browser harness with the actual compiled reroute worker; B and return-to-A cases, exact deadline, explicit completion, and 35 s yielding 0 walk XP. A physical phone walk is NOT VERIFIED.",
+    "sourceReproduction": "PASS: the final 276-entry source ZIP rebuilt 21/21 byte-identical runtime files using existing pinned dependencies, without env credentials."
   },
   "temporaryPublisherAccess": "No new Wrangler grant created; published through existing authenticated dashboard. Previous temporary OAuth remains revoked.",
   "limitations": [
-    "A new physical GPS/voice walk remains unverified.",
-    "Gemini may time out; retry and explicit manual planning remain available.",
-    "POI snapshot/OSM hours/200m graph connectors have documented uncertainty."
+    "Google Gemini availability remains insufficient in the observed sample: 6/10 valid contracts. Quota errors, provider failures and timeouts are handled explicitly. Manual quick actions and the map do not require Gemini.",
+    "A physical iPhone GPS/voice walk is not verified for this release.",
+    "POI coverage, hours, accessibility and graph connectors have documented uncertainty."
   ],
-  "sourceArchiveGitHubCommit": "e5f342b2e834a2e5af50ab8142fd60ac3ec1d045"
+  "verifiedAt": "2026-10-20T16:11:35.544181+00:00",
+  "intentModel": "gemini-3.1-flash-lite",
+  "apiCodeSha256": "2e3d2ce4c2af9a1adec76937cd26e89df1f0c143d60cb7911a2bdfada353038a",
+  "auditFixes": [
+    "Preserve the map wish/exclusions, or explicitly replace them, before requiring a POI.",
+    "Safe GPS-gap recovery retains the original B or A and absolute deadline; no progress teleport.",
+    "Completed-minute floor for walk XP; neutral/OFF/unrelated personalization leaves the baseline invariant.",
+    "Readable mobile captions, 44 px controls, keyboard-accessible summary, and correct A/B deadline labels in RU/KK/EN.",
+    "Ordered 20/21/26/40 s deadlines; a single HTTP 503 retry within the original deadline; distinct HTTP 429 quota UI.",
+    "Explicit empty-text activity quick actions use local planning; free text remains Google Gemini without keyword fallback."
+  ]
 }
