@@ -1,8 +1,8 @@
 {
-  "source_commit": "41dbc88e8726b56534d9a2e8a0056fd53bf2aff6",
-  "files": 200,
-  "bytes": 2603678,
-  "sha256": "8c3e1977eb73b971ebad42faf70386d87984d9783f232a2f7768f7bdb41cfb37",
+  "source_commit": "7e6e224a4b8dfd9016ff1d97bb04e66094987760",
+  "files": 206,
+  "bytes": 2624262,
+  "sha256": "2391f68bb8561964dfb4f030e4ace26341b1d05c3d6bceaec547703a49ddfab1",
   "included_generated_types": [
     "next-env.d.ts"
   ],
@@ -24,16 +24,16 @@
       "sha256": "27d36dcc16f30fea206259766aa1f1a9e6ecd7725fac2fd7822a33b338f655c8"
     },
     "README.md": {
-      "bytes": 28039,
-      "sha256": "1f45e58bbe2d468e11c8b2c1fd5db3c3a30661aca4f480dc28fb48eb62ceae29"
+      "bytes": 30672,
+      "sha256": "bd2d4ea2b678cbea024f0c805cea198ef44e9acb19e1ea3e4044529250b39df2"
     },
     "app/api/places/route.ts": {
       "bytes": 604,
       "sha256": "9505e5340f978f7dcc8817cbdeb44aeb4afc271e1ccee49d7006b3c671455a79"
     },
     "app/api/plan/route.ts": {
-      "bytes": 3558,
-      "sha256": "74aaf4c524e5efa5f7b81fcf24f5bc889f374416063a1cdb41245780f3508047"
+      "bytes": 3636,
+      "sha256": "a763963df8aeea49ece9bf77312efaad0a8c6aa8e3d275c41174302bde769733"
     },
     "app/chatgpt-auth.ts": {
       "bytes": 2550,
@@ -44,16 +44,20 @@
       "sha256": "6314d343e1f49d72d003c23cd68ac740dc16ce1b69c9c848c3b692fefa3e14dc"
     },
     "app/layout.tsx": {
-      "bytes": 733,
-      "sha256": "df0ad47368d63e598ad8df54db6f8de9a4725ee48f9b89b042990fae7f999532"
+      "bytes": 762,
+      "sha256": "87afea212a2945a71a1750fcf62e52052cedd4341230f4c31395c072d6ebb3b0"
     },
     "app/mobile-journey.css": {
       "bytes": 14339,
       "sha256": "7f18731cb98a1b751a46d973ffa5cace9660eb93a0410a723911f9ba17e456c8"
     },
     "app/page.tsx": {
-      "bytes": 67323,
-      "sha256": "61784957d5954934350f223dacae984a6480f26219b6df2541531d9696a44c3f"
+      "bytes": 74984,
+      "sha256": "11ee58bca517fccbba5c59262270262cb48ab690a1e57932a17ad30109fd3ba9"
+    },
+    "app/route-choice.css": {
+      "bytes": 8707,
+      "sha256": "2686e4b89a4778c9398b4b40aa3bfc428440cf857794b5b465f61b1df786a663"
     },
     "build/connector-preview-plugin.mjs": {
       "bytes": 7211,
@@ -96,8 +100,8 @@
       "sha256": "f5c63b26091d987d34d6177044a0584096402a3258a0d822f50c03bf8b616256"
     },
     "components/city-map.tsx": {
-      "bytes": 21468,
-      "sha256": "a59cd788917320e833ed8a748c3151a60b8dea9b0b07368acff4fe6fdc9af8dc"
+      "bytes": 21873,
+      "sha256": "b73b5f762e532d28017b0c98f1f568e24e93f70919569ab8e72b15d55518d158"
     },
     "components/connector-error.tsx": {
       "bytes": 1082,
@@ -115,9 +119,17 @@
       "bytes": 1046,
       "sha256": "03a24a8589d2e341733e73c582317b022df7755468f92708cbf0b8acb1e5c436"
     },
+    "components/point-picker-focus.css": {
+      "bytes": 3937,
+      "sha256": "d2ac53020faa4a8eb5a4b74564598e14968105c0179bdce41f8de100d48e4548"
+    },
     "components/point-picker.tsx": {
-      "bytes": 8971,
-      "sha256": "0aaebeddc586dbc8bc17c7f75dd6dc7c1fd1eb17b649c38abe3d49873e35745e"
+      "bytes": 11768,
+      "sha256": "bf3fdddd03f5f5fa7ec79dac1c2dd524e761769dba35438d705a28e6eb9b9204"
+    },
+    "components/route-choices.tsx": {
+      "bytes": 4002,
+      "sha256": "7121042d56c2087c804f95b6520be77c7b642725fdbe96ecf81c18b1346f5879"
     },
     "components/ui/accordion.tsx": {
       "bytes": 2048,
@@ -404,8 +416,8 @@
       "sha256": "ae1ef2c17097681ccfe893f17d74b8c00b4f61dd0257468299cb20b65f183513"
     },
     "docs/JURY_EVIDENCE.md": {
-      "bytes": 21227,
-      "sha256": "47266cfe50d3b6e7a85486d41fab89501ea97cb4127248702d439be2b7e418ed"
+      "bytes": 24402,
+      "sha256": "aa8133337351ac95106fa62d97625981a744740898501d03e3e2a826643c3000"
     },
     "docs/JURY_QA.md": {
       "bytes": 11756,
@@ -420,16 +432,16 @@
       "sha256": "e2190b33030bb3bb48dd34397dbce6a7f5980747f639e5412316ebdd5a7a4bce"
     },
     "docs/SUBMISSION_CHECKLIST.md": {
-      "bytes": 6388,
-      "sha256": "f8cea923724210f99197084ff18d7a696716e8d3a8b341222dbe57f4e79cf213"
+      "bytes": 7604,
+      "sha256": "81a11c8ecdfda4101993d9d40b9bca6decc9e9741cd59835121814148089f5bc"
     },
     "docs/TEST_SCENARIOS.md": {
-      "bytes": 11857,
-      "sha256": "f9217f13ff52f1979934dc008c43de8b3854cf52e5ae8d18966dee410e440e09"
+      "bytes": 15798,
+      "sha256": "fe5c6353b2a3809a24a3c0ea2504dadd35f203388127e2272bbeddfd07acf897"
     },
     "docs/VNEXT_RELEASE.md": {
-      "bytes": 31334,
-      "sha256": "3804157468dc04a02b856f792416fdece92efd24aa7da5cb5c4d45c923037d1d"
+      "bytes": 35292,
+      "sha256": "5233eddeb0eb0c4a5dbe65eb215b627d512a9ec5d57669436cf0deb43a11f0c4"
     },
     "docs/evaluation/README.md": {
       "bytes": 2650,
@@ -516,8 +528,8 @@
       "sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b"
     },
     "lib/build-plan.ts": {
-      "bytes": 12153,
-      "sha256": "5945ab1f575b8fe8bd1f80e063d45888aa538e94de5faa31089105c4c2787f6f"
+      "bytes": 12204,
+      "sha256": "2587a457be00df43f166f11cdcb167f4e0a85165d90610b72d701a59d84e1015"
     },
     "lib/connector-context.ts": {
       "bytes": 612,
@@ -552,8 +564,8 @@
       "sha256": "630ada5236a651b6a70d30542ce47639e74f515ad29e505f9b886cb679f77756"
     },
     "lib/intent.ts": {
-      "bytes": 17911,
-      "sha256": "3fc36e49eb474cd3e7a52cd06e3d98d40144a4e7b252d05439a35509f42a2265"
+      "bytes": 18131,
+      "sha256": "930b84f87ea489bf2128615cd55949d3b186417e4925fa019f1303603b13f8cf"
     },
     "lib/place-facts.ts": {
       "bytes": 6477,
@@ -568,20 +580,20 @@
       "sha256": "bbb5d5f6390f984050afa4cf837f31d9f410f185f7285908463a8c6d662f4e7a"
     },
     "lib/plan-validation.ts": {
-      "bytes": 7395,
-      "sha256": "9ba36c1e00d2e8fc4d46bc6295251fcd6f4ebbbf6d4caed02408c45100335869"
+      "bytes": 7897,
+      "sha256": "d61a40e14c0af7998b238c69cbaa56d80304e75ab8a87eb0925c204b22f592af"
     },
     "lib/planner.ts": {
-      "bytes": 54738,
-      "sha256": "9b6143faf4669f683348ce287dcbc62bb5619dbbfd9f46ab374774930ce57041"
+      "bytes": 58110,
+      "sha256": "18d5f6ce09d2acf3f2a9b935e7b69494e02507c710e2b5d55688e3c51138fd36"
     },
     "lib/planning-context.ts": {
       "bytes": 18852,
       "sha256": "bf4234d9d7020fc652d933d71f1c360d2666a2e56af53307bb7c006997a93965"
     },
     "lib/qadam-types.ts": {
-      "bytes": 3149,
-      "sha256": "cdeedd25766092a46680d86374e63ae7dee7c45c88b1743a19421a0a6a35803e"
+      "bytes": 3372,
+      "sha256": "336bb0b98d2997beda0a5e3244b035b373644ca17f4593c4afb631fc368d89bf"
     },
     "lib/query-policy.ts": {
       "bytes": 1082,
@@ -594,6 +606,10 @@
     "lib/request-abort.ts": {
       "bytes": 1300,
       "sha256": "0ab24a852f4033ab41372b9ee50d00aded3f968a4a1700e330b4f0ebf29903e7"
+    },
+    "lib/route-choice.ts": {
+      "bytes": 4595,
+      "sha256": "36a24079b0a9e93643c809a012af8b7d09305462c0b1cacf88057058f3353704"
     },
     "lib/time-context.ts": {
       "bytes": 3040,
@@ -786,6 +802,14 @@
     "tests/rag.test.ts": {
       "bytes": 18790,
       "sha256": "fc6d173b1dfa109fd08ea20fb89bb2e00eb5895782e901bb8fbb57a6d8a5da83"
+    },
+    "tests/route-choice-copy.test.ts": {
+      "bytes": 1872,
+      "sha256": "ee52722a53f18496f6f2838323d013430aa8dbabe6ca9f0b51e7f216e53d4965"
+    },
+    "tests/route-selection.test.ts": {
+      "bytes": 8855,
+      "sha256": "c315992eacdd2cfb9ba851a3c56efa4ffe4bec7e24e2cfd14636b4a9b04c35c3"
     },
     "tests/vnext-backend.test.ts": {
       "bytes": 22398,
