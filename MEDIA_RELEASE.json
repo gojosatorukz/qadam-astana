@@ -1,0 +1,77 @@
+{
+  "release": "Qadam ai-v18 final demonstration and pitch",
+  "publishedAt": "2026-10-20T18:10:07.966389+00:00",
+  "site": "https://qadam-astana.pages.dev/",
+  "repository": "https://github.com/gojosatorukz/qadam-astana",
+  "underlyingApplication": {
+    "canonicalSourceCommit": "e03dc88f92c465f8bb5e96e52569b89b4f236bb2",
+    "cloudflareDeployment": "3c0aabe1-33f9-4f3d-8f9b-f33c75bf9e48",
+    "sourceArchive": "qadam-cloudflare-source.zip",
+    "sourceArchiveSha256": "0967a575261223287e896c44407293e6b33c2f9858d99d6bd4b8b77ea890f7a3",
+    "sourceArchiveEntries": 281,
+    "apiCodeSha256": "35d508943398f60be9dea68964668dddf692cd6b8efde9d402f5df5fa841bba8"
+  },
+  "youtube": {
+    "url": "https://youtu.be/GgR8BL8obfI",
+    "visibility": "unlisted",
+    "title": "Qadam — открой город между делами | Smart City 2026",
+    "uploadedVideoFile": "Qadam-Demo.mp4",
+    "russianSubtitlesFile": "Qadam-Demo.ru.srt",
+    "subtitleCues": 59,
+    "studioPublished": true,
+    "anonymousOEmbedStatus": 200,
+    "customThumbnail": "Standard video frame. Custom upload requires phone verification; no phone verification was initiated."
+  },
+  "demonstration": {
+    "durationSeconds": 179.54,
+    "format": "1920x1080, 24 fps, H.264/AAC MP4, faststart",
+    "content": "Real public UI recordings edited with pauses and stock synthetic narration. Not a physical GPS walk.",
+    "qa": "Root reviewed final encoded frames at 56, 101, 143 and 167 seconds; full local decode completed without errors."
+  },
+  "presentation": {
+    "slides": 9,
+    "spokenPitchTargetMinutes": "5–7",
+    "preparedScriptDuration": "6:15",
+    "qa": "All nine final PDF slide renders reviewed; YouTube URL and live-site QR checked. The 3-minute video is separate from the 5–7-minute spoken pitch."
+  },
+  "files": {
+    "Qadam-Demo.mp4": {
+      "bytes": 6003759,
+      "sha256": "3c6fb9059572f5cd897461bf478dcb68ca69ab87574198561fdeea4e040ec55a"
+    },
+    "Qadam-Demo.ru.srt": {
+      "bytes": 6487,
+      "sha256": "ebf1a311385527e292dc181a2dae3198bd0e1ffcc8df30923768ee562212e734"
+    },
+    "Qadam-Pitch.pdf": {
+      "bytes": 484439,
+      "sha256": "56c3f72e339f79bb5017807ea9e91c10923e99f80c40f4bf942166699565768d"
+    },
+    "Qadam-Pitch.pptx": {
+      "bytes": 245828,
+      "sha256": "9afaf02e7317f99eb2e19fa9716de3acdb25191149936405f34cfea3638f2890"
+    },
+    "PITCH_SCRIPT.md": {
+      "bytes": 10612,
+      "sha256": "f9e37fa100a5ef696685bd23743621959180174ec9a1e8d17a536702a55aebf0"
+    },
+    "QA-AND-REHEARSAL.md": {
+      "bytes": 12440,
+      "sha256": "f1df3debb7cfb1f1dc3ec9daeea22177f456641e43bed98b07b10b49cea3ebb8"
+    },
+    "TEST_SCENARIOS.md": {
+      "bytes": 10976,
+      "sha256": "231be8a642ad63cb52039f9b135183878213d277deba4073f7067f12a974d7b8"
+    }
+  },
+  "limitations": [
+    "Thirty strict AI checks are a finite selected sample, including ten new holdout queries, not an uptime SLA or general accuracy. All thirty winners were Cloudflare reserve.",
+    "Physical GPS/voice walking, field ETA, entrances and crossings are not verified by this demonstration.",
+    "The municipal opt-in collection is a future proposal and is not enabled.",
+    "No official competition submission was performed by this publication workflow."
+  ],
+  "previousMedia": {
+    "youtube": "https://youtu.be/YsN--AADsZ0",
+    "status": "Archived baseline v9; preserved without modification."
+  }
+}

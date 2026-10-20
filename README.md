@@ -1,5 +1,11 @@
 # Qadam — открой город между делами
 
+**[Открыть Qadam](https://qadam-astana.pages.dev/)** · **[PDF-питч](./Qadam-Pitch.pdf)** · **[MP4-демо](./Qadam-Demo.mp4)** · **[YouTube-демо](https://youtu.be/GgR8BL8obfI)** · **[Исходники](./qadam-cloudflare-source.zip)**
+
+**Демо ≈3 минуты** показывает опубликованный UI; **PDF/PPTX из 9 слайдов** предназначены для отдельного выступления на 5–7 минут (подготовленная речь ≈6:15). [PowerPoint](./Qadam-Pitch.pptx) · [Текст выступления](./PITCH_SCRIPT.md) · [Сценарии и ограничения](./TEST_SCENARIOS.md) · [QA и репетиция](./QA-AND-REHEARSAL.md).
+
+В видео смонтированы настоящие браузерные записи Qadam и синтетическая дикторская озвучка. GPS-прогулка на улице не имитировалась. [Русские субтитры](./Qadam-Demo.ru.srt).
+
 Qadam помогает выбрать, куда зайти в Астане за свободные 30–90 минут, и дойти до следующего дела. Задай точку А, время, желание и необязательную точку Б. Получи до четырёх вариантов с **1–3 реальными остановками**: все переходы, посещения, финиш в Б либо возврат в А и запас уже включены в бюджет.
 
 **[Открыть Qadam](https://qadam-astana.pages.dev/)** · [резервный сайт](https://qadam-astana-walk.pubg-bekzat.chatgpt.site/) · [GitHub](https://github.com/gojosatorukz/qadam-astana)
@@ -87,6 +93,13 @@ npm run build
 
 ## Демо и дальнейшее развитие
 
-[YouTube — 90 секунд](https://youtu.be/YsN--AADsZ0) · [MP4](https://github.com/gojosatorukz/qadam-astana/blob/main/qadam-demo.mp4) · [PDF-питч](https://github.com/gojosatorukz/qadam-astana/blob/main/qadam-pitch.pdf). Это **baseline v9**, без нового паспорта и карты возможностей. Обновление демо/питча отложено до утверждения продукта участником; официальная заявка **не отправлена**.
+Текущие материалы ai-v18: [YouTube-демо ≈3 минуты](https://youtu.be/GgR8BL8obfI), [MP4](./Qadam-Demo.mp4), [PDF-питч](./Qadam-Pitch.pdf), [PPTX](./Qadam-Pitch.pptx). Питч рассчитан на 5–7 минут, видео — отдельная короткая демонстрация. Хеши и версия приложения фиксируются в [MEDIA_RELEASE.json](./MEDIA_RELEASE.json). Официальная заявка **не отправлена**.
+
+<details>
+<summary>Архив материалов baseline v9</summary>
+
+[Прежний YouTube](https://youtu.be/YsN--AADsZ0) · [прежний MP4](./qadam-demo.mp4) · [прежний PDF](./qadam-pitch.pdf). Это исторические материалы, а не текущее демо.
+
+</details>
 
 [Будущая концепция городского пилота](./CITY_PILOT.md) описывает отдельный opt-in и осторожные недельные агрегаты. В текущем продукте такой сбор и автоматическая передача городу **не включены**. Партнёрство, пользователи пилота и экономический эффект не заявляются.

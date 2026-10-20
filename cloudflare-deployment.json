@@ -55,8 +55,21 @@
     "models": "Gemini and/or Cloudflare-hosted Google Gemma receive the query and bounded controls only. No structured coordinates, passport data or GPS stream are sent to the models; free text can contain private data. Provider technical logs are outside app control."
   },
   "media": {
-    "status": "Baseline v9 unchanged; demo and pitch updates are deferred until product approval.",
-    "video": "https://youtu.be/YsN--AADsZ0"
+    "status": "Current ai-v18 demo and nine-slide pitch published as separate media assets; previous baseline v9 preserved. Application source and deployment identities are unchanged.",
+    "video": "https://youtu.be/GgR8BL8obfI",
+    "videoVisibility": "unlisted",
+    "videoFile": "Qadam-Demo.mp4",
+    "videoSha256": "3c6fb9059572f5cd897461bf478dcb68ca69ab87574198561fdeea4e040ec55a",
+    "videoDurationSeconds": 179.54,
+    "presentationPdf": "Qadam-Pitch.pdf",
+    "presentationPptx": "Qadam-Pitch.pptx",
+    "presentationPdfSha256": "56c3f72e339f79bb5017807ea9e91c10923e99f80c40f4bf942166699565768d",
+    "presentationSlides": 9,
+    "spokenPitchMinutes": "5–7",
+    "preparedScriptDuration": "6:15",
+    "manifest": "MEDIA_RELEASE.json",
+    "previousVideo": "https://youtu.be/YsN--AADsZ0",
+    "physicalGpsWalkClaimed": false
   },
   "liveChecks": {
     "publishedClientBundle": "/assets/index-2D4MFpyA.js",
