@@ -45,7 +45,7 @@ MP4 предыдущей версии v9: https://github.com/gojosatorukz/qadam-
 Сохранённый черновик формы с v9 не обновлён и не отправлен.
 Перед сдачей: обновить видео/слайды, согласовать все вложения и получить указание на отправку.
 
-SOURCE COMMIT: 7e6e224a4b8dfd9016ff1d97bb04e66094987760
-SOURCE ZIP: 206 files · SHA256 2391f68bb8561964dfb4f030e4ace26341b1d05c3d6bceaec547703a49ddfab1
-Sites version: 12
+SOURCE COMMIT: e3fb47fbc3f60e00384b313fc69f2e057673108c
+SOURCE ZIP: 206 files · SHA256 8d90363be69652d6d19ca0cd2c459c86bb4a021b84fe45515dcea7eb91c17b08
+Sites version: 13
 HOLD — NOT SUBMITTED. ЗАЯВКУ НЕ ОТПРАВЛЯТЬ.

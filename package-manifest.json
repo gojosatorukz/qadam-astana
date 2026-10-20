@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-20T11:55:57.201436+05:00",
+  "created_at": "2026-10-20T12:01:53.395669+05:00",
   "team": "Qadam",
   "track": "AI MODELS FOR SMART CITY",
   "submission_status": "HOLD — product iteration; baseline v9 media and saved form need refresh; not submitted",
@@ -7,11 +7,11 @@
   "site": "https://qadam-astana-walk.pubg-bekzat.chatgpt.site/",
   "github": "https://github.com/gojosatorukz/qadam-astana",
   "youtube": "https://youtu.be/YsN--AADsZ0",
-  "source_commit": "7e6e224a4b8dfd9016ff1d97bb04e66094987760",
+  "source_commit": "e3fb47fbc3f60e00384b313fc69f2e057673108c",
   "files": {
     "START_HERE.txt": {
       "bytes": 4758,
-      "sha256": "30af889705b2e5e0f69769e08213d4eb2490ef29fa43b84fa2b38c6b824e8276"
+      "sha256": "9c186847376340569e88aa583b4ac3204ef142dde1ea20aa925cfb053845cedc"
     },
     "presentation/qadam-pitch.pdf": {
       "bytes": 771040,
@@ -42,12 +42,12 @@
       "sha256": "70d6a494072f90149e86a9ceeafe0c602c76de90ff49c4f001c76fb08bdf39d1"
     },
     "source/qadam-source.zip": {
-      "bytes": 2624262,
-      "sha256": "2391f68bb8561964dfb4f030e4ace26341b1d05c3d6bceaec547703a49ddfab1"
+      "bytes": 2624398,
+      "sha256": "8d90363be69652d6d19ca0cd2c459c86bb4a021b84fe45515dcea7eb91c17b08"
     },
     "source/source-manifest.json": {
       "bytes": 30357,
-      "sha256": "cd5065a3e7067f18af1f42a540974957276ad8298b13a738041046e09690d3fa"
+      "sha256": "60e4ebe68465cd1f334b8a98f15f5e21da8443b3733296f9c3382b8af8d392e2"
     },
     "docs/EVALUATION.md": {
       "bytes": 16056,
@@ -70,8 +70,8 @@
       "sha256": "ad5b31ce8ff1ae7194c0c8c0b3d63873f4f51068a8e38cacc9c1077797b5f776"
     },
     "docs/VNEXT_RELEASE.md": {
-      "bytes": 35292,
-      "sha256": "5233eddeb0eb0c4a5dbe65eb215b627d512a9ec5d57669436cf0deb43a11f0c4"
+      "bytes": 35679,
+      "sha256": "c81667ff4f9387724b63d2eb507cf0612bf5ff5819bfdb409bf43ff323fb26fd"
     }
   }
 }

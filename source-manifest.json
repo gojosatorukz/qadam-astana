@@ -1,8 +1,8 @@
 {
-  "source_commit": "7e6e224a4b8dfd9016ff1d97bb04e66094987760",
+  "source_commit": "e3fb47fbc3f60e00384b313fc69f2e057673108c",
   "files": 206,
-  "bytes": 2624262,
-  "sha256": "2391f68bb8561964dfb4f030e4ace26341b1d05c3d6bceaec547703a49ddfab1",
+  "bytes": 2624398,
+  "sha256": "8d90363be69652d6d19ca0cd2c459c86bb4a021b84fe45515dcea7eb91c17b08",
   "included_generated_types": [
     "next-env.d.ts"
   ],
@@ -52,8 +52,8 @@
       "sha256": "7f18731cb98a1b751a46d973ffa5cace9660eb93a0410a723911f9ba17e456c8"
     },
     "app/page.tsx": {
-      "bytes": 74984,
-      "sha256": "11ee58bca517fccbba5c59262270262cb48ab690a1e57932a17ad30109fd3ba9"
+      "bytes": 75042,
+      "sha256": "8971ccd503a7f6964b779d874b6f98229af04069f7e825f9331f06ff3807d892"
     },
     "app/route-choice.css": {
       "bytes": 8707,
@@ -440,8 +440,8 @@
       "sha256": "fe5c6353b2a3809a24a3c0ea2504dadd35f203388127e2272bbeddfd07acf897"
     },
     "docs/VNEXT_RELEASE.md": {
-      "bytes": 35292,
-      "sha256": "5233eddeb0eb0c4a5dbe65eb215b627d512a9ec5d57669436cf0deb43a11f0c4"
+      "bytes": 35679,
+      "sha256": "c81667ff4f9387724b63d2eb507cf0612bf5ff5819bfdb409bf43ff323fb26fd"
     },
     "docs/evaluation/README.md": {
       "bytes": 2650,
