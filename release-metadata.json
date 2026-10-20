@@ -1,21 +1,21 @@
 {
-  "release": "Qadam mobile-first product iteration",
+  "release": "Qadam route choice and map-only product iteration",
   "site": "https://qadam-astana-walk.pubg-bekzat.chatgpt.site/",
-  "site_saved_version": 11,
-  "site_deployment_id": "appgdep_6ad70667ac1081919b98666734d27c46",
+  "site_saved_version": 13,
+  "site_deployment_id": "appgdep_6ad711bc3a748191be5ded76abfbe8bc",
   "site_deployment_status": "succeeded",
-  "source_commit": "41dbc88e8726b56534d9a2e8a0056fd53bf2aff6",
-  "source_files": 200,
+  "source_commit": "e3fb47fbc3f60e00384b313fc69f2e057673108c",
+  "source_files": 206,
   "github": "https://github.com/gojosatorukz/qadam-astana",
-  "github_publication_status": "Published payload; anonymous immutable RAW11/11byte-exact; ZIP CRC/source200/bundle17/embeddedmedia-v9verified",
+  "github_publication_status": "Published payload verified; final metadata RAW verification recorded separately",
   "youtube": "https://youtu.be/YsN--AADsZ0",
   "media_status": "baseline-v9; refresh deferred by participant; does not show new mobile/A→B/food",
   "presentation_status": "baseline-v9;10slides;refresh pending",
   "draft_status": "Saved version9 draft unchanged this iteration; stale relative to product; requires coordinated media/attachments refresh",
   "competition_submission_status": "HOLD — NOT SUBMITTED",
-  "release_status": "PRODUCT REVIEW READY; site11/source/GitHub aligned; final submission pending media and saved-form refresh",
+  "release_status": "PRODUCT REVIEW READY; site13/source/GitHub payload aligned; FINAL SUBMISSION pending media and saved form refresh",
   "tests": {
-    "pass": 309,
+    "pass": 320,
     "fail": 0
   },
   "typescript": "PASS",
@@ -35,38 +35,40 @@
     "emptywishautomaticnearby"
   ],
   "max_choices": 4,
+  "new_capabilities": [
+    "non-repeating canonical batches<=80IDs",
+    "source-only cuisine105/314food",
+    "required-place route or honest empty",
+    "explicit other-places release",
+    "map-only picker and result",
+    "on-map route switching",
+    "required place retained on refresh and Add15; explicit Other places releases it"
+  ],
   "max_stops": 3,
   "max_Dijkstra_trees": 5,
-  "browser_qa": "Exact покушать real Gemini roundtrip45 and A→B90,4choices each;repeat free pins;fullmap;automaticblankwish/noB;320/390/430no page overflow",
+  "browser_qa": "Local real Gemini food roundtrip45 and A→B90:4choices then4newdisjoint venues for each;numeric comparison;map-only switching;selected-place→route;repeat free pins;visible why/visit/action;320/390/430no page overflow;production check recorded after publish;production13realGeminifood4PASS;required30empty→Add15→45sameYouMePASS;staleRefreshsameYouMePASS;OtherplacesreleasePASS;4→4disjointPASS;map-onlyswitch1→2PASS",
   "physical_iPhone_GPS": "not independently tested",
   "user_observations": "Participant supplied mobile screenshots and forwarded feedback; number of independent observers unknown; formal sessions not claimed",
   "source_photos": "2matched garden/park photos, CC BY-SA4 with attribution; no verifiedrestaurantphotos",
-  "checked_at_utc": "2026-10-20T06:13:31.581463+00:00",
+  "checked_at_utc": "2026-10-20T08:11:04.862405+00:00",
   "sha256": {
-    "qadam-source.zip": "8c3e1977eb73b971ebad42faf70386d87984d9783f232a2f7768f7bdb41cfb37",
-    "qadam-submission-package.zip": "6983679d34a344f1049b43ba0bd8f81095c89d718e5fd63195359a1d565976c5",
-    "qadam-submission-info.txt": "7e0c87aaa228cda64bc527dfccf1347a1565ca8b28ccfc684f6c49db3340daa9",
+    "qadam-source.zip": "8d90363be69652d6d19ca0cd2c459c86bb4a021b84fe45515dcea7eb91c17b08",
+    "qadam-submission-package.zip": "9518cd5b5d1c7f4b0d8a58ee826df2bbb0178a343c2a4c933dbe70fcf97f44f3",
+    "qadam-submission-info.txt": "9c186847376340569e88aa583b4ac3204ef142dde1ea20aa925cfb053845cedc",
     "media/qadam-demo.mp4": "1d75761a01a701ae3684fbaccb8ac6d645dc104cb75991aafff54fd0b8d50267",
     "media/subtitles.ru.srt": "70d6a494072f90149e86a9ceeafe0c602c76de90ff49c4f001c76fb08bdf39d1",
     "presentation/qadam-pitch.pdf": "4b06254a36183393c5a1c3392ccf6a3476638e1c075fe8e38f94cac7c2554e7f",
     "presentation/qadam-pitch.pptx": "4c709abd1cffb91533500f52f626e7ed680017451a4d3546bac55716121b9c8c"
   },
-  "public_site_checks": {
-    "site_version": 11,
-    "source_commit": "41dbc88e8726b56534d9a2e8a0056fd53bf2aff6",
-    "optional_B_default": "round-trip confirmed in publishedUI",
-    "free_pin": "two successive arbitraryB taps confirmed before applying",
-    "food_AB": "Exact покушать,realGemini,Baiterek→NationalMuseum90,4distinctfoodchoices,primaryRahat53walk+29visit+8buffer",
-    "full_map": "PASS;A,foodstop,B visible on390x844",
-    "provider_observation": "Earlier v10 first call timed out at6500ms;explicitretry succeeded. v11 directedA→B call succeeded. No service availability rate inferred.",
-    "timeout_recovery": "Newunitregressions cover explicit FoodwithoutAI/manual path and A/B/time preservation; no deliberate production outage induced",
-    "proof": "../research/mobile-first-v10-evidence/production-v11-A-to-B-food.txt"
+  "production_checks": {
+    "site_version": 13,
+    "first_real_Gemini_food_request": "PASS;4routes;no unsupported generic по пути",
+    "required_place_30_minutes": "PASS;YouMe empty;no substitute",
+    "add_15_minutes_same_place": "PASS;45minutes;exactly1routeYouMe",
+    "stale_refresh": "PASS;actual stale Refresh retained exactly1requiredYouMe route",
+    "new_batch_and_map": "PASS;explicit Otherplaces released YouMe;4routes then4disjoint venues;A/45min retained;map-only switch1KFC→2RIBAMBELLE"
   },
-  "remaining": [
-    "Physical iPhone/GPS retest",
-    "Update demo/pitch after product review",
-    "Refresh saved form attachments together; final submission requires explicit user instruction"
-  ],
-  "github_payload_commit": "666622a91c79e7ca69f176e71a7c6c2c0d8e1764",
-  "github_payload_verification": "github-mobile-v11-verification.json"
+  "verification_evidence": "Local route-choice-v12-evidence plus production route-choice-v13-evidence; final GitHub byte checks recorded separately",
+  "github_payload_commit": "260fc4cc759c3192eecb9f822cec04d5dc05c186",
+  "github_verification": "github-route-choice-v13-verification.json;10payloadfiles PASS;metadata verified separately after upload"
 }
