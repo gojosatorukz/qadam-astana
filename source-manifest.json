@@ -1,8 +1,8 @@
 {
-  "source_commit": "72e00e9acc2d7fba2e8aea30fb2356ab6df3e3a6",
-  "files": 191,
-  "bytes": 2066808,
-  "sha256": "2ba73006675aae03e100cae63918109a99fea64428ef8bfa21080a213b7a558e",
+  "source_commit": "45bfc0176baebcffcab6c8c8ae48c055f51c97b4",
+  "files": 200,
+  "bytes": 2602349,
+  "sha256": "be8c9ad5185fe22a87f33b96fa5737dd6da560a8d082c0018f0e51b4ffe0a54c",
   "included_generated_types": [
     "next-env.d.ts"
   ],
@@ -24,8 +24,8 @@
       "sha256": "27d36dcc16f30fea206259766aa1f1a9e6ecd7725fac2fd7822a33b338f655c8"
     },
     "README.md": {
-      "bytes": 21807,
-      "sha256": "84ea0f4e6ad36963b2450f1879b144e9c98f81e622638bacaef76e1d9c682fe1"
+      "bytes": 27505,
+      "sha256": "445385ef68bfc551e846a495d3db860987cd1e2a0d107a28addc0388734bf1ce"
     },
     "app/api/places/route.ts": {
       "bytes": 604,
@@ -44,12 +44,16 @@
       "sha256": "6314d343e1f49d72d003c23cd68ac740dc16ce1b69c9c848c3b692fefa3e14dc"
     },
     "app/layout.tsx": {
-      "bytes": 715,
-      "sha256": "cdbda3be479b731999b7733088e51bd76960cf1b4194c02559d5e372e3b6a51c"
+      "bytes": 733,
+      "sha256": "df0ad47368d63e598ad8df54db6f8de9a4725ee48f9b89b042990fae7f999532"
+    },
+    "app/mobile-journey.css": {
+      "bytes": 14339,
+      "sha256": "7f18731cb98a1b751a46d973ffa5cace9660eb93a0410a723911f9ba17e456c8"
     },
     "app/page.tsx": {
-      "bytes": 67863,
-      "sha256": "597c67ed5fe508066ebadc78f2961d3da97d20517c2d17186112d1115ad15d4d"
+      "bytes": 67323,
+      "sha256": "61784957d5954934350f223dacae984a6480f26219b6df2541531d9696a44c3f"
     },
     "build/connector-preview-plugin.mjs": {
       "bytes": 7211,
@@ -80,20 +84,20 @@
       "sha256": "31f4ca67a4a62572571003d3d5aac85ee6fbfca67a192924bac6b168d95e98fd"
     },
     "components/accessible-dialog.tsx": {
-      "bytes": 1688,
-      "sha256": "82980701e8caf7da9fecbe404b28765e1ab6f671fa9091be62fd7b7e35e0980f"
+      "bytes": 1787,
+      "sha256": "d4224dfc917a8a24b158a7b0c73fd6926dd5fd33518b0e48c84322c40167638e"
     },
     "components/city-map-geometry.ts": {
-      "bytes": 6840,
-      "sha256": "f01135afc0d137d90a58ccae564477417015d0e9dc1aa53b2573f49e9484f838"
+      "bytes": 7929,
+      "sha256": "65a16a51a2560b8746fddd99edcc8b4ee6f48c80b146e29ba21c8262cff3ce57"
     },
     "components/city-map.css": {
-      "bytes": 7974,
-      "sha256": "9735dc48838e27b16a613e03af0157e93b0b95e56d93fc85c19ca3abd7952f4c"
+      "bytes": 8575,
+      "sha256": "f5c63b26091d987d34d6177044a0584096402a3258a0d822f50c03bf8b616256"
     },
     "components/city-map.tsx": {
-      "bytes": 15861,
-      "sha256": "5e50d755aacae92dce5e6aa67b4eae3a089162287b99e7e2380493300d21d2be"
+      "bytes": 21468,
+      "sha256": "a59cd788917320e833ed8a748c3151a60b8dea9b0b07368acff4fe6fdc9af8dc"
     },
     "components/connector-error.tsx": {
       "bytes": 1082,
@@ -106,6 +110,14 @@
     "components/place-discovery.tsx": {
       "bytes": 1139,
       "sha256": "c721f52f3b4fa2ec981e71ee4521d1a5c1195e94de28e4bbf909f1726bc02e2b"
+    },
+    "components/place-photo.tsx": {
+      "bytes": 1046,
+      "sha256": "03a24a8589d2e341733e73c582317b022df7755468f92708cbf0b8acb1e5c436"
+    },
+    "components/point-picker.tsx": {
+      "bytes": 8971,
+      "sha256": "0aaebeddc586dbc8bc17c7f75dd6dc7c1fd1eb17b649c38abe3d49873e35745e"
     },
     "components/ui/accordion.tsx": {
       "bytes": 2048,
@@ -355,13 +367,17 @@
       "bytes": 22742,
       "sha256": "55e6d0891cd9d121a779b8afee89ecad377e59e2dce4e7fe355a3dfb37d02939"
     },
+    "data/place-photos.json": {
+      "bytes": 2995,
+      "sha256": "24e76710fdac40c5d23c76882f6cade67ea9da8bb0043beb69ee72d0a532d1e6"
+    },
     "data/poi.json": {
-      "bytes": 634227,
-      "sha256": "c5cf68566bbe8e725f4b7cbee7083e267cb8b450943594de9ae4eac0d775d72e"
+      "bytes": 890489,
+      "sha256": "7cfa3bb068190a0fcebd27e3150769d1fa583853c4636291b26fec8a6bcdd57c"
     },
     "data/provenance.json": {
-      "bytes": 8698,
-      "sha256": "3ba9246ed7d3a241a8ad5aaf5fa718ee97424a9bf1635a34471cb84f7adccb2c"
+      "bytes": 22199,
+      "sha256": "d83b324831c45180cf461094ae6a1dc70adc9af71812b8defe6150e521ad7283"
     },
     "data/walk-graph.json": {
       "bytes": 5754766,
@@ -376,8 +392,8 @@
       "sha256": "13ddacbf0be50e054d450a6c642b7fdc1aa943fd6b99084711e07e58b600390d"
     },
     "docs/DECISIONS.md": {
-      "bytes": 13794,
-      "sha256": "db88c9fba0bfe75171dc6ea31d5954a4318a027485ff808b3bf8baacbb8a8e0a"
+      "bytes": 18947,
+      "sha256": "1b50797f64963847011c099306e9014f798f6e430fbd46693c0c5a9815e86641"
     },
     "docs/DEPLOYMENT.md": {
       "bytes": 6734,
@@ -388,12 +404,12 @@
       "sha256": "ae1ef2c17097681ccfe893f17d74b8c00b4f61dd0257468299cb20b65f183513"
     },
     "docs/JURY_EVIDENCE.md": {
-      "bytes": 17080,
-      "sha256": "fe40fbf6e2cc69afd8d06199b9648f017e5a0a82e7f81cbc52bc0b1b2192f32e"
+      "bytes": 21227,
+      "sha256": "1518b728ec477f1c71124c4cb86f2d545255e662dacc47a55d4e6715d85828ed"
     },
     "docs/JURY_QA.md": {
-      "bytes": 10741,
-      "sha256": "a178906950401f790ebe1574a485c009946a3c9c275831a938b51a24dc676c1b"
+      "bytes": 11756,
+      "sha256": "ed2808b1ed1be73d620e6cd0b37304e27f777f3ed025843a3ab9b6cbaa8e1baa"
     },
     "docs/README.md": {
       "bytes": 462,
@@ -404,16 +420,16 @@
       "sha256": "e2190b33030bb3bb48dd34397dbce6a7f5980747f639e5412316ebdd5a7a4bce"
     },
     "docs/SUBMISSION_CHECKLIST.md": {
-      "bytes": 5076,
-      "sha256": "7c79645482dd9ddbb0e028e860e68814efe99fe563cec0b1c69e1081d967ce01"
+      "bytes": 6388,
+      "sha256": "ced61166ef89a5506ce57860f1a99c935f7ccda32101991e79c6c89d796fce34"
     },
     "docs/TEST_SCENARIOS.md": {
       "bytes": 11857,
       "sha256": "f9217f13ff52f1979934dc008c43de8b3854cf52e5ae8d18966dee410e440e09"
     },
     "docs/VNEXT_RELEASE.md": {
-      "bytes": 23910,
-      "sha256": "23302b1317906ab2c2beb00bc9a33cc891b02d34efcd2d1e728a9941b73c4958"
+      "bytes": 30805,
+      "sha256": "9e342e22b0cb5b7574393eedeebf47704838ccb1470aab02b39d49aee965d794"
     },
     "docs/evaluation/README.md": {
       "bytes": 2650,
@@ -500,8 +516,8 @@
       "sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b"
     },
     "lib/build-plan.ts": {
-      "bytes": 12049,
-      "sha256": "1702bd4dff12a4dd9f158fc6b6b9fffc2c5ac3fae684cf182c81c0cb4b358ea3"
+      "bytes": 12153,
+      "sha256": "5945ab1f575b8fe8bd1f80e063d45888aa538e94de5faa31089105c4c2787f6f"
     },
     "lib/connector-context.ts": {
       "bytes": 612,
@@ -524,52 +540,56 @@
       "sha256": "1c93d747e384c8e17e3e3dd5361b24412babf5eba2a11d2ae7a75f4e0924112c"
     },
     "lib/experience.ts": {
-      "bytes": 8918,
-      "sha256": "0e28af71b93be2ffa7ccc3e0d012cde9e27be50d1df66e466f941acd36bd39b6"
+      "bytes": 9720,
+      "sha256": "df93f97330315a3ed7366254e080cf08231e2dd7fa850db0a24cbdec2887cb20"
     },
     "lib/intent-feedback.ts": {
       "bytes": 1109,
       "sha256": "794300bb326dc5fa42c459971467279f38585e03973f3c0b676b82d7e0f5310e"
     },
     "lib/intent-types.ts": {
-      "bytes": 1023,
-      "sha256": "6ea452ff59031ecc7a2a6dbec639dcdc1aba6b0330ca1e13eb9b5659259e876e"
+      "bytes": 1031,
+      "sha256": "630ada5236a651b6a70d30542ce47639e74f515ad29e505f9b886cb679f77756"
     },
     "lib/intent.ts": {
-      "bytes": 17220,
-      "sha256": "8b75ef5ed66d047d09962a6354a849ad430e87b558331b678635bd44acca72c6"
+      "bytes": 17911,
+      "sha256": "3fc36e49eb474cd3e7a52cd06e3d98d40144a4e7b252d05439a35509f42a2265"
     },
     "lib/place-facts.ts": {
       "bytes": 6477,
       "sha256": "06b78c1d0d6855a5a754bbe3c720a29fb296ba8640ff490ca68da8a4d2309d3b"
+    },
+    "lib/place-photos.ts": {
+      "bytes": 197,
+      "sha256": "c0a7d0a4aac89dddfb58c9344e1bef34903f4c8615f9091711eb0c8e222472fd"
     },
     "lib/place-ranking.ts": {
       "bytes": 446,
       "sha256": "bbb5d5f6390f984050afa4cf837f31d9f410f185f7285908463a8c6d662f4e7a"
     },
     "lib/plan-validation.ts": {
-      "bytes": 5792,
-      "sha256": "b89514521ed36083dbbed4526824a994a2d94dbc1e7c4caee1d509c93d26e628"
+      "bytes": 7395,
+      "sha256": "4e8a801645cf7afc85c7e9fb5504bd025d5208211238d41dfece1eaff6ca1986"
     },
     "lib/planner.ts": {
-      "bytes": 48924,
-      "sha256": "72c694fe40e9b40dc8ec4b57629ca36bd332dac5364c4fce5fdcd7bb60b4a006"
+      "bytes": 54738,
+      "sha256": "9b6143faf4669f683348ce287dcbc62bb5619dbbfd9f46ab374774930ce57041"
     },
     "lib/planning-context.ts": {
-      "bytes": 17625,
-      "sha256": "6d74e618d8fd81399491d817387016a2599d37703d1b1220c1f94c2dae18366a"
+      "bytes": 17877,
+      "sha256": "0e95581c68818c35aa359c12edc4f3f938a2ae3d5aa30686148898f030720e0c"
     },
     "lib/qadam-types.ts": {
-      "bytes": 2679,
-      "sha256": "e02ac912bec293e27f8eca8ddb187f7e1defbeb490167762f3bb89d8a020b9a5"
+      "bytes": 3149,
+      "sha256": "cdeedd25766092a46680d86374e63ae7dee7c45c88b1743a19421a0a6a35803e"
     },
     "lib/query-policy.ts": {
       "bytes": 1082,
       "sha256": "985dfc26ab0f6a2a56642bad9f93a7f29a6a9fe483bf9cdc29f4be2cc1bd586d"
     },
     "lib/rag.ts": {
-      "bytes": 17838,
-      "sha256": "f2d684c998a9d7d5a980e38527b0e4eb40ba4126d991baf228ccfb18a87e0887"
+      "bytes": 18769,
+      "sha256": "c401ac720ced4d63b6ea16d53b9856ab13afe2f919e6b8fc814c63c99bd80a76"
     },
     "lib/request-abort.ts": {
       "bytes": 1300,
@@ -580,16 +600,16 @@
       "sha256": "312d3d811198e74e1760bdc2654ee2d6f1a7ad79f4cb5a9658439bed2b5dfc2e"
     },
     "lib/ui-copy.ts": {
-      "bytes": 2624,
-      "sha256": "8040934c2cca4c61b02d9e66fad3d549c4215a705c0b287f68b90b1506d2ab2e"
+      "bytes": 2676,
+      "sha256": "9331b14ffbbd00248718db0d8e889bc26b17aaeac3da72f5a25e6cfe4b14cb14"
     },
     "lib/utils.ts": {
       "bytes": 177,
       "sha256": "53f3d3d070f0a9082934da25b875f9499855c2b0693868dd28be8c23d8730f68"
     },
     "lib/walking-graph.ts": {
-      "bytes": 9885,
-      "sha256": "5bfa8ce0982e3fafd09a9589adb9dc5d6b8a929f1b3845e35e7d301a93b4bb9a"
+      "bytes": 9897,
+      "sha256": "b5e5ad36493be0c253b2320daa6744e1bc6802fd4f98c7f9224268be579e9b52"
     },
     "next-env.d.ts": {
       "bytes": 284,
@@ -623,6 +643,14 @@
       "bytes": 1036,
       "sha256": "d051a8c47936990a9085693d307bb7cea1bc1b6d7ed956bcbaacf674f4ec96b9"
     },
+    "public/photos/astana-botanical-garden.jpg": {
+      "bytes": 231191,
+      "sha256": "ecede3b157f8bc250e6cf6409fffa24dbee1c47fa559e8014ca5a23c64fab353"
+    },
+    "public/photos/astana-zhetysu-park.jpg": {
+      "bytes": 250958,
+      "sha256": "d8cdcdfaaaebee039859eebf88141d75634386f90f0d70403a4138e804726460"
+    },
     "public/window.svg": {
       "bytes": 386,
       "sha256": "decf1cf7bb22b5c99c4857cfcd5718ce5465c4454166317589c83fc73df74b66"
@@ -632,8 +660,8 @@
       "sha256": "2ae5329ac860076070c9217a43106a15cb5ecf907a0f7baeb9ef903f76b53c68"
     },
     "scripts/collect-pois.mjs": {
-      "bytes": 18499,
-      "sha256": "1b44e3bc7d98b7bbe75bbd1a39120bf5ccd69f0ea932cb63502d81a642fdf115"
+      "bytes": 22135,
+      "sha256": "527ec3e8dec1834183dbc28a44cdbd65aacbeb5ee3764649c76d061d37b3ca4b"
     },
     "scripts/connector-preview/connector-preview-session.mjs": {
       "bytes": 6855,
@@ -704,16 +732,16 @@
       "sha256": "df86ebfc27d2f00860036658e933ac0ddd7b5f6879aa5d51218f0863c7e1fb60"
     },
     "tests/city-map-geometry.test.ts": {
-      "bytes": 5675,
-      "sha256": "a4ad9ab31884e04a7ef60ecc9cffadea3b8be7a508c1df83e967424ca705268d"
+      "bytes": 7646,
+      "sha256": "118ab42a3dda56408302f8ceeca2eae90236bcfe658c21ef9aec79d3172a6fa9"
     },
     "tests/experience.test.ts": {
       "bytes": 4056,
       "sha256": "f1c9592aabf9e7d720ca1cd29b5f47d800cf412a383b254756200e32b7360455"
     },
     "tests/extended.test.ts": {
-      "bytes": 9999,
-      "sha256": "3f6fd245ab0b96768e8b3a7223d2c687d41fbdfbbe87efb02b887ff259e85c25"
+      "bytes": 10608,
+      "sha256": "b714ff99aa8ab595385f42f007f96f3cf2a512f793c29f3e553493e2ac923209"
     },
     "tests/final-audit-regressions.test.ts": {
       "bytes": 11012,
@@ -733,11 +761,15 @@
     },
     "tests/intent.test.ts": {
       "bytes": 17459,
-      "sha256": "35ea3ea12d9d01a77531e21170f6c7bfb7146858a4943c98b977777df0157782"
+      "sha256": "3fa88c09bb5c09ae471c376943514605c2425d26bd3ef5278b20ed3e3c91675c"
     },
     "tests/place-facts.test.ts": {
       "bytes": 9853,
       "sha256": "262c5da69d7fabcec107b4cd731b4b72e9925df860e9aa0876da0fa1cfb22fb3"
+    },
+    "tests/place-photos.test.ts": {
+      "bytes": 1594,
+      "sha256": "eb3062e33acdbf5954968194700194801b302ab2710b66fbf93c1ddf00acbe85"
     },
     "tests/planner-intent.test.ts": {
       "bytes": 14507,
@@ -746,6 +778,10 @@
     "tests/planner.test.ts": {
       "bytes": 16673,
       "sha256": "df787afd3b759a57ee010092b56cb699af803094159af60017fbe2af88f79b37"
+    },
+    "tests/point-to-point-food.test.ts": {
+      "bytes": 12300,
+      "sha256": "3a50f7cdf8fc028ed0e9ecb43c4f6ae9885c64821466827f55345689c041d8ae"
     },
     "tests/rag.test.ts": {
       "bytes": 18790,
