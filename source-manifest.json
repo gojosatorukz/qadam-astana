@@ -1,8 +1,8 @@
 {
-  "source_commit": "e8c6d7ac7b1c6c93241d9307e81b7f51e0aa9221",
-  "files": 213,
-  "bytes": 2659127,
-  "sha256": "18a5e85491878ffcef8776f670abc2b7e06f3296205eaa92f297e424913275e5",
+  "source_commit": "4eee3935f33811325b676bf939f941b16d7a8011",
+  "files": 225,
+  "bytes": 2690026,
+  "sha256": "27b20ac5dc6825fce734705ad0afdeebe195c1008d2423616590202a9fc25fb0",
   "included_generated_types": [
     "next-env.d.ts"
   ],
@@ -24,8 +24,8 @@
       "sha256": "27d36dcc16f30fea206259766aa1f1a9e6ecd7725fac2fd7822a33b338f655c8"
     },
     "README.md": {
-      "bytes": 33736,
-      "sha256": "75eab311d5552bc55a87fda58378e5127ef894cd7aa4bc5880d4f1fdbd4e0c0e"
+      "bytes": 37854,
+      "sha256": "b93997acd3fbc647f22879f2e51982cb3029282543218291cd178cd52d5f4fad"
     },
     "app/api/places/route.ts": {
       "bytes": 604,
@@ -52,8 +52,8 @@
       "sha256": "7f18731cb98a1b751a46d973ffa5cace9660eb93a0410a723911f9ba17e456c8"
     },
     "app/page.tsx": {
-      "bytes": 76307,
-      "sha256": "2ab6ebd2f986a356e808e2c8c382e5b31dd2a4cf61729638c4e63beff848ee07"
+      "bytes": 76363,
+      "sha256": "7e64821974f2ed9f80496c4cf8f6c5b95d37d45b2ebbab080bc3f028ee497cc7"
     },
     "app/route-choice.css": {
       "bytes": 8707,
@@ -100,8 +100,8 @@
       "sha256": "d787c6a399deab3ce90c422cf99e95347c96e6883105ff0618fd9d2f3a74212e"
     },
     "components/city-map.tsx": {
-      "bytes": 26640,
-      "sha256": "d33ac8e81bce45d878e0733c5beed61a8ea0bc06d5a0ad196f949b8ab32b63f9"
+      "bytes": 26663,
+      "sha256": "c80cf623c839edd0da62d31996c49703440d3ee2d1aa01c344f8abe2f50f7127"
     },
     "components/connector-error.tsx": {
       "bytes": 1082,
@@ -376,12 +376,12 @@
       "sha256": "a0784eb77831a799fad7991df4f1b666f876201565a80175e1aa68733574a2e4"
     },
     "components/walking-mode.css": {
-      "bytes": 10211,
-      "sha256": "26b6d37ffa8ead1041d946b8bf99321fe30e71fa7ad37067d5ce113600c394dd"
+      "bytes": 10877,
+      "sha256": "7b02d72723612c08acaa0d0398080998891b8631fc93c614b1d0fbbf95d76e99"
     },
     "components/walking-mode.tsx": {
-      "bytes": 28648,
-      "sha256": "f35f77eeae257327d2b0466acb75ca3ca3680494c802b806612f4eb082658524"
+      "bytes": 36771,
+      "sha256": "7f2ff7cbcb9e06bbd298a446357b6edfa4c1fca176321a6cce8388d88c264395"
     },
     "data/place-facts.json": {
       "bytes": 22742,
@@ -424,12 +424,12 @@
       "sha256": "ae1ef2c17097681ccfe893f17d74b8c00b4f61dd0257468299cb20b65f183513"
     },
     "docs/JURY_EVIDENCE.md": {
-      "bytes": 27462,
-      "sha256": "492bbd9a012c6cb765c23e67d07e9467b95a694daf716e2992a61b57be534a09"
+      "bytes": 30968,
+      "sha256": "89a25e27ef94081c320867517811ec259ff1094aa998c1ea6dade59afae75f39"
     },
     "docs/JURY_QA.md": {
-      "bytes": 14566,
-      "sha256": "0e4d51b072393fce8517fb268362d32ef210c7f87478c04a825410808d28c8ab"
+      "bytes": 17588,
+      "sha256": "2763c4ff687de3e3b8676aa6d7faabd21d74ea663fb32ee7f937de474ce04958"
     },
     "docs/README.md": {
       "bytes": 462,
@@ -440,16 +440,16 @@
       "sha256": "e2190b33030bb3bb48dd34397dbce6a7f5980747f639e5412316ebdd5a7a4bce"
     },
     "docs/SUBMISSION_CHECKLIST.md": {
-      "bytes": 9117,
-      "sha256": "79fce871d3e18a9f0a294e7a5ac95be6935bcb1c0321ee2387a96423becc6028"
+      "bytes": 11885,
+      "sha256": "881f945b75f854dd647b53dd74c8e3e379cf53f42c8f413b9d8fae4516a0118d"
     },
     "docs/TEST_SCENARIOS.md": {
-      "bytes": 20937,
-      "sha256": "914af109ed7fe813e97bc1fe2640163f59802a14357a124116fa15503625d98e"
+      "bytes": 26019,
+      "sha256": "732fc33aab9129358161f73ebb0e81bd05ffad8ceaa363906add99cc73e71645"
     },
     "docs/VNEXT_RELEASE.md": {
-      "bytes": 39156,
-      "sha256": "601558c4a542755b80d2aa02da2c0910805a331ad24ec239b5d5c36582889072"
+      "bytes": 43843,
+      "sha256": "e004aa88343b06f72e910b2ea54bdee7a49c5cacd7b5300904db9c3e866fa946"
     },
     "docs/evaluation/README.md": {
       "bytes": 2650,
@@ -636,8 +636,36 @@
       "sha256": "47eab9c30daabe1fdb6ecb068e29cf55174cec1128f89ae9556000c60bfa23ca"
     },
     "lib/walk-guide.ts": {
-      "bytes": 13903,
-      "sha256": "74c2ba3608105b146d2057cccd00e2d558307dd5729c155da74ae578d1e16072"
+      "bytes": 13924,
+      "sha256": "8cbbaf97e5cff713fa89801aeabe74046759e76ff0a947a58a4c4ed09040d70b"
+    },
+    "lib/walk-reroute-apply.ts": {
+      "bytes": 1621,
+      "sha256": "9342b66483cca35741cbc789e0f5414f1c01e3c4e8493ca227fe66f82213705f"
+    },
+    "lib/walk-reroute-client.ts": {
+      "bytes": 5469,
+      "sha256": "77aa3144e8671257b5c64fd6dfa8c9ef4824789fa36a6af4c36e6420998e06fe"
+    },
+    "lib/walk-reroute-policy.ts": {
+      "bytes": 3714,
+      "sha256": "8fc9715feccfc218f296e6bd036df054342cd0bdea5daadd5fa854f542b3fbcf"
+    },
+    "lib/walk-reroute-worker.d.ts": {
+      "bytes": 218,
+      "sha256": "66ae70227a32595759346284d3b39fc39b8874b7d9d9cd482a9739b2ab736415"
+    },
+    "lib/walk-reroute.ts": {
+      "bytes": 10860,
+      "sha256": "01d0f05c6086228a2458908838425833bc40f378882d8f0ff703e34f0160c15b"
+    },
+    "lib/walk-reroute.worker.ts": {
+      "bytes": 1364,
+      "sha256": "c4a0243ee0fe68eed9c2a93cc183eb049d6b85f13e8dfc0c36f3e99c2c580a8f"
+    },
+    "lib/walk-route-distance.ts": {
+      "bytes": 3503,
+      "sha256": "669aa3def463bbf7d07bc703cc6fd7e16e9ba47d4189833a78fd978e3b23f321"
     },
     "lib/walk-session.ts": {
       "bytes": 1673,
@@ -836,8 +864,28 @@
       "sha256": "814f83b0b2df13ffce6cddc8265e92eeb99813a1fe8b48fe6b4c998a09c79e55"
     },
     "tests/walk-guide.test.ts": {
-      "bytes": 13397,
-      "sha256": "723e10b718f9f2c79ec77ad4096167c2e4097cc65c72cd1c917a88b77c30a3ea"
+      "bytes": 14429,
+      "sha256": "aca58e83b3939fd8e835f138b5a1df4ac3fb11875a7983a05e11afad7b1b118c"
+    },
+    "tests/walk-reroute-apply.test.ts": {
+      "bytes": 2339,
+      "sha256": "394370fd17ad3e786f4ab65ca9e4ef0f707eafaaafbe3db665115071ca5c8989"
+    },
+    "tests/walk-reroute-client.test.ts": {
+      "bytes": 7452,
+      "sha256": "14da8b2a237ff068eb1a43999d174b81d1943120020ac3e020c26bc73a259aef"
+    },
+    "tests/walk-reroute-policy.test.ts": {
+      "bytes": 4645,
+      "sha256": "69c67f64e2178927913748dd5861159df2e184084edad0715617f06365995f14"
+    },
+    "tests/walk-reroute.test.ts": {
+      "bytes": 11166,
+      "sha256": "57e8d75790c820d976ee0e94c3fb798f07180640ee263e760cec11e336eb620e"
+    },
+    "tests/walk-route-distance.test.ts": {
+      "bytes": 6189,
+      "sha256": "7eee671727ac3b74ce9b73e284786b5a94e6196d33cb50324ff239b82b3e7c5f"
     },
     "tests/walk-session.test.ts": {
       "bytes": 2808,
