@@ -22,7 +22,7 @@ MP4 предыдущей версии v9: https://github.com/gojosatorukz/qadam-
 Проверенных фото ресторанов нет; доступны внешние 2ГИС/Google Maps/сайт места.
 
 ПРОВЕРКИ
-307/307 тестов кода, TypeScript, importer и сборка PASS.
+309/309 тестов кода, TypeScript, importer и сборка PASS.
 Живой Gemini/UI: «покушать» без Б за45минут; Байтерек→Национальный музей за90минут;
 оба дали четыре реальных варианта. Пустое желание/без Б тоже даёт результат.
 Повторные свободные точки и полноэкранные карты проверены в браузере.
@@ -37,7 +37,7 @@ MP4 предыдущей версии v9: https://github.com/gojosatorukz/qadam-
 Сохранённый черновик формы с v9 не обновлён и не отправлен.
 Перед сдачей: обновить видео/слайды, согласовать все вложения и получить указание на отправку.
 
-SOURCE COMMIT: 45bfc0176baebcffcab6c8c8ae48c055f51c97b4
-SOURCE ZIP: 200 files · SHA256 be8c9ad5185fe22a87f33b96fa5737dd6da560a8d082c0018f0e51b4ffe0a54c
-Sites version: 10
+SOURCE COMMIT: 41dbc88e8726b56534d9a2e8a0056fd53bf2aff6
+SOURCE ZIP: 200 files · SHA256 8c3e1977eb73b971ebad42faf70386d87984d9783f232a2f7768f7bdb41cfb37
+Sites version: 11
 HOLD — NOT SUBMITTED. ЗАЯВКУ НЕ ОТПРАВЛЯТЬ.

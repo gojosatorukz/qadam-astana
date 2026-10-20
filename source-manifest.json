@@ -1,8 +1,8 @@
 {
-  "source_commit": "45bfc0176baebcffcab6c8c8ae48c055f51c97b4",
+  "source_commit": "41dbc88e8726b56534d9a2e8a0056fd53bf2aff6",
   "files": 200,
-  "bytes": 2602349,
-  "sha256": "be8c9ad5185fe22a87f33b96fa5737dd6da560a8d082c0018f0e51b4ffe0a54c",
+  "bytes": 2603678,
+  "sha256": "8c3e1977eb73b971ebad42faf70386d87984d9783f232a2f7768f7bdb41cfb37",
   "included_generated_types": [
     "next-env.d.ts"
   ],
@@ -24,8 +24,8 @@
       "sha256": "27d36dcc16f30fea206259766aa1f1a9e6ecd7725fac2fd7822a33b338f655c8"
     },
     "README.md": {
-      "bytes": 27505,
-      "sha256": "445385ef68bfc551e846a495d3db860987cd1e2a0d107a28addc0388734bf1ce"
+      "bytes": 28039,
+      "sha256": "1f45e58bbe2d468e11c8b2c1fd5db3c3a30661aca4f480dc28fb48eb62ceae29"
     },
     "app/api/places/route.ts": {
       "bytes": 604,
@@ -393,7 +393,7 @@
     },
     "docs/DECISIONS.md": {
       "bytes": 18947,
-      "sha256": "1b50797f64963847011c099306e9014f798f6e430fbd46693c0c5a9815e86641"
+      "sha256": "ad5b31ce8ff1ae7194c0c8c0b3d63873f4f51068a8e38cacc9c1077797b5f776"
     },
     "docs/DEPLOYMENT.md": {
       "bytes": 6734,
@@ -405,11 +405,11 @@
     },
     "docs/JURY_EVIDENCE.md": {
       "bytes": 21227,
-      "sha256": "1518b728ec477f1c71124c4cb86f2d545255e662dacc47a55d4e6715d85828ed"
+      "sha256": "47266cfe50d3b6e7a85486d41fab89501ea97cb4127248702d439be2b7e418ed"
     },
     "docs/JURY_QA.md": {
       "bytes": 11756,
-      "sha256": "ed2808b1ed1be73d620e6cd0b37304e27f777f3ed025843a3ab9b6cbaa8e1baa"
+      "sha256": "d5158c02b004cd84eca205b8bbf661fb0b2c9bed5ec9a03159bb434dac6c41fb"
     },
     "docs/README.md": {
       "bytes": 462,
@@ -421,15 +421,15 @@
     },
     "docs/SUBMISSION_CHECKLIST.md": {
       "bytes": 6388,
-      "sha256": "ced61166ef89a5506ce57860f1a99c935f7ccda32101991e79c6c89d796fce34"
+      "sha256": "f8cea923724210f99197084ff18d7a696716e8d3a8b341222dbe57f4e79cf213"
     },
     "docs/TEST_SCENARIOS.md": {
       "bytes": 11857,
       "sha256": "f9217f13ff52f1979934dc008c43de8b3854cf52e5ae8d18966dee410e440e09"
     },
     "docs/VNEXT_RELEASE.md": {
-      "bytes": 30805,
-      "sha256": "9e342e22b0cb5b7574393eedeebf47704838ccb1470aab02b39d49aee965d794"
+      "bytes": 31334,
+      "sha256": "3804157468dc04a02b856f792416fdece92efd24aa7da5cb5c4d45c923037d1d"
     },
     "docs/evaluation/README.md": {
       "bytes": 2650,
@@ -569,15 +569,15 @@
     },
     "lib/plan-validation.ts": {
       "bytes": 7395,
-      "sha256": "4e8a801645cf7afc85c7e9fb5504bd025d5208211238d41dfece1eaff6ca1986"
+      "sha256": "9ba36c1e00d2e8fc4d46bc6295251fcd6f4ebbbf6d4caed02408c45100335869"
     },
     "lib/planner.ts": {
       "bytes": 54738,
       "sha256": "9b6143faf4669f683348ce287dcbc62bb5619dbbfd9f46ab374774930ce57041"
     },
     "lib/planning-context.ts": {
-      "bytes": 17877,
-      "sha256": "0e95581c68818c35aa359c12edc4f3f938a2ae3d5aa30686148898f030720e0c"
+      "bytes": 18852,
+      "sha256": "bf4234d9d7020fc652d933d71f1c360d2666a2e56af53307bb7c006997a93965"
     },
     "lib/qadam-types.ts": {
       "bytes": 3149,
@@ -780,8 +780,8 @@
       "sha256": "df787afd3b759a57ee010092b56cb699af803094159af60017fbe2af88f79b37"
     },
     "tests/point-to-point-food.test.ts": {
-      "bytes": 12300,
-      "sha256": "3a50f7cdf8fc028ed0e9ecb43c4f6ae9885c64821466827f55345689c041d8ae"
+      "bytes": 14993,
+      "sha256": "0ce50767a5ab1c18b2c2d493244dab5805721b59d5b6f93faf24c6335f278cfe"
     },
     "tests/rag.test.ts": {
       "bytes": 18790,
