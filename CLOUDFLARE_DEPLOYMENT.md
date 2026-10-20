@@ -1,6 +1,6 @@
 # Qadam: Cloudflare free deployment profile
 
-This profile reuses the frozen Qadam source in `../../qadam` (base commit `4eee3935f33811325b676bf939f941b16d7a8011`). It adapts only hosting and initial planning execution; the original Sites checkout and public deployment remain unchanged.
+This profile builds the current canonical Qadam source in `../../qadam`. It serves the phone-first planner, live possibilities map and local city passport. The earlier Sites public deployment remains a preserved v15 backup; it is not republished by this profile.
 
 Target public hostname: https://qadam-astana.pages.dev/
 Backup Sites hostname: https://qadam-astana-walk.pubg-bekzat.chatgpt.site/
@@ -38,6 +38,8 @@ For an authorized Cloudflare account, `wrangler pages secret put GEMINI_API_KEY 
 
 ## Verification and limits
 
-The canonical suite passed 387/387 and the standalone API/RPC/metadata/error suite passed 28/28; TypeScript and production builds passed. This includes planning with the static `Response.json` API absent (Safari 16), safe support codes, cancellation and server-clock failures. Real browser checks exercised food interpretation with Gemini, four route choices, a return to A and an optional B, actual compiled rerouting workers, and actual iframe widths 320/390/430. The participant confirmed that routes appear on the physical iPhone after switching worker data imports to JSON assets. Tests use synthetic public coordinates; a physical GPS/voice walk remains unverified. Publication and live verification are recorded separately in `cloudflare-deployment.json`.
+The canonical suite passed 423/423 and the standalone API/RPC/metadata/error suite passed 29/29; TypeScript and production builds passed. This includes planning with the static `Response.json` API absent (Safari 16), safe support codes, cancellation and server-clock failures. Real browser checks exercised food interpretation with Gemini, four route choices, a return to A and an optional B, actual compiled rerouting workers, and actual iframe widths 320/390/430. The participant confirmed that routes appear on the physical iPhone after switching worker data imports to JSON assets. Tests use synthetic public coordinates; a physical GPS/voice walk remains unverified. Publication and live verification are recorded separately in `cloudflare-deployment.json`.
+
+Local passport/preferences stay on the device. Only a minimal preference snapshot is sent to the local planning worker, outside the public API request. A bounded ±6 soft bias never overrides time, filters, exclusions or a required POI. GPS-qualified completion is the only source of passport progress. The possibilities map uses cached endpoint search trees, raw JSON assets and no AI calls on slider changes. Past/invalid departures and expired return windows disable the map. Public city reporting is a future opt-in proposal; collection/transmission is not enabled.
 
 The original presentation/video remain baseline v9 until the participant approves a final product version. The official application is on HOLD and has not been submitted.

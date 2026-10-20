@@ -1,62 +1,77 @@
 {
-  "createdAt": "2026-10-20T11:52:47.075789+00:00",
+  "createdAt": "2026-10-20T12:59:19.796805+00:00",
   "site": "https://qadam-astana.pages.dev/",
   "backupSite": "https://qadam-astana-walk.pubg-bekzat.chatgpt.site/",
-  "canonicalSourceCommit": "4eee3935f33811325b676bf939f941b16d7a8011",
+  "canonicalSourceCommit": "9795babc545cd0626ae7609d0a42e9d0db4b8dbe",
   "architecture": "Cloudflare Pages static SPA; browser graph/planning workers; server-only Gemini Functions",
   "hosting": "Free; no paid bindings or subscription enabled",
   "tests": {
-    "canonical": 387,
-    "standalone": 28,
+    "canonical": 423,
+    "standalone": 29,
     "typescript": "PASS",
     "build": "PASS"
   },
   "runtimeArchive": {
     "path": "qadam-cloudflare-deploy.zip",
-    "files": 19,
-    "bytes": 3959651,
-    "sha256": "218ad3b64b42030f166f57ec4692020c6f4ce5a5d21b8d341e400c7fb0a82bf0"
+    "files": 21,
+    "bytes": 3999114,
+    "sha256": "f427115619b64a85fb0f0fe426279b75170dbc03c1c17a5d4810a7f36e4af964"
   },
   "sourceArchive": {
     "path": "qadam-cloudflare-source.zip",
-    "files": 250,
-    "bytes": 2888657,
-    "sha256": "ce501da7ae84f65800ab465b10653442072841fe567d9dbb832a387ef67af700"
+    "files": 270,
+    "bytes": 2944086,
+    "sha256": "c5d8c103d8d55632b86aa7961b4c2b66290403cb4866ab85c3c666188d3e8294"
   },
   "secretScan": "PASS",
   "submission": "HOLD-NOT-SUBMITTED",
+  "release": "mobile-city-v16",
   "deployment": {
-    "id": "1aacddf5-003c-4c79-a577-a51f0ca45a23",
-    "url": "https://1aacddf5.qadam-astana.pages.dev",
+    "id": "076888aa-2fd2-41ca-9a39-bf23577fa5cc",
+    "url": "https://076888aa.qadam-astana.pages.dev",
     "environment": "production",
-    "latest_stage": {
-      "name": "deploy",
-      "started_on": null,
-      "ended_on": "2026-10-20T11:46:26.621359Z",
-      "status": "success"
-    },
-    "aliases": null
+    "branch": "main",
+    "status": "success",
+    "method": "Cloudflare dashboard Direct Upload;21/21 files uploaded; advanced-mode _worker.js supported"
   },
   "productionSecret": {
     "name": "GEMINI_API_KEY",
-    "type": "secret_text"
+    "type": "secret_text",
+    "configuredHealthCheck": true
+  },
+  "features": [
+    "Phone-first planner with three bottom tabs and horizontal route choices",
+    "Cached walking-network possibilities map; one stop via A-to-POI-to-B or return-to-A including visit and buffer",
+    "Full-screen possibilities map and live time/filter updates",
+    "Local private city passport, GPS-qualified completions, XP/levels, personal soft preferences",
+    "Strict fresh GPS/accuracy/near-A startup; custom time preview until explicit now replanning"
+  ],
+  "personalData": {
+    "passportStorage": "browser localStorage only; no GPS tracks or coordinates in passport",
+    "preferences": "minimal local worker snapshot; excluded from public API and Gemini request",
+    "ratings": "personal only; stars after GPS-confirmed completed visit; soft±6 bias cannot override hard constraints",
+    "cityReporting": "future proposal only; collection and transmission disabled",
+    "modelTraining": "not enabled"
   },
   "media": {
-    "status": "baseline v9; refresh deferred until participant approval",
+    "status": "baseline v9; update deferred until participant approves product",
     "video": "https://youtu.be/YsN--AADsZ0"
   },
   "liveChecks": {
-    "phonePlanning": "PASS: participant confirmed routes appeared on physical iPhone after JSON asset fix",
-    "latestClientBundle": "/assets/index-8J8K_arA.js",
-    "productionPublication": "PASS: Cloudflare canonical production deployment status success",
-    "priorPrimaryBrowserChecks": "PASS: four food45 routes, Gemini intent and explanations, full-screen map/option switching; A-to-B60 no feasible stop handled",
-    "exactLatestLocalBrowserCheck": "PASS: compiled raw JSON loader, explicit manual food planning produces four valid45min return routes after simulated/observed provider timeout",
-    "sourceBaselinePreserved": "PASS: canonical git clean; original frozen ZIP/metadata hashes unchanged"
+    "publishedClientBundle": "/assets/index-Drahgzbt.js",
+    "apiHealth": "PASS:publichealth,statusok,geminiConfiguredtrue,1204POI",
+    "aiIntent": "PASS:Gemini food interpretation3612ms on retry; initial attempt timed out; four network routes produced",
+    "explanations": "Provider unavailable on checked response; deterministic source-based explanations preserved",
+    "map": "PASS:75 feasible places at45min, full-screen map opens on public hostname",
+    "localMobile": "PASS:320/390/430 widths;freeAmapclick;expiredcustomblocked;mapPOIbuildpreservesrequiredplace;GPSpreviewnoXP",
+    "sourceReproduction": "PASS:publicsourceZIP270files;rebuild21runtimefiles byte-identical with existing pinned dependencies",
+    "physicalPhone": "Previous release routes confirmed by participant; this release checked in phone-sized browser, new physical iPhone walk not confirmed"
   },
+  "temporaryPublisherAccess": "No new Wrangler grant created; published through existing authenticated dashboard. Previous temporary OAuth remains revoked.",
   "limitations": [
-    "A physical GPS/voice walk remains unverified.",
-    "Gemini can time out; retry and explicit manual planning remain available.",
-    "Root browser network intermittently times out to pages.dev; latest primary phone check is participant confirmed."
+    "A new physical GPS/voice walk remains unverified.",
+    "Gemini may time out; retry and explicit manual planning remain available.",
+    "POI snapshot/OSM hours/200m graph connectors have documented uncertainty."
   ],
-  "temporaryPublisherAccess": "Revoked via official Wrangler logout; whoami confirms not authenticated"
+  "sourceArchiveGitHubCommit": "e5f342b2e834a2e5af50ab8142fd60ac3ec1d045"
 }
