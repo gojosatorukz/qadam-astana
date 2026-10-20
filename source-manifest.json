@@ -1,8 +1,8 @@
 {
-  "source_commit": "f274665892ae406ba308cb01f5e694903ee78e58",
+  "source_commit": "80bfef7ed9ad21674e7cc5c867f8d950eade1245",
   "files": 187,
-  "bytes": 2047625,
-  "sha256": "82349c8e0e410306a22d6aa59f8e05b694c1f350632da78aa6a347991f879abd",
+  "bytes": 2048875,
+  "sha256": "3ded96815641449aea95d7cc109900a05c59eb8ef967245c51fb8687b5748c18",
   "included_generated_types": [
     "next-env.d.ts"
   ],
@@ -24,8 +24,8 @@
       "sha256": "27d36dcc16f30fea206259766aa1f1a9e6ecd7725fac2fd7822a33b338f655c8"
     },
     "README.md": {
-      "bytes": 18570,
-      "sha256": "799811a29869549ff7c958233e2272917a679049f8da5de3bec1b57bceaed491"
+      "bytes": 19980,
+      "sha256": "fcd9000e42c7d26655e97f597c37d3e5292bbc39746e70f14f1bb644e9d3f0e6"
     },
     "app/api/places/route.ts": {
       "bytes": 604,
@@ -40,16 +40,16 @@
       "sha256": "4265a2e7c2dcb3a6f4b7026f762bf5b6e4caec76cc13c0a45987ee9a9f2e42cc"
     },
     "app/globals.css": {
-      "bytes": 40507,
-      "sha256": "13f94ea4306a7128e099f8e97e66c8d103cc643211d3a5374666903f41d7fcd7"
+      "bytes": 40757,
+      "sha256": "6314d343e1f49d72d003c23cd68ac740dc16ce1b69c9c848c3b692fefa3e14dc"
     },
     "app/layout.tsx": {
       "bytes": 715,
       "sha256": "cdbda3be479b731999b7733088e51bd76960cf1b4194c02559d5e372e3b6a51c"
     },
     "app/page.tsx": {
-      "bytes": 63518,
-      "sha256": "b07dc78e645e588a79522fc8ac913e2893664ba337d63ba9c65e0955688ddc0a"
+      "bytes": 64130,
+      "sha256": "2cdbbb9430a145ab24d542579cb905b470c7ec85a40b00b4dbf0a9d48289a96e"
     },
     "build/connector-preview-plugin.mjs": {
       "bytes": 7211,
@@ -408,8 +408,8 @@
       "sha256": "f9217f13ff52f1979934dc008c43de8b3854cf52e5ae8d18966dee410e440e09"
     },
     "docs/VNEXT_RELEASE.md": {
-      "bytes": 17951,
-      "sha256": "5eaf5def05eeabbddebd1956b30ecdfc9ab55ae30a41445275405ba09b56d254"
+      "bytes": 19981,
+      "sha256": "204cc0361784346c8e64cabccebabd2a2f3da35543b8cd5a3fd4fa8e1bcfeb26"
     },
     "docs/evaluation/README.md": {
       "bytes": 2650,
@@ -520,8 +520,8 @@
       "sha256": "1c93d747e384c8e17e3e3dd5361b24412babf5eba2a11d2ae7a75f4e0924112c"
     },
     "lib/experience.ts": {
-      "bytes": 8024,
-      "sha256": "366b0f9fe111cfc25e38bbe4715ae94a75ed58c0e92d7dd70fa5f365ad173a7f"
+      "bytes": 8261,
+      "sha256": "86d13aad286d85f0ddea13d3439d8d72e7af433c42e19e770468e4faa3fb5e38"
     },
     "lib/intent-feedback.ts": {
       "bytes": 1109,
@@ -552,8 +552,8 @@
       "sha256": "1b709902a246f18bad2924edac265a7ae9f401880ea431ef3d505456e23f3156"
     },
     "lib/planning-context.ts": {
-      "bytes": 15060,
-      "sha256": "48f912b5e7a715fe89eee28f57681f8a1c8557d9d0c6e870f187ac0ead42e094"
+      "bytes": 15019,
+      "sha256": "00b52af4470f70a628fb6cdf784a853cacc0f024680d57975dc03a131a0314a9"
     },
     "lib/qadam-types.ts": {
       "bytes": 2679,

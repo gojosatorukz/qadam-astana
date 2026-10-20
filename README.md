@@ -6,11 +6,11 @@ Qadam помогает выбрать короткую прогулку по А�
 
 Проект команды **Qadam** для Smart City «ИИ-помощник по прогулкам в городе Астана». [Хакатон](https://gdg.community.dev/events/details/google-gdg-astana-presents-build-with-ai-hackathon-2026/).
 
-**VNext опубликован** на прежнем URL: Sites version 6, source `d0b5b1462ffd48111bcf354be8baf98e85681bae`, 19.10.2026 22:50 UTC / 20.10.2026 03:50 Алматы. Чистая установка, TypeScript и **259/259 тестов** проходят; направленный анонимный HTTP smoke — **5/5**, отдельно от browser QA. Новое [90-секундное демо VNext](https://youtu.be/u8qfP-Jfxq8) подготовлено с ручными русскими субтитрами. [PDF](https://github.com/gojosatorukz/qadam-astana/blob/main/qadam-pitch.pdf), [PowerPoint](https://github.com/gojosatorukz/qadam-astana/blob/main/qadam-pitch.pptx), [source manifest](https://github.com/gojosatorukz/qadam-astana/blob/main/source-manifest.json) и [единый комплект](https://github.com/gojosatorukz/qadam-astana/blob/main/qadam-submission-package.zip) синхронизируются как один выпуск. Точный commit архива включает последующие doc-only изменения и фиксируется в manifest; будущий GitHub SHA здесь не подставляется.
+**VNext опубликован** на прежнем URL: Sites version 6, source `d0b5b1462ffd48111bcf354be8baf98e85681bae`, 19.10.2026 22:50 UTC / 20.10.2026 03:50 Алматы. Чистая установка, TypeScript и **259/259 тестов** проходят; направленный анонимный HTTP smoke — **5/5**, отдельно от browser QA. Новое [90-секундное демо VNext](https://youtu.be/u8qfP-Jfxq8) подготовлено с ручными русскими субтитрами. [PDF](https://github.com/gojosatorukz/qadam-astana/blob/main/qadam-pitch.pdf), [PowerPoint](https://github.com/gojosatorukz/qadam-astana/blob/main/qadam-pitch.pptx), [source manifest](https://github.com/gojosatorukz/qadam-astana/blob/main/source-manifest.json) и [единый комплект](https://github.com/gojosatorukz/qadam-astana/blob/main/qadam-submission-package.zip) синхронизируются как один выпуск. Точный commit архива включает последующие изменения документации и патч переходов в 2ГИС и фиксируется в manifest; будущий GitHub SHA здесь не подставляется.
 
 ## Запуск
 
-Нужны Node.js ≥22.13 и npm. В публичном репозитории полный код находится в [qadam-source.zip](https://github.com/gojosatorukz/qadam-astana/blob/main/qadam-source.zip). Проверяйте его точный source commit и SHA256 по [source-manifest.json](https://github.com/gojosatorukz/qadam-astana/blob/main/source-manifest.json): кодовый freeze — `d0b5b146…`, последующие изменения документации имеют собственный commit. Для полученных исходников:
+Нужны Node.js ≥22.13 и npm. В публичном репозитории полный код находится в [qadam-source.zip](https://github.com/gojosatorukz/qadam-astana/blob/main/qadam-source.zip). Проверяйте его точный source commit и SHA256 по [source-manifest.json](https://github.com/gojosatorukz/qadam-astana/blob/main/source-manifest.json): кодовый freeze — `d0b5b146…`, последующие изменения документации и патч 2ГИС имеют собственный commit. Для полученных исходников:
 
 ```sh
 npm ci
@@ -20,6 +20,12 @@ npm run dev
 Откройте адрес из вывода сервера, обычно `http://localhost:5173`. React, TypeScript, Vinext/Vite; серверные API исполняются на Cloudflare Workers.
 
 Для понимания текстовых запросов задайте серверный `GEMINI_API_KEY` через окружение или `.env.local`. [.env.example](.env.example) содержит пустой шаблон. Модель по умолчанию — `gemini-3.5-flash-lite`; настройка — `GEMINI_MODEL`. Дополнительные проверенные модели объяснения задаются через `GEMINI_FALLBACK_MODELS`. Ключ не попадает в frontend, Git или архив.
+
+## Открытие места в 2ГИС
+
+В карточках, источниках и избранном есть открытие публичной точки места в 2ГИС, рядом остаётся Google Maps. Для футбола и shopping первый внешний поиск тоже ведёт в 2ГИС. Переход происходит только по нажатию: Qadam не передаёт старт пользователя, историю или полный текст запроса в ссылке точки. Поиск координат не доказывает соответствие карточки организации, проверенный вход или совпадение маршрутов. Приложение не импортирует сведения 2ГИС и не использует его платный API.
+
+OpenStreetMap не назван обязательным провайдером в официальном Smart City-кейсе. В проекте он остаётся источником собранного снимка и пешеходного графа, с атрибуцией ODbL. Открытие в другом сервисе не меняет происхождение данных или расчёт времени Qadam.
 
 ## Выбор и уточнение
 

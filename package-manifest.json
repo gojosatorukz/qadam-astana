@@ -1,16 +1,16 @@
 {
-  "created_at": "2026-10-20T04:09:02.258304+05:00",
+  "created_at": "2026-10-20T08:07:10.210377+05:00",
   "team": "Qadam",
   "track": "AI MODELS FOR SMART CITY",
   "submission_status": "HOLD — draft only; not submitted",
   "site": "https://qadam-astana-walk.pubg-bekzat.chatgpt.site/",
   "github": "https://github.com/gojosatorukz/qadam-astana",
   "youtube": "https://youtu.be/u8qfP-Jfxq8",
-  "source_commit": "f274665892ae406ba308cb01f5e694903ee78e58",
+  "source_commit": "80bfef7ed9ad21674e7cc5c867f8d950eade1245",
   "files": {
     "START_HERE.txt": {
-      "bytes": 5992,
-      "sha256": "81efd847f6a16d34ac1d19129761da597698b29cea021430b68187d3afbc7977"
+      "bytes": 7922,
+      "sha256": "bdce4da099d28245ee0dc7bbc5aaf88be540aa7c143a08ee1a5832156cc8de22"
     },
     "presentation/qadam-pitch.pdf": {
       "bytes": 770925,
@@ -29,16 +29,16 @@
       "sha256": "e4dbee4eea918c8ec519613f320112630533850a82adc26442c108b2e81b3ad9"
     },
     "demo/subtitles.ru.srt": {
-      "bytes": 2975,
-      "sha256": "d81776d81e9c67eded3af7eb6d8c646b26a85e7660b87c452721e0ee0357591f"
+      "bytes": 2895,
+      "sha256": "e4e1cbf88432fe3f06fd1ccf8099b7afa87b8368c32f257665c3e4feb60941a8"
     },
     "source/qadam-source.zip": {
-      "bytes": 2047625,
-      "sha256": "82349c8e0e410306a22d6aa59f8e05b694c1f350632da78aa6a347991f879abd"
+      "bytes": 2048875,
+      "sha256": "3ded96815641449aea95d7cc109900a05c59eb8ef967245c51fb8687b5748c18"
     },
     "source/source-manifest.json": {
       "bytes": 27522,
-      "sha256": "0e666ea317063b3458282858c11f8a9c181c0e8d71aaac7470a1a060924fc263"
+      "sha256": "9463e1c9e0c969ab250749b9de444b8555f01986dbbb5b91359e5f760bb89f10"
     },
     "docs/EVALUATION.md": {
       "bytes": 16056,
@@ -57,8 +57,8 @@
       "sha256": "c5c6b979eba4beac0451ac8d9e30e8a04b5547400f38c5abcf5b9bfac205957e"
     },
     "docs/VNEXT_RELEASE.md": {
-      "bytes": 17951,
-      "sha256": "5eaf5def05eeabbddebd1956b30ecdfc9ab55ae30a41445275405ba09b56d254"
+      "bytes": 19981,
+      "sha256": "204cc0361784346c8e64cabccebabd2a2f3da35543b8cd5a3fd4fa8e1bcfeb26"
     }
   }
 }
