@@ -1,0 +1,77 @@
+{
+  "release": "Qadam VNext + 2GIS",
+  "team": "Qadam",
+  "author": "Rashiduly Bekzat",
+  "track": "AI MODELS FOR SMART CITY",
+  "site": "https://qadam-astana-walk.pubg-bekzat.chatgpt.site/",
+  "youtube": "https://youtu.be/u8qfP-Jfxq8",
+  "github": "https://github.com/gojosatorukz/qadam-astana",
+  "source_commit": "80bfef7ed9ad21674e7cc5c867f8d950eade1245",
+  "application_code_commit": "80bfef7ed9ad21674e7cc5c867f8d950eade1245",
+  "site_saved_version": 8,
+  "site_deployment_status": "succeeded",
+  "automatic_tests": {
+    "pass": 259,
+    "fail": 0
+  },
+  "independent_clean_install": "pass on baseline VNext; no dependency change in 2GIS patch",
+  "anonymous_http_smoke": {
+    "pass": 5,
+    "total": 5,
+    "scope": "baseline VNext"
+  },
+  "competition_submission_status": "HOLD — do not submit",
+  "deadline_local": "2026-10-20T23:59:00+05:00",
+  "deadline_source": "direct organizer extension confirmed by participant",
+  "youtube_status": "published unlisted; manual RU23captions; full privacy-enhanced embed playback90.021s ended verified",
+  "draft_status": "Saved draft; source and links replaced with version8 files; presentation/video unchanged; NOT SUBMITTED",
+  "video": {
+    "seconds": 90,
+    "width": 1920,
+    "height": 1080,
+    "bytes": 4656360
+  },
+  "presentation": {
+    "slides": 10,
+    "speaker_seconds": 370
+  },
+  "sha256": {
+    "qadam-source.zip": "3ded96815641449aea95d7cc109900a05c59eb8ef967245c51fb8687b5748c18",
+    "qadam-submission-package.zip": "1e42585f1a5c2b0f98f57f9fdb61608b90fa9b18af84798921742d86156a9971",
+    "presentation/qadam-pitch.pdf": "5711192541c5cd9155bdd98a697142f209671b4cc1af89ac8784a7c8780b1a5e",
+    "media/qadam-demo.mp4": "e4dbee4eea918c8ec519613f320112630533850a82adc26442c108b2e81b3ad9",
+    "media/subtitles.ru.srt": "e4e1cbf88432fe3f06fd1ccf8099b7afa87b8368c32f257665c3e4feb60941a8"
+  },
+  "youtube_playback_proof": "research/vnext-production/youtube-playback.json",
+  "site_deployment_id": "appgdep_6ad6da9ce6b881919b3d27264a0dc4e8",
+  "final_source_diff": "2GIS public destination links in result/source/favorites and external category actions; CSS; README/release notes",
+  "draft_proof": "form-2gis-ready.png",
+  "draft_uploaded_files": [
+    "Qadam-VNext-presentation.pdf",
+    "Qadam-VNext-demo.mp4",
+    "Qadam-VNext-source.zip",
+    "Qadam-VNext-links.txt"
+  ],
+  "github_artifact_commit": "1613a24077c87a5262919217c9b481110b4b22e2",
+  "github_publication_status": "Published; 8/8 anonymous immutable RAW byte checks passed for 2GIS payload, including semantic check of root/bundle SRT23",
+  "github_verification": "github-2gis-verification.json",
+  "release_status": "READY — Sites version8 and payload published; package verified; current source/links saved in draft; competition submission HOLD",
+  "baseline_application_code_commit": "d0b5b1462ffd48111bcf354be8baf98e85681bae",
+  "patch_checks": {
+    "typescript": "pass",
+    "tests": "259/259 pass",
+    "local_mobile": "390x844 no horizontal overflow in saved-list",
+    "2gis_web_destination": "Lovers Park / Ғашықтар resolved from public coordinates",
+    "physical_phone_app_launch": "not checked",
+    "production_ui": "Public route and place modal show working destination-only 2GIS link; source result 85/90 min",
+    "production_proof": "2gis-published.png"
+  },
+  "caption_correction": {
+    "cues": 23,
+    "sha256": "e4e1cbf88432fe3f06fd1ccf8099b7afa87b8368c32f257665c3e4feb60941a8",
+    "reason": "Canonical/bundle SRT was stale; YouTube captions were already correct"
+  },
+  "github_payload_commit": "11cd4b998e3f9c55ce351d5a8a6ed2fc57495b8a",
+  "github_baseline_verification": "github-vnext-verification.json",
+  "github_metadata_note": "github_payload_commit identifies the verified payload. A subsequent commit publishes this metadata; see github-2gis-verification.json for its immutable hash/check."
+}
