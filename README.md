@@ -1,3 +1,18 @@
+## Current free Cloudflare deployment
+
+**App:** https://qadam-astana.pages.dev/  
+**Backup:** https://qadam-astana-walk.pubg-bekzat.chatgpt.site/
+
+The Cloudflare copy serves the UI, 1,204 source places and graph planning/rerouting workers. Server-only Pages Functions provide Gemini and a server clock; the API key is an encrypted secret. Initial route computation runs off the UI thread in a dedicated browser worker, using the same canonical graph and constraints. There is no separately rented server.
+
+- [Reproducible Cloudflare source](./qadam-cloudflare-source.zip) includes canonical source plus the standalone hosting profile. See [deployment/setup](./CLOUDFLARE_DEPLOYMENT.md) and [release metadata](./cloudflare-deployment.json).
+- Canonical tests: 387/387. Standalone hosting tests: 28/28, TypeScript and production build pass, including Safari without static `Response.json`.
+- The primary `qadam-astana.pages.dev` URL stays the same when publishing updates to this project. The original Sites release and its source/package archives remain preserved.
+- The participant confirmed routes appear on the physical iPhone after changing large worker data imports to static JSON assets. Browser checks on the primary hostname also passed. A physical GPS/voice walk remains unverified.
+- Video and slides below are baseline v9 and are awaiting the participant's final product approval. The official application has not been submitted.
+
+---
+
 # Qadam — куда успеть по пути между делами
 
 Qadam помогает выбрать, куда зайти в Астане между делами. Пользователь задаёт точку А, доступное время и, по желанию, точку Б. Приложение предлагает до четырёх выполнимых вариантов по 1–3 реальных места: дорога, посещения, путь до цели или обратно и запас уже входят в бюджет. Можно написать «покушать» или оставить желание пустым для автоматического выбора поблизости.
